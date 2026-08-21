@@ -144,24 +144,26 @@ sidebar_menu <- function(id = "sidebarMenu", ..., .list = NULL) {
   result  <- list()
   nav_buf <- list()
 
-  flush_nav <- function() {
-    if (length(nav_buf) == 0L) return()
-    result[[length(result) + 1L]] <<- htmltools::tags$nav(
-      class = "nav nav-pills flex-column",
-      nav_buf
-    )
-    nav_buf <<- list()
-  }
-
   for (i in seq_along(items)) {
     if (is_title[[i]]) {
-      flush_nav()
+      if (length(nav_buf) > 0L) {
+        result[[length(result) + 1L]] <- htmltools::tags$nav(
+          class = "nav nav-pills flex-column",
+          nav_buf
+        )
+        nav_buf <- list()
+      }
       result[[length(result) + 1L]] <- items[[i]]
     } else {
       nav_buf[[length(nav_buf) + 1L]] <- items[[i]]
     }
   }
-  flush_nav()
+  if (length(nav_buf) > 0L) {
+    result[[length(result) + 1L]] <- htmltools::tags$nav(
+      class = "nav nav-pills flex-column",
+      nav_buf
+    )
+  }
 
   htmltools::tags$div(
     class = "sidebar-nav-sections",
