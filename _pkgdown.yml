@@ -1,0 +1,91 @@
+url: https://novartis.github.io/bslibdash/
+
+template:
+  bootstrap: 5
+
+development:
+  mode: auto
+
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [search, github]
+
+articles:
+  - title: Articles
+    navbar: ~
+    contents:
+      - getting-started
+      - components
+      - theming
+
+reference:
+  - title: Page layout
+    desc: >
+      The dashboard page shell and its top-level regions.
+    contents:
+      - dashboardPage
+      - dashboardHeader
+      - dashboardSidebar
+      - dashboardBody
+      - dashboardFooter
+
+  - title: Sidebar navigation
+    desc: Sidebar menus, sub-items and the user panel.
+    contents:
+      - sidebarMenu
+      - sidebarMenuOutput
+      - sidebarUserPanel
+      - sidebarSearchForm
+
+  - title: Body content
+    desc: Tabsets and grid helpers for laying out dashboard content.
+    contents:
+      - tabItem
+      - tabsetPanel
+      - updateTabItems
+      - boxLayout
+      - column
+
+  - title: Cards and boxes
+    desc: Collapsible/closable cards and tabbed cards.
+    contents:
+      - box
+      - tabBox
+
+  - title: KPI tiles
+    desc: Value boxes and info boxes for headline metrics.
+    contents:
+      - valueBox
+      - valueBoxOutput
+      - renderValueBox
+      - infoBox
+      - infoBoxOutput
+      - renderInfoBox
+
+  - title: Header widgets
+    desc: Header dropdown menus for messages, notifications and tasks.
+    contents:
+      - dropdownMenu
+      - dropdownMenuOutput
+      - renderDropdownMenu
+      - menuItemOutput
+      - renderMenu
+
+  - title: Feedback and inputs
+    desc: Accordions, badges, buttons, icons and toasts.
+    contents:
+      - accordion
+      - badge
+      - actionButton
+      - icon
+      - toast
+
+  - title: Theming
+    desc: Bootstrap 5 / bslib theme helpers.
+    contents:
+      - brand_bs_theme
+
+  - title: Package
+    contents:
+      - bslibdash-package

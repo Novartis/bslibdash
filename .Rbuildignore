@@ -8,7 +8,9 @@
 ^LICENSE\.md$
 ^CONTRIBUTING\.md$
 ^CODE_OF_CONDUCT\.md$
+^cran-comments\.md$
 ^docs$
+^_pkgdown\.yml$
 ^coverage$
 ^inst/shiny/examples/.*/rsconnect$
 ^inst/shiny/examples/.*/\.?log$

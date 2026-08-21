@@ -3,6 +3,7 @@
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![R-CMD-check](https://github.com/Novartis/bslibdash/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Novartis/bslibdash/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 bslibdash is a toolkit for building modern dashboards in
