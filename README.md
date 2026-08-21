@@ -2,25 +2,47 @@
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![R-CMD-check](https://github.com/Novartis/bslibdash/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Novartis/bslibdash/actions/workflows/R-CMD-check.yaml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-bslibdash is a toolkit for building modern dashboards in
-[shiny](https://shiny.posit.co/). It sits on top of
-[bslib](https://rstudio.github.io/bslib/) and Bootstrap 5, and packages
-the building blocks of a typical dashboard — page shells, sidebars,
-cards, KPI tiles, header widgets and feedback components — behind a
-small, consistent API.
+bslibdash gives you the vocabulary of a dashboard — a page shell, a
+sidebar menu, cards, KPI tiles, header widgets — built on top of
+[bslib](https://rstudio.github.io/bslib/) and Bootstrap 5. Because it's
+a thin layer over bslib, dashboards built with bslibdash inherit your
+theme, dark mode and `bslib::bs_themer()` for free, and play nicely
+with other bslib-based Shiny packages like
+[teal](https://insightsengineering.github.io/teal/).
 
-Because most of the components are a thin layer over `bslib`, dashboards built
-with `bslibdash` share theming, dark mode and the wider Bootstrap 5
-ecosystem (including [teal](https://insightsengineering.github.io/teal/)
-and other modern bslib-based Shiny modules) out of the box. The API also
-mirrors [shinydashboard](https://rstudio.github.io/shinydashboard/) wherever
-the underlying concept is the same, so porting an existing app is
-mostly search-and-replace — see `vignette("getting-started")` for the
-full migration story.
+If you know [shinydashboard](https://rstudio.github.io/shinydashboard/),
+you already know most of the bslibdash API: function names and
+arguments mirror it wherever the underlying concept is the same, so
+porting an existing app is mostly search-and-replace.
+
+## Features
+
+* A responsive **page shell**: header, collapsible/overlay sidebar,
+  body and footer.
+* **Sidebar navigation** with menus, sub-items, badges and a user
+  panel.
+* **Cards** that collapse, close and go full-screen, plus tabbed
+  cards.
+* **KPI tiles** — value boxes and info boxes on the Bootstrap status
+  palette.
+* **Header widgets** for messages, notifications and tasks.
+* Full **theming** through `bslib::bs_theme()`: components recompile
+  their CSS automatically, so custom themes never lose bslibdash
+  styles.
+
+## Installation
+
+bslibdash isn't on CRAN yet. Install the development version from
+GitHub:
+
+``` r
+# install.packages("pak")
+pak::pak("Novartis/bslibdash")
+```
 
 ## Usage
 
@@ -71,11 +93,11 @@ shiny::runApp(
 
 ## Why bslibdash?
 
-* **vs raw [bslib](https://rstudio.github.io/bslib/)** — bslib gives you
-  the building blocks (themes, cards, sidebars). bslibdash gives you the
-  dashboard *vocabulary* on top: a page shell, a sidebar menu with
-  sub-items and badges, header dropdowns, info/value tiles — so you
-  don't write them in every app.
+* **vs raw [bslib](https://rstudio.github.io/bslib/)** — bslib gives
+  you the building blocks (themes, cards, sidebars). bslibdash
+  assembles them into a dashboard: a page shell, a sidebar menu with
+  sub-items and badges, header dropdowns, KPI tiles — so you don't
+  rebuild them in every app.
 * **vs [shinydashboard](https://rstudio.github.io/shinydashboard/)** —
   same names, same mental model, but rendered with Bootstrap 5 and
   themed through bslib. Dynamic theming, dark mode and `bs_themer()`
@@ -83,42 +105,33 @@ shiny::runApp(
 * **vs [bs4Dash](https://rinterface.github.io/bs4Dash/)** — bslibdash
   stays close to vanilla bslib, so dashboards inherit your bslib theme
   rather than carrying a bespoke AdminLTE one.
-* **Fits the modern Shiny ecosystem.** Because
-  bslibdash is a thin bslib layer, it slots into apps built with
-  [teal](https://insightsengineering.github.io/teal/), raw
-  `bslib::page_*` layouts,
-  [shinyuieditor](https://rstudio.github.io/shinyuieditor/),
-  [bsicons](https://github.com/rstudio/bsicons) and any other
-  Bootstrap 5 / bslib component — all sharing the same theme, dark
-  mode and `bs_themer()` machinery as your dashboard shell.
 
-## What's in the box
-
-At a glance, bslibdash covers the pieces a typical KPI dashboard needs:
-
-* a responsive **page shell** (header, collapsible/overlay sidebar, body, footer),
-* **sidebar navigation** with menus, sub-items, badges and a user panel,
-* **cards and tab-cards** that can collapse, close and go full-screen,
-* **KPI tiles** (value boxes, info boxes) on the Bootstrap status palette,
-* **header widgets** for messages, notifications and tasks,
-* **feedback bits** — accordions, badges, buttons, icons and toasts, and
-* **theming** through any `bslib::bs_theme()`, with components recompiling
-  their CSS via `bslib::bs_dependency_defer()` so custom themes never
-  drop bslibdash styles.
-
-See `vignette("components")` or the package reference (`?bslibdash`) for
-the live list of functions.
+Because bslibdash is just bslib underneath, it also slots into apps
+built with [teal](https://insightsengineering.github.io/teal/), raw
+`bslib::page_*()` layouts,
+[shinyuieditor](https://rstudio.github.io/shinyuieditor/) and
+[bsicons](https://github.com/rstudio/bsicons) — all sharing the same
+theme, dark mode and `bs_themer()` machinery as your dashboard shell.
 
 ## Learn more
 
-* `vignette("getting-started", package = "bslibdash")` — minimal
-  skeleton and the **migration guide from shinydashboard**.
-* `vignette("components",      package = "bslibdash")` — copy-pasteable
-  tour of every component.
-* `vignette("theming",         package = "bslibdash")` — customise
-  `brand_bs_theme()`, swap Bootswatch presets, add bespoke SCSS, and
-  use `bslib::bs_themer()`.
-* Example apps live in [`inst/shiny/examples/`](inst/shiny/examples).
+* [Get started](https://novartis.github.io/bslibdash/articles/getting-started.html) —
+  a minimal skeleton and a migration guide from shinydashboard.
+* [Components](https://novartis.github.io/bslibdash/articles/components.html) —
+  a copy-pasteable tour of every component.
+* [Theming](https://novartis.github.io/bslibdash/articles/theming.html) —
+  customise `brand_bs_theme()`, swap Bootswatch presets, add your own
+  SCSS, and use `bslib::bs_themer()`.
+* [Function reference](https://novartis.github.io/bslibdash/reference/index.html) —
+  every exported function, organised by topic.
+* More example apps live in [`inst/shiny/examples/`](inst/shiny/examples).
+
+## Getting help
+
+If you find a bug, please open an
+[issue](https://github.com/Novartis/bslibdash/issues) with a minimal
+reproducible example. To propose a change, see
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Code of Conduct
 
