@@ -65,7 +65,7 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Novartis Pharma AG [copyright holder]
+  \item Novartis Open Source Initiative [copyright holder]
 }
 
 }

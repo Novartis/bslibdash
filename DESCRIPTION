@@ -6,7 +6,7 @@ Authors@R: c(
     person("Alexandros", "Kouretsis", email = "alexandros@appsilon.com", role = c("aut", "cre")),
     person("Ardalan", "Mirshani", email = "ardalan.mirshani@novartis.com", role = "aut"),
     person("Dominik", "Rafacz", email = "dominik.rafacz_ext@novartis.com", role = "aut"),
-    person("Novartis", "Pharma AG", role = "cph")
+    person("Novartis Open Source Initiative", role = "cph")
     )
 Description: Build modern Bootstrap 5 dashboards in Shiny with bslib. Provides a dashboard page shell
     and reusable components that integrate with bslib theming and follow Bootstrap design patterns. The
