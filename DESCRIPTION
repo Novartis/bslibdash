@@ -13,6 +13,8 @@ Description: Build modern Bootstrap 5 dashboards in Shiny with bslib. Provides a
     API is inspired by shinydashboard where the underlying concepts are shared, helping existing apps 
     migrate with minimal changes while supporting a cleaner, more flexible dashboard design style.
 License: MIT + file LICENSE
+URL: https://github.com/Novartis/bslibdash, https://novartis.github.io/bslibdash/
+BugReports: https://github.com/Novartis/bslibdash/issues
 Depends:
     R (>= 4.1.0)
 Imports:
@@ -26,7 +28,7 @@ Imports:
     glue,
     sass
 Suggests:
-    testthat (>= 2.1.0),
+    testthat (>= 3.0.0),
     withr,
     knitr,
     lintr,
@@ -34,7 +36,7 @@ Suggests:
     covr
 VignetteBuilder: knitr
 Encoding: UTF-8
-Language: en-US
+Language: en-GB
 Roxygen: list(markdown = TRUE)
 Collate: 
     'useful-items.R'
@@ -58,3 +60,4 @@ Collate:
     'widgets-sidebar.R'
 Config/roxygen2/version: 8.0.0
 RoxygenNote: 7.3.3
+Config/testthat/edition: 3
