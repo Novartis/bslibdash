@@ -1,0 +1,10 @@
+linters: linters_with_defaults(
+ line_length_linter(120),
+ pipe_consistency_linter(),
+ object_name_linter(styles = c("camelCase", "snake_case")),
+ object_usage_linter = NULL
+ )
+exclusions: list(
+ "R/aliases.R"
+ )
+encoding: "UTF-8"

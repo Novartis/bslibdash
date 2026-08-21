@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+}
+
+.app-layout {
+  height: calc(100vh - var(--app-header-height));
+}
+
+.app-main {
+  background-color: $body-tertiary-bg;
+  min-width: 0;          /* critical for flex overflow */
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;     /* keep scroll confined to the scrollable region */
+}
+
+.app-main-inner {
+  flex: 1 1 auto;
+  min-height: 0;        /* allow flex child to shrink and scroll */
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-pane {
+  padding: $spacer;
+}

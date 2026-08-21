@@ -1,0 +1,6 @@
+// Core entrypoint: runtime CSS variables + body / icon foundations.
+// Attached alongside every component dependency so :root --app-* tokens
+// are emitted exactly once per page.
+
+@import "10-tokens/css-vars";
+@import "20-foundation/body";

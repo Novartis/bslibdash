@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// Runtime CSS variables
+//
+// Runtime knobs/hooks only. For theme styling, prefer Bootstrap/bslib Sass
+// variables ($*) over --bs-*; bslib recompiles via bs_dependency_defer().
+
+:root {
+  /* Layout knobs (overridable from R via inline `style=`) */
+  --app-sidebar-width: 250px;
+  --app-sidebar-collapsed-width: 4.6rem;
+
+  --app-header-height: 48px;
+  --app-header-z: 1000;
+
+  --app-footer-height: 40px;
+
+  /* Header foreground (consumed by both header shell and header dropdowns) */
+  --app-header-fg: #{color-contrast($primary)};
+
+  /* Typography micro-tokens */
+  --app-title-font-size: 1rem;
+  --app-title-font-weight: 600;
+  --app-title-letter-spacing: 0.2px;
+
+  /* Spacing exports */
+  --app-canvas-padding-x: 1.5rem;
+  --app-canvas-padding-y: 1.25rem;
+  --app-footer-padding-x: 1.5rem;
+  --app-content-pad: 0.1rem;
+}

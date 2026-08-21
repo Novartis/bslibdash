@@ -1,0 +1,45 @@
+// Styles for the .bslibdash-toast component.
+//
+// We deliberately do NOT restyle Shiny's `.shiny-notification` host: the
+// default Shiny / bslib notification chrome (background, border, status
+// color, position, dismiss button) is the box. This partial only adds layout
+// for the additional `toast()` features — header (title + optional icon),
+// body, and subtitle footnote — so they no longer require a nested
+// `bslib::card` wrapper (which previously caused the box-in-box look).
+//
+// Compiled via bslib::bs_dependency() against the active bs_theme(), so we
+// can reference Bootstrap Sass variables ($spacer, $font-weight-semibold,
+// $text-muted) directly and they recompile when the theme changes.
+
+.bslibdash-toast-header {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.5;
+  font-weight: $font-weight-semibold;
+  line-height: 1.25;
+
+  + .bslibdash-toast-body { margin-top: $spacer * 0.35; }
+}
+
+.bslibdash-toast-icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.bslibdash-toast-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.bslibdash-toast-body {
+  line-height: 1.4;
+
+  + .bslibdash-toast-body { margin-top: $spacer * 0.25; }
+}
+
+.bslibdash-toast-subtitle {
+  font-size: $small-font-size;
+  color: $text-muted;
+}

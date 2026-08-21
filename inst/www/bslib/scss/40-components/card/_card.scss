@@ -1,0 +1,59 @@
+.bslib-card {
+  // Overflow: visible enables dropdown to stick out of the card
+  overflow: visible !important;
+  
+  .card-body {
+    overflow: visible !important;
+    min-height: 0;
+  }
+  
+  // Full screen: contain and scroll instead of overflow visible
+  &[data-full-screen="true"] {
+    overflow: auto !important;
+
+    .card-body {
+      overflow: auto !important;
+    }
+  }
+}
+
+.card-toggle-icon {
+  transition: transform 0.2s ease !important;
+}
+
+.card-toggle-btn.collapsed .card-toggle-icon {
+  transform: rotate(-90deg) !important; /* pointing right when collapsed */
+}
+
+.btn-tool {
+  background-color: transparent;
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  padding: $spacer * 0.25 $spacer * 0.375;
+  box-shadow: none;
+}
+
+.btn-tool:last-child {
+  padding-right: 0;
+}
+
+.btn-tool:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  background-color: transparent;
+  color: inherit;
+}
+
+.btn-tool:focus-visible {
+  transform: scale(0.97);
+  box-shadow: 0 0 0 .25rem rgba($primary, .25);
+}
+
+.btn-tool-icon {
+  transform: scale(0.9);
+}
+
+.btn-tool-icon.bi-chevron-down {
+  transform: scale(1.05);
+}

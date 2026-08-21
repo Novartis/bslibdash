@@ -1,0 +1,200 @@
+.app-sidebar .nav-link:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px rgba($primary, 0.35);
+}
+
+.app-sidebar .bslibdash-sidebar-search-form {
+  margin: 0 0 $spacer * 0.75;
+}
+
+.app-sidebar .bslibdash-sidebar-search-form .input-group {
+  flex-wrap: nowrap;
+}
+
+.app-sidebar .bslibdash-sidebar-search-input {
+  border-color: rgba($body-color, 0.18);
+  background-color: $input-bg;
+}
+
+.app-sidebar .bslibdash-sidebar-search-input::placeholder {
+  color: rgba($body-color, 0.55);
+}
+
+.app-sidebar .bslibdash-sidebar-search-button.action-button {
+  border-color: rgba($body-color, 0.18);
+}
+
+.app-sidebar .bslibdash-sidebar-search-button.action-button:hover,
+.app-sidebar .bslibdash-sidebar-search-button.action-button:focus-visible {
+  background-color: rgba($primary, 0.08);
+  border-color: rgba($primary, 0.28);
+}
+
+.app-sidebar .nav-link {
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+
+  position: relative;
+  overflow: visible;
+
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.6;
+
+  margin: $spacer * 0.125 0;
+
+  background: transparent;
+  border: 1px solid transparent;
+
+  font-weight: 450;
+
+  /* theme-safe */
+  color: rgba($body-color, 0.78);
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.12s ease;
+}
+
+.app-sidebar .nav-pills .nav-link {
+  color: rgba($body-color, 0.78);
+  background: transparent;
+}
+
+.app-sidebar .nav-link i {
+  font-size: 1.15rem;
+  color: rgba($body-color, 0.55);
+  transition: color 0.18s ease;
+}
+
+.app-sidebar .nav-link:hover {
+  background-color: rgba($body-color, 0.04);
+  color: rgba($body-color, 0.88);
+}
+
+.app-sidebar .nav-link:hover i {
+  color: rgba($primary, 0.80);
+}
+
+.app-sidebar .nav-link.active,
+.app-sidebar .nav-pills .nav-link.active {
+  font-weight: 600;
+
+  background: linear-gradient(
+    90deg,
+    rgba($primary, 0.12),
+    rgba($primary, 0.04)
+  );
+
+  transform: translateX(1px);
+  border: none;
+
+  box-shadow: inset 0 0 0 1px rgba($primary, 0.01);
+  color: rgba($body-color, 0.92);
+}
+
+.app-sidebar .nav-link.active:hover,
+.app-sidebar .nav-pills .nav-link.active:hover {
+  background: rgba($primary, 0.08);
+}
+
+.app-sidebar.is-collapsed .nav-link.active,
+.app-sidebar.is-collapsed .nav-pills .nav-link.active {
+  background: rgba($primary, 0.04);
+}
+
+.app-sidebar .nav-link.active i,
+.app-sidebar .nav-pills .nav-link.active i {
+  color: $primary;
+}
+
+.app-sidebar .nav-link.active::before,
+.app-sidebar .nav-pills .nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .4rem;
+  bottom: .4rem;
+  width: 3px;
+  border-radius: 2px;
+  background-color: $primary;
+}
+
+.app-sidebar .nav-link-sub {
+  font-size: 0.95rem;
+  padding-left: 2rem;
+}
+
+.app-sidebar .nav-link-sub i {
+  font-size: 0.95rem;
+}
+
+.app-sidebar .sidebar-subnav {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+/* ---------------------------------------------------------------------------
+ * Desktop-only: collapsed-rail nav styling. The is-collapsed class is only
+ * meaningful at the lg breakpoint and up; on mobile the sidebar becomes an
+ * off-canvas overlay where nav items always render full-width with labels.
+ * ------------------------------------------------------------------------ */
+@include media-breakpoint-up(lg) {
+  .app-sidebar.is-collapsed .nav-link.active,
+  .app-sidebar.is-collapsed .nav-pills .nav-link.active {
+    background: rgba($primary, 0.04);
+  }
+
+  .app-sidebar.is-collapsed .nav {
+    align-items: center;
+  }
+
+  .app-sidebar.is-collapsed .nav-link {
+    justify-content: center;
+    gap: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+
+  /* Hide text completely in collapsed mode */
+  .app-sidebar.is-collapsed .nav-text {
+    display: none;
+  }
+
+  .app-sidebar.is-collapsed.is-expanded .nav {
+    align-items: stretch;
+  }
+
+  .app-sidebar.is-collapsed.is-expanded .nav-link {
+    justify-content: flex-start;
+    gap: $spacer * 0.6;
+    width: auto;
+    height: auto;
+    padding: .5rem .75rem;
+  }
+
+  .app-sidebar.is-collapsed.is-expanded .nav-text {
+    display: inline;
+  }
+
+  /* Keep indicator inside the square */
+  .app-sidebar.is-collapsed .nav-link.active::after {
+    right: 2px;
+    top: 22%;
+    height: 56%;
+  }
+
+  .app-sidebar.is-collapsed .nav-link-sub {
+    padding-left: 0;
+  }
+
+  .app-sidebar.is-collapsed .bslibdash-sidebar-search-form {
+    display: none;
+  }
+
+  .app-sidebar.is-collapsed.is-expanded .bslibdash-sidebar-search-form {
+    display: block;
+  }
+}

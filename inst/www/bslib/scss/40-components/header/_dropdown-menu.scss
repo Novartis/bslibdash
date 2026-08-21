@@ -1,0 +1,55 @@
+.app-header .bslibdash-dropdown-menu {
+  display: inline-block;
+  list-style: none;
+}
+
+.app-header .bslibdash-dropdown-menu .bslibdash-dropdown-toggle {
+  color: var(--app-header-fg);
+  border-radius: .5rem;
+  position: relative;
+}
+
+.app-header .bslibdash-dropdown-menu .bslibdash-dropdown-toggle:hover,
+.app-header .bslibdash-dropdown-menu .bslibdash-dropdown-toggle:focus-visible {
+  color: var(--app-header-fg);
+  background-color: rgba(255, 255, 255, .14);
+}
+
+.app-header .bslibdash-dropdown-badge {
+  position: absolute;
+  top: -.15rem;
+  right: -.35rem;
+  font-size: .64rem;
+}
+
+.bslibdash-dropdown-menu-panel {
+  min-width: 20rem;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.bslibdash-dropdown-header {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-weight: 700;
+}
+
+.bslibdash-dropdown-item {
+  white-space: normal;
+}
+
+.bslibdash-dropdown-item-title {
+  font-size: .9rem;
+}
+
+.bslibdash-dropdown-message-image {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+
+.bslibdash-dropdown-task-progress {
+  height: .5rem;
+}

@@ -1,0 +1,16 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.Rprofile$
+^\.vscode$
+^\.github$
+^\.gitignore$
+^\.lintr$
+^LICENSE\.md$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT\.md$
+^docs$
+^coverage$
+^inst/shiny/examples/.*/rsconnect$
+^inst/shiny/examples/.*/\.?log$
+^inst/shiny/examples/.*/_snaps$
+^.*\.new\.png$

@@ -1,0 +1,19 @@
+body {
+  overflow-x: hidden;
+  background-color: $body-tertiary-bg;
+}
+
+.icon-missing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  border: 1px dashed currentColor;
+  border-radius: 0.2em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: -0.125em;
+  opacity: 0.8;
+}

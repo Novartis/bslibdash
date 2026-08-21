@@ -1,0 +1,94 @@
+.bslibdash-info-box {
+  border: 0;
+  overflow: hidden !important;
+  box-shadow: 0 .28rem .8rem rgba($body-color, 0.11);
+  transition: transform .14s ease, box-shadow .18s ease;
+}
+
+.bslibdash-info-box .card-body {
+  padding: 0 !important;
+}
+
+.bslibdash-info-box-inner {
+  display: flex;
+  min-height: 92px;
+}
+
+.bslibdash-info-box-icon {
+  flex: 0 0 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bslibdash-info-box-accent);
+  color: var(--bslibdash-info-box-accent-fg);
+}
+
+.bslibdash-info-box-icon i,
+.bslibdash-info-box-icon svg,
+.bslibdash-info-box-icon .bi,
+.bslibdash-info-box-icon .icon-missing {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  opacity: .92;
+}
+
+.bslibdash-info-box-content {
+  flex: 1;
+  min-width: 0;
+  padding: .8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bslibdash-info-box-no-icon .bslibdash-info-box-content {
+  padding-left: 1.1rem;
+}
+
+.bslibdash-info-box-text {
+  margin: 0;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-weight: 600;
+  opacity: .82;
+}
+
+.bslibdash-info-box-number {
+  margin: .15rem 0 0;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.bslibdash-info-box-subtitle {
+  margin: .15rem 0 0;
+  font-size: .86rem;
+  opacity: .75;
+}
+
+.bslibdash-info-box.bslibdash-info-box-fill {
+  background-color: var(--bslibdash-info-box-accent);
+  color: var(--bslibdash-info-box-accent-fg);
+}
+
+.bslibdash-info-box.bslibdash-info-box-fill .bslibdash-info-box-icon {
+  background-color: rgba(255, 255, 255, .16);
+  color: inherit;
+}
+
+.bslibdash-info-box.bslibdash-info-box-fill .bslibdash-info-box-text,
+.bslibdash-info-box.bslibdash-info-box-fill .bslibdash-info-box-number,
+.bslibdash-info-box.bslibdash-info-box-fill .bslibdash-info-box-subtitle {
+  color: inherit;
+}
+
+.bslibdash-info-box:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 .4rem 1rem rgba($body-color, 0.15);
+}
+
+.bslibdash-info-box-link {
+  color: inherit;
+}

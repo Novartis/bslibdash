@@ -1,0 +1,14 @@
+@each $name, $color in $theme-colors {
+  $bg-subtle: map-get($theme-colors-bg-subtle, $name);
+  $border-subtle: map-get($theme-colors-border-subtle, $name);
+  $text-emphasis: map-get($theme-colors-text, $name);
+
+  .bslibdash-accordion-item-#{$name} {
+    border-color: $border-subtle;
+
+    .accordion-button {
+      background-color: $bg-subtle;
+      color: $text-emphasis;
+    }
+  }
+}

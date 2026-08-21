@@ -1,0 +1,60 @@
+Package: bslibdash
+Type: Package
+Title: Bootstrap 5 Dashboard Framework for Shiny Apps
+Version: 0.7.5
+Authors@R: c(
+    person("Alexandros", "Kouretsis", email = "alexandros@appsilon.com", role = c("aut", "cre")),
+    person("Ardalan", "Mirshani", email = "ardalan.mirshani@novartis.com", role = "aut"),
+    person("Dominik", "Rafacz", email = "dominik.rafacz_ext@novartis.com", role = "aut"),
+    person("Novartis", "Pharma AG", role = "cph")
+    )
+Description: Build modern Bootstrap 5 dashboards in Shiny with bslib. Provides a dashboard page shell
+    and reusable components that integrate with bslib theming and follow Bootstrap design patterns. The
+    API is inspired by shinydashboard where the underlying concepts are shared, helping existing apps 
+    migrate with minimal changes while supporting a cleaner, more flexible dashboard design style.
+License: MIT + file LICENSE
+Depends:
+    R (>= 4.1.0)
+Imports:
+    utils,
+    shiny (>= 1.0.5),
+    shinyjs,
+    htmltools,
+    bslib (>= 0.6.0),
+    bsicons,
+    rlang,
+    glue,
+    sass
+Suggests:
+    testthat (>= 2.1.0),
+    withr,
+    knitr,
+    lintr,
+    rmarkdown,
+    covr
+VignetteBuilder: knitr
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+Collate: 
+    'useful-items.R'
+    'cards.R'
+    'sidebar.R'
+    'body.R'
+    'layout.R'
+    'aliases.R'
+    'brand_bs_theme.R'
+    'bslibdash-package.R'
+    'dependencies.R'
+    'feedbacks.R'
+    'grid.R'
+    'icons.R'
+    'inputs.R'
+    'sidebar_bslib.R'
+    'sidebar_user.R'
+    'utils.R'
+    'widgets-boxes.R'
+    'widgets-menu.R'
+    'widgets-sidebar.R'
+Config/roxygen2/version: 8.0.0
+RoxygenNote: 7.3.3

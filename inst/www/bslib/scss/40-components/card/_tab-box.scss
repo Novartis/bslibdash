@@ -1,0 +1,41 @@
+.bslibdash-tab-box-right.bslib-card .card-header > .nav,
+.bslibdash-tab-box-nav-right {
+  flex: 0 0 auto;
+  min-width: auto;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+// bslib's card.scss makes .card-header a flex row with align-items: center and
+// halved vertical padding (padding-block: calc(var(--bs-card-cap-padding-y) / 2)).
+//
+// Bootstrap's .card-header-tabs { margin-bottom: calc(-1 * var(--bs-card-cap-padding-y)) }
+// was designed for block layout with full padding — it over-pulls in this flex context.
+//
+// Fix:
+//   1. align-self: flex-end anchors the nav's margin-box end to the card-header's
+//      content-box end (i.e., just above the bottom padding).
+//   2. margin-bottom: $card-cap-padding-y * -0.5 cancels the remaining
+//      half-padding (resolved at compile time against the active theme).
+//   3. Each <a> already gets margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width))
+//      via bslib's bs3compat @extend .nav-link, giving the 1px overlap that merges
+//      the active tab with the card body.
+//   4. Override --bs-nav-tabs-link-active-bg to var(--bs-card-bg) so the active tab
+//      background and its bottom border-color hide the card-header border, not body-bg
+//      which differs in dark/custom themes.
+.bslibdash-tab-box {
+  .card-header > .nav.card-header-tabs {
+    align-self: flex-end;
+    margin-bottom: $card-cap-padding-y * -0.5;
+  }
+
+  // border-color shorthand: top | right+left | bottom
+  // bottom = card-bg makes the active tab bottom border invisible against the card body
+  .nav-tabs {
+    --bs-nav-tabs-link-active-bg: var(--bs-card-bg);
+    --bs-nav-tabs-link-active-border-color:
+      var(--bs-border-color)
+      var(--bs-border-color)
+      var(--bs-card-bg);
+  }
+}

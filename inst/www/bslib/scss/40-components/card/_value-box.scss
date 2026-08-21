@@ -1,0 +1,50 @@
+.bslibdash-value-box {
+  border: 0;
+  overflow: hidden !important;
+  box-shadow: 0 .35rem .95rem rgba($body-color, 0.12);
+  transition: transform .14s ease, box-shadow .18s ease;
+}
+
+.bslibdash-value-box .card-body {
+  padding: .9rem 1rem !important;
+}
+
+.bslibdash-value-box .value-box-title {
+  margin-bottom: .2rem;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  opacity: .9;
+}
+
+.bslibdash-value-box .value-box-value {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.bslibdash-value-box.showcase-top-right .value-box-showcase {
+  opacity: .28;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: .1rem;
+}
+
+.bslibdash-value-box.showcase-top-right .value-box-showcase i,
+.bslibdash-value-box.showcase-top-right .value-box-showcase svg,
+.bslibdash-value-box.showcase-top-right .value-box-showcase .bi {
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 2.1rem;
+}
+
+.bslibdash-value-box:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 .5rem 1.2rem rgba($body-color, 0.16);
+}
+
+.bslibdash-value-box-link {
+  color: inherit;
+}

@@ -1,0 +1,6 @@
+Title: {bslibdash} dashboard example
+Description: A simple dashboard example using the {bslibdash} package
+Author: David granjon
+License: MIT
+Type: Shiny
+

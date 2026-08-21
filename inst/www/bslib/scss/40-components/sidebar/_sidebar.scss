@@ -1,0 +1,284 @@
+/* Sidebar (layout + collapse) — Bootstrap-first */
+.app-sidebar {
+  background: $body-secondary-bg;
+  width: var(--app-sidebar-width);
+
+  overflow-x: hidden;
+  white-space: nowrap;
+  border-right: 0 !important;
+
+  transition: width 0.25s cubic-bezier(.4, 0, .2, 1);
+  
+  position: relative;
+}
+
+/* While the window is actively being resized, suppress sidebar transitions so
+ * crossing the lg breakpoint doesn't replay the mobile slide animation just
+ * because the media-query rules (transform / transition) swap in or out. */
+body.is-resizing .app-sidebar,
+body.is-resizing .app-sidebar-backdrop {
+  transition: none !important;
+}
+
+.app-sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+  background: rgba($body-color, 0.08);
+}
+
+/* Inner padding wrapper */
+.sidebar-inner {
+  padding: $spacer * 2.25 $spacer * 1;
+  transition: padding 0.25s ease;
+  position: relative;
+}
+
+/* Sidebar title (sidebarHeader) — AdminLTE / bs4Dash aesthetic:
+   small uppercase caption, subdued colour, generous top spacing to
+   separate menu sections, no top margin on the first one.
+   Uses Bootstrap 5 design tokens for spacing, type and colour. */
+.sidebar-title {
+  white-space: nowrap;
+  margin-top:    map-get($spacers, 4); // 1.5 * $spacer
+  margin-bottom: map-get($spacers, 2); // 0.5 * $spacer
+  padding:       0 map-get($spacers, 1); // 0.25 * $spacer
+  font-size: $font-size-sm * 0.85;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $text-muted;
+  transition: opacity 0.15s ease, height 0.2s ease, margin 0.2s ease,
+              padding 0.2s ease;
+}
+
+.sidebar-title:first-child,
+.sidebar-user-panel + .sidebar-title {
+  margin-top: 0;
+}
+
+.sidebar-title .sidebar-title-text {
+  font-weight: inherit;
+}
+
+/* ---------------------------------------------------------------------------
+ * Sidebar user panel
+ * ------------------------------------------------------------------------ */
+.sidebar-user-panel {
+  padding: map-get($spacers, 2) map-get($spacers, 3); // 0.5 / 1 * $spacer
+  border-radius: $border-radius;
+  background-color: $body-bg;
+}
+
+.sidebar-user-image {
+  flex: 0 0 auto;
+  width:  $spacer * 2.5;
+  height: $spacer * 2.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $primary-bg-subtle;
+  color: $primary-text-emphasis;
+  line-height: 1;
+}
+
+.sidebar-user-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-user-image .sidebar-user-default-icon {
+  font-size: $font-size-base * 1.75;
+}
+
+.sidebar-user-info {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.sidebar-user-name {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  color: $body-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-subtitle {
+  font-size: $font-size-sm;
+  color: $text-muted;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------------------------------------------------------------------------
+ * Expandable menu items — caret indicator
+ * ------------------------------------------------------------------------ */
+.nav-item.has-subnav > .nav-link .sidebar-caret {
+  font-size: $font-size-sm * 0.85;
+  color: $text-muted;
+  transition: transform 0.2s ease, opacity 0.15s ease;
+}
+
+.nav-item.has-subnav > .nav-link[aria-expanded="true"] .sidebar-caret {
+  transform: rotate(90deg);
+}
+
+/* ---------------------------------------------------------------------------
+ * Desktop-only: collapsed-rail styling. The is-collapsed class is only
+ * meaningful at the lg breakpoint and up; on mobile the sidebar becomes
+ * an off-canvas overlay where collapsed-rail styling never applies.
+ * ------------------------------------------------------------------------ */
+@include media-breakpoint-up(lg) {
+  .app-sidebar.is-collapsed {
+    width: var(--app-sidebar-collapsed-width);
+  }
+
+  .app-sidebar.is-collapsed .sidebar-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .app-sidebar.is-collapsed .sidebar-title {
+    opacity: 0;
+    height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .app-sidebar.is-collapsed .sidebar-user-panel {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    gap: 0;
+  }
+
+  .app-sidebar.is-collapsed .sidebar-user-info {
+    display: none;
+  }
+
+  /* When the sidebar is collapsed: hide the text caret and show a small
+     indicator dot at the bottom-right of the icon so the user still gets
+     a visual cue that this item has children. */
+  .app-sidebar.is-collapsed .nav-item.has-subnav > .nav-link .sidebar-caret {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .app-sidebar.is-collapsed .nav-item.has-subnav > .nav-link {
+    position: relative;
+  }
+
+  .app-sidebar.is-collapsed .nav-item.has-subnav > .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: map-get($spacers, 1);
+    right: map-get($spacers, 1);
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: $primary;
+    opacity: 0.75;
+  }
+}
+
+/* Mobile close button — visible only at small breakpoints */
+.app-sidebar-close {
+  display: none;
+  position: absolute;
+  top: $spacer * 0.5;
+  right: $spacer * 0.5;
+  z-index: 2;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.app-sidebar-close:hover,
+.app-sidebar-close:focus-visible {
+  background: rgba($body-color, 0.08);
+}
+
+/* Mobile backdrop element (created by JS) */
+.app-sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1044;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.app-sidebar-backdrop.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------------------
+ * Mobile breakpoint: hide sidebar by default, slide in as overlay when open
+ * ------------------------------------------------------------------------ */
+@include media-breakpoint-down(lg) {
+  .app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+
+    z-index: 1045;
+
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(.4, 0, .2, 1);
+
+    box-shadow: none;
+  }
+
+  .app-sidebar.is-open {
+    transform: translateX(0);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .app-sidebar-close {
+    display: inline-flex;
+  }
+
+  /* Make room for the close button so it doesn't overlap content */
+  .sidebar-inner {
+    padding-top: $spacer * 3.5;
+  }
+}

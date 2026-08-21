@@ -1,0 +1,163 @@
+---
+title: "Components"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Components}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", eval = FALSE, purl = FALSE)
+```
+
+A guided tour of the UI components in bslibdash. New here? Start with
+`vignette("getting-started")` for an end-to-end app; for restyling see
+`vignette("theming")`.
+
+All examples assume:
+
+```{r purl=FALSE}
+library(shiny)
+library(bslibdash)
+```
+
+## Cards
+
+`box()` is the primary card. `boxLayout()` arranges several cards in a
+responsive grid, and `updateBox()` controls a card from the server.
+
+```{r purl=FALSE}
+boxLayout(
+  box("First card",  title = "Status",  status = "primary"),
+  box("Second card", title = "Details", status = "info",
+      collapsible = TRUE),
+  type = "deck"
+)
+
+# server side
+updateBox("status", action = "toggle")          # collapse/expand
+updateBox("status", action = "update",
+          options = list(title = "Updated", status = "success"))
+```
+
+Valid `status`/`background` values are the eight Bootstrap status names
+(`primary`, `secondary`, `success`, `info`, `warning`, `danger`, `light`,
+`dark`).
+
+## Value & info boxes
+
+```{r purl=FALSE}
+fluidRow(
+  valueBox("128", "Open tickets", icon = icon("inbox"),    color = "primary"),
+  valueBox("42%", "CPU",          icon = icon("cpu"),      color = "warning"),
+  infoBox(title = "Status",       value = "Healthy",       color = "success")
+)
+```
+
+Both accept Bootstrap status names (`primary`, `success`, ...) **and**
+the legacy `shinydashboard` palette (`aqua`, `green`, `red`, ...), which
+is mapped automatically.
+
+## Tab box
+
+```{r purl=FALSE}
+tabBox(
+  id = "summary", title = "Q4",
+  tabPanel("Overview", p("Overview content")),
+  tabPanel("Details",  p("Detail content"))
+)
+```
+
+## Sidebar navigation
+
+```{r purl=FALSE}
+dashboardSidebar(
+  sidebarUserPanel("Jane Doe", subtitle = "Administrator"),
+  sidebarSearchForm("q", "go", label = "Search records..."),
+  sidebarMenu(
+    id = "sidebarMenu",
+    sidebarHeader("Main"),
+    menuItem("Overview", tabName = "overview", icon = icon("house")),
+    menuItem("Reports",  icon = icon("bar-chart"),
+      menuSubItem("Daily",   tabName = "reports_daily"),
+      menuSubItem("Monthly", tabName = "reports_monthly")
+    )
+  )
+)
+```
+
+Navigate from the server with `updateTabItems()`:
+
+```{r purl=FALSE}
+observeEvent(input$go_reports, {
+  updateTabItems(session, inputId = "sidebarMenu", selected = "reports")
+})
+```
+
+## Header dropdown menus
+
+```{r purl=FALSE}
+dashboardHeader(
+  title = "Operations",
+  rightUi = dropdownMenu(
+    type = "notifications", badgeStatus = "warning",
+    notificationItem("Backup completed",  status = "success"),
+    notificationItem("New deployment",    status = "info"),
+    messageItem(from = "Ops bot", message = "Pipeline finished",
+                color = "success"),
+    taskItem(text = "Data refresh", value = 75, color = "info")
+  )
+)
+```
+
+Use `dropdownMenuOutput()` + `renderDropdownMenu()` to drive the panel
+reactively. See the next section for the full set of output/render pairs.
+
+## Reactive outputs and renderers
+
+Most dynamic bslibdash components follow the familiar Shiny
+`*Output()` + `render*()` pattern. Place the `*Output()` in the UI where
+the component should appear, then build it from the server with the
+matching `render*()`:
+
+| UI side                   | Server side             | Re-renders                |
+|---------------------------|-------------------------|---------------------------|
+| `valueBoxOutput()`        | `renderValueBox()`      | A single `valueBox()`     |
+| `infoBoxOutput()`         | `renderInfoBox()`       | A single `infoBox()`      |
+| `dropdownMenuOutput()`    | `renderDropdownMenu()`  | A header `dropdownMenu()` |
+| `sidebarMenuOutput()`     | `renderMenu()`          | A `sidebarMenu()`         |
+
+## Accordion, badges, buttons, icons
+
+```{r purl=FALSE}
+accordion(
+  id = "filters",
+  accordionItem(title = "Date range", p("Last 30 days")),
+  accordionItem(title = "Region",     p("All regions"), status = "info")
+)
+
+badge("NEW", color = "success", position = "right", rounded = TRUE)
+
+actionButton("refresh", "Refresh", icon = "arrow-clockwise",
+             status = "primary")
+
+icon("user")                       # Bootstrap Icons via {bsicons}
+icon("bar-chart", size = "1.25rem", class = "text-primary")
+```
+
+## Toasts
+
+`toast()` is a thin wrapper over `shiny::showNotification()` that uses a
+`bslib::card()` as the notification body:
+
+```{r purl=FALSE}
+observeEvent(input$save, {
+  toast(
+    title    = "Saved",
+    body     = "Settings were updated.",
+    options  = list(type = "message", delay = 3000),
+    session  = session
+  )
+})
+```
