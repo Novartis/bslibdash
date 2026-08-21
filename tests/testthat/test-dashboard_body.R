@@ -27,9 +27,9 @@ test_that("dashboardBody() generates expected html", {
 
   expect_equal(names(formals(dashboardBody)), "...")
   expect_true(
-    ui$hasClass("app-main-inner") 
+    ui$hasClass("app-main-inner")
   )
-  
+
   expect_equal(
     ui$children(cssSelector = ".app-footer")$length(),
     0

@@ -25,7 +25,7 @@ test_that("bslibdash_component_dependency() distinct components are NOT collapse
   expect_identical(dep_sbar$name, "bslibdash-sidebar")
 })
 
-test_that("bslibdash_component_dependency() closure has exactly one formal (shiny::registerThemeDependency arity check)", {
+test_that("bslibdash_component_dependency() closure has exactly one formal", {
   # `shiny::registerThemeDependency()` is called by bslib at render time
   # and hard-errors when `length(formals(func)) != 1`. Any workaround
   # that adds an *extra* formal to the closure — a natural instinct for

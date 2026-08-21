@@ -27,7 +27,7 @@ test_that("sidebarHeader() smoke test", {
   expect_true(ui$hasClass("sidebar-title d-flex align-items-center gap-2"))
   expect_true(grepl("Test", as.character(ui$allTags()), fixed = TRUE))
 })
- 
+
 test_that("menuItem() smoke test", {
   ui <- menuItem(text = "Test", tabName = "tab_test") |>
     htmltools::tagQuery()
@@ -36,32 +36,32 @@ test_that("menuItem() smoke test", {
   expect_true(ui$hasAttrs("data-nav-to"))
   expect_true(grepl('data-nav-to="tab_test"', as.character(ui$allTags()), fixed = TRUE))
 })
- 
+
 test_that("menuItem() uses ellipsis icon by default for nested items", {
   result <- menuItem(
     text = "Parent",
     menuSubItem(text = "Child", tabName = "child")
   )
- 
+
   html <- as.character(htmltools::renderTags(result)$html)
- 
+
   expect_true(
     grepl("ellipsis", html, fixed = TRUE),
     info = "Expected default ellipsis icon when no icon is supplied to a nested menuItem"
   )
 })
- 
+
 test_that("menuItem() uses provided icon for nested items", {
   custom_icon <- bslibdash::icon("house")
- 
+
   result <- menuItem(
     text = "Parent",
     icon = custom_icon,
     menuSubItem(text = "Child", tabName = "child")
   )
- 
+
   html <- as.character(htmltools::renderTags(result)$html)
- 
+
   expect_true(
     grepl("house", html, fixed = TRUE),
     info = "Expected the custom icon to be rendered for a nested menuItem"
@@ -243,7 +243,7 @@ test_that("sidebarMenu() respects an explicit selected = TRUE on a non-first ite
 
   active_buttons <- regmatches(
     html,
-    gregexpr('<button[^>]*\\bnav-link\\b[^>]*\\bactive\\b[^>]*>', html)
+    gregexpr("<button[^>]*\\bnav-link\\b[^>]*\\bactive\\b[^>]*>", html)
   )[[1]]
 
   expect_equal(length(active_buttons), 1)
@@ -263,7 +263,7 @@ test_that("sidebarMenu() respects selected = TRUE on a nested menuSubItem()", {
 
   active_buttons <- regmatches(
     html,
-    gregexpr('<button[^>]*\\bnav-link\\b[^>]*\\bactive\\b[^>]*>', html)
+    gregexpr("<button[^>]*\\bnav-link\\b[^>]*\\bactive\\b[^>]*>", html)
   )[[1]]
 
   expect_equal(length(active_buttons), 1)
@@ -297,7 +297,7 @@ test_that("default sidebar menu and tabItems markup does not duplicate ids", {
   expect_equal(duplicate_ids, character())
   expect_equal(sum(ids == "sidebarMenu"), 1)
 })
- 
+
 test_that("dashboardSidebar() inherits bslib_sidebar for bslib engine", {
   bslib_sidebar <- dashboardSidebar() |> htmltools::tagQuery()
   expect_true(bslib_sidebar$hasClass("app-sidebar flex-shrink-0"))
