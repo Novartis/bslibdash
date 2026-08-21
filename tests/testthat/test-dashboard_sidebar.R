@@ -221,9 +221,7 @@ test_that("sidebarMenu() auto-activates the first item when none is selected", {
     menuItem("Reports",  tabName = "reports")
   )
 
-  active_buttons <- htmltools::tagQuery(ui)$
-    find("button.nav-link.active")$
-    selectedTags()
+  active_buttons <- htmltools::tagQuery(ui)$find("button.nav-link.active")$selectedTags()
 
   expect_equal(length(active_buttons), 1)
 
