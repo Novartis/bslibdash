@@ -1,0 +1,284 @@
+# bslibdash
+
+bslibdash gives you the vocabulary of a dashboard — a page shell, a
+sidebar menu, cards, KPI tiles, header widgets — built on top of
+[bslib](https://rstudio.github.io/bslib/) and Bootstrap 5. Because it’s
+a thin layer over bslib, dashboards built with bslibdash inherit your
+theme, dark mode and
+[`bslib::bs_themer()`](https://rstudio.github.io/bslib/reference/run_with_themer.html)
+for free, and play nicely with other bslib-based Shiny packages like
+[teal](https://insightsengineering.github.io/teal/).
+
+If you know [shinydashboard](https://rstudio.github.io/shinydashboard/),
+you already know most of the bslibdash API: function names and arguments
+mirror it wherever the underlying concept is the same, so porting an
+existing app is mostly search-and-replace.
+
+## Features
+
+- A responsive **page shell**: header, collapsible/overlay sidebar, body
+  and footer.
+- **Sidebar navigation** with menus, sub-items, badges and a user panel.
+- **Cards** that collapse, close and go full-screen, plus tabbed cards.
+- **KPI tiles** — value boxes and info boxes on the Bootstrap status
+  palette.
+- **Header widgets** for messages, notifications and tasks.
+- Full **theming** through
+  [`bslib::bs_theme()`](https://rstudio.github.io/bslib/reference/bs_theme.html):
+  components recompile their CSS automatically, so custom themes never
+  lose bslibdash styles.
+
+## Installation
+
+bslibdash isn’t on CRAN yet. Install the development version from
+GitHub:
+
+``` r
+
+# install.packages("pak")
+pak::pak("Novartis/bslibdash")
+```
+
+## Usage
+
+``` r
+
+library(shiny)
+library(bslibdash)
+
+ui <- dashboardPage(
+  header = dashboardHeader(title = "bslibdash demo"),
+  sidebar = dashboardSidebar(
+    sidebarUserPanel("Jane Doe", subtitle = "Administrator"),
+    sidebarMenu(
+      id = "sidebarMenu",
+      menuItem("Overview", tabName = "overview", icon = icon("house")),
+      menuItem("Reports",  tabName = "reports",  icon = icon("bar-chart"))
+    )
+  ),
+  body = dashboardBody(
+    tabItems(
+      tabItem(
+        "overview",
+        boxLayout(
+          valueBox("128", "Open tickets", icon = icon("inbox"),
+                   color = "primary"),
+          valueBox("42%", "CPU load",     icon = icon("cpu"),
+                   color = "warning"),
+          infoBox("Status", "Healthy",    icon = icon("heart-pulse"),
+                  color = "success")
+        ),
+        box("Hello, world!", title = "Welcome",
+            status = "primary", collapsible = TRUE)
+      ),
+      tabItem("reports", box("Report body", title = "Quarterly"))
+    )
+  )
+)
+
+shinyApp(ui, server = function(input, output, session) {})
+```
+
+For a full walk-through of every component, run the kitchen-sink demo:
+
+``` r
+
+shiny::runApp(
+  system.file("shiny/examples/14_kitchen_sink", package = "bslibdash")
+)
+```
+
+## Why bslibdash?
+
+- **vs raw [bslib](https://rstudio.github.io/bslib/)** — bslib gives you
+  the building blocks (themes, cards, sidebars). bslibdash assembles
+  them into a dashboard: a page shell, a sidebar menu with sub-items and
+  badges, header dropdowns, KPI tiles — so you don’t rebuild them in
+  every app.
+- **vs [shinydashboard](https://rstudio.github.io/shinydashboard/)** —
+  same names, same mental model, but rendered with Bootstrap 5 and
+  themed through bslib. Dynamic theming, dark mode and `bs_themer()`
+  work out of the box.
+- **vs [bs4Dash](https://rinterface.github.io/bs4Dash/)** — bslibdash
+  stays close to vanilla bslib, so dashboards inherit your bslib theme
+  rather than carrying a bespoke AdminLTE one.
+
+Because bslibdash is just bslib underneath, it also slots into apps
+built with [teal](https://insightsengineering.github.io/teal/), raw
+`bslib::page_*()` layouts,
+[shinyuieditor](https://rstudio.github.io/shinyuieditor/) and
+[bsicons](https://github.com/rstudio/bsicons) — all sharing the same
+theme, dark mode and `bs_themer()` machinery as your dashboard shell.
+
+## Learn more
+
+- [Get
+  started](https://novartis.github.io/bslibdash/articles/getting-started.html)
+  — a minimal skeleton and a migration guide from shinydashboard.
+- [Components](https://novartis.github.io/bslibdash/articles/components.html)
+  — a copy-pasteable tour of every component.
+- [Theming](https://novartis.github.io/bslibdash/articles/theming.html)
+  — customise
+  [`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md),
+  swap Bootswatch presets, add your own SCSS, and use
+  [`bslib::bs_themer()`](https://rstudio.github.io/bslib/reference/run_with_themer.html).
+- [Function
+  reference](https://novartis.github.io/bslibdash/reference/index.html)
+  — every exported function, organised by topic.
+- More example apps live in
+  [`inst/shiny/examples/`](https://novartis.github.io/bslibdash/inst/shiny/examples).
+
+## Getting help
+
+If you find a bug, please open an
+[issue](https://github.com/Novartis/bslibdash/issues) with a minimal
+reproducible example. To propose a change, see
+[CONTRIBUTING.md](https://novartis.github.io/bslibdash/CONTRIBUTING.md).
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of
+Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+By contributing to this project, you agree to abide by its terms.
+
+# Package index
+
+## Page layout
+
+The dashboard page shell and its top-level regions.
+
+- [`dashboardPage()`](https://novartis.github.io/bslibdash/reference/dashboardPage.md)
+  : Branded dashboard page
+- [`dashboardHeader()`](https://novartis.github.io/bslibdash/reference/dashboardHeader.md)
+  : Dashboard navbar
+- [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`sidebarMenu()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`menuItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`menuSubItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`sidebarHeader()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  : Create a dashboard main sidebar
+- [`dashboardBody()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  [`tabItems()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  [`tabItem()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  : Dashboard body
+- [`dashboardFooter()`](https://novartis.github.io/bslibdash/reference/dashboardFooter.md)
+  : Dashboard footer
+
+## Sidebar navigation
+
+Sidebar menus, sub-items and the user panel.
+
+- [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`sidebarMenu()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`menuItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`menuSubItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`sidebarHeader()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  : Create a dashboard main sidebar
+- [`sidebarMenuOutput()`](https://novartis.github.io/bslibdash/reference/sidebarMenuOutput.md)
+  : Sidebar menu output
+- [`sidebarUserPanel()`](https://novartis.github.io/bslibdash/reference/sidebarUserPanel.md)
+  : Sidebar user panel
+- [`sidebarSearchForm()`](https://novartis.github.io/bslibdash/reference/sidebarSearchForm.md)
+  : Create a search form to place in a sidebar
+
+## Body content
+
+Tabsets and grid helpers for laying out dashboard content.
+
+- [`dashboardBody()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  [`tabItems()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  [`tabItem()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  : Dashboard body
+- [`tabsetPanel()`](https://novartis.github.io/bslibdash/reference/tabsetPanel.md)
+  : bslibdash tabsetPanel
+- [`updateTabItems()`](https://novartis.github.io/bslibdash/reference/updateTabItems.md)
+  : Update the selected sidebar tab item
+- [`boxLayout()`](https://novartis.github.io/bslibdash/reference/boxLayout.md)
+  : Container for cards
+- [`column()`](https://novartis.github.io/bslibdash/reference/column.md)
+  : Column system
+
+## Cards and boxes
+
+Collapsible/closable cards and tabbed cards.
+
+- [`box()`](https://novartis.github.io/bslibdash/reference/box.md)
+  [`updateBox()`](https://novartis.github.io/bslibdash/reference/box.md)
+  [`updateCard()`](https://novartis.github.io/bslibdash/reference/box.md)
+  : Create a card
+- [`tabBox()`](https://novartis.github.io/bslibdash/reference/tabBox.md)
+  : Tab box
+
+## KPI tiles
+
+Value boxes and info boxes for headline metrics.
+
+- [`valueBox()`](https://novartis.github.io/bslibdash/reference/valueBox.md)
+  : Value box
+- [`valueBoxOutput()`](https://novartis.github.io/bslibdash/reference/valueBoxOutput.md)
+  : Value box output
+- [`renderValueBox()`](https://novartis.github.io/bslibdash/reference/renderValueBox.md)
+  : Render a value box
+- [`infoBox()`](https://novartis.github.io/bslibdash/reference/infoBox.md)
+  : Info box
+- [`infoBoxOutput()`](https://novartis.github.io/bslibdash/reference/infoBoxOutput.md)
+  : Info box output
+- [`renderInfoBox()`](https://novartis.github.io/bslibdash/reference/renderInfoBox.md)
+  : Render an info box
+
+## Header widgets
+
+Header dropdown menus for messages, notifications and tasks.
+
+- [`dropdownMenu()`](https://novartis.github.io/bslibdash/reference/dropdownMenu.md)
+  [`messageItem()`](https://novartis.github.io/bslibdash/reference/dropdownMenu.md)
+  [`notificationItem()`](https://novartis.github.io/bslibdash/reference/dropdownMenu.md)
+  [`taskItem()`](https://novartis.github.io/bslibdash/reference/dropdownMenu.md)
+  : Dropdown menu
+- [`dropdownMenuOutput()`](https://novartis.github.io/bslibdash/reference/dropdownMenuOutput.md)
+  : Dropdown menu output
+- [`renderDropdownMenu()`](https://novartis.github.io/bslibdash/reference/renderDropdownMenu.md)
+  : Render a dropdown menu
+- [`menuItemOutput()`](https://novartis.github.io/bslibdash/reference/menuItemOutput.md)
+  : Sidebar menu item output
+- [`renderMenu()`](https://novartis.github.io/bslibdash/reference/renderMenu.md)
+  : Render a sidebar menu element
+
+## Feedback and inputs
+
+Accordions, badges, buttons, icons and toasts.
+
+- [`accordion()`](https://novartis.github.io/bslibdash/reference/accordion.md)
+  [`accordionItem()`](https://novartis.github.io/bslibdash/reference/accordion.md)
+  : Accordion container
+- [`badge()`](https://novartis.github.io/bslibdash/reference/badge.md)
+  [`dashboardBadge()`](https://novartis.github.io/bslibdash/reference/badge.md)
+  : Create dashboard badge item
+- [`actionButton()`](https://novartis.github.io/bslibdash/reference/actionButton.md)
+  : Action button/link
+- [`icon()`](https://novartis.github.io/bslibdash/reference/icon.md) :
+  Create an bslibdash icon
+- [`toast()`](https://novartis.github.io/bslibdash/reference/toast.md) :
+  Create a toast
+
+## Theming
+
+Bootstrap 5 / bslib theme helpers.
+
+- [`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md)
+  : Default bslibdash brand theme
+
+## Package
+
+- [`bslibdash`](https://novartis.github.io/bslibdash/reference/bslibdash-package.md)
+  [`bslibdash-package`](https://novartis.github.io/bslibdash/reference/bslibdash-package.md)
+  : bslibdash: Bootstrap 5 dashboards for Shiny
+
+# Articles
+
+### Articles
+
+- [Getting started with
+  bslibdash](https://novartis.github.io/bslibdash/articles/getting-started.md):
+- [Components](https://novartis.github.io/bslibdash/articles/components.md):
+- [Theming](https://novartis.github.io/bslibdash/articles/theming.md):
