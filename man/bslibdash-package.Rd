@@ -44,6 +44,15 @@ bespoke SCSS.
 }
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Novartis/bslibdash}
+  \item \url{https://novartis.github.io/bslibdash/}
+  \item Report bugs at \url{https://github.com/Novartis/bslibdash/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Alexandros Kouretsis \email{alexandros@appsilon.com}
 
@@ -56,7 +65,7 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Novartis Pharma AG [copyright holder]
+  \item Novartis Open Source Initiative [copyright holder]
 }
 
 }

@@ -5,6 +5,9 @@ linters: linters_with_defaults(
  object_usage_linter = NULL
  )
 exclusions: list(
- "R/aliases.R"
+ "R/aliases.R",
+ "inst/shiny/examples",
+ "tests/manual",
+ "vignettes"
  )
 encoding: "UTF-8"
