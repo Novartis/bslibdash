@@ -48,19 +48,19 @@ dashboardBody(
 #> <div class="app-main-inner">
 #>   <div class="content-canvas flex-grow-1">
 #>     <div class="tabbable">
-#>       <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="5800">
+#>       <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="7819">
 #>         <li class="active">
-#>           <a href="#tab-5800-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
+#>           <a href="#tab-7819-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
 #>         </li>
 #>         <li>
-#>           <a href="#tab-5800-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
+#>           <a href="#tab-7819-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
 #>         </li>
 #>       </ul>
-#>       <div class="tab-content" data-tabsetid="5800">
-#>         <div class="tab-pane active" data-value="overview" id="tab-5800-1">
+#>       <div class="tab-content" data-tabsetid="7819">
+#>         <div class="tab-pane active" data-value="overview" id="tab-7819-1">
 #>           <h2>Overview</h2>
 #>         </div>
-#>         <div class="tab-pane" data-value="reports" id="tab-5800-2">
+#>         <div class="tab-pane" data-value="reports" id="tab-7819-2">
 #>           <h2>Reports</h2>
 #>         </div>
 #>       </div>
@@ -73,19 +73,19 @@ tabItems(
 )
 #> <div class="content-canvas flex-grow-1">
 #>   <div class="tabbable">
-#>     <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="1052">
+#>     <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="5331">
 #>       <li class="active">
-#>         <a href="#tab-1052-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
+#>         <a href="#tab-5331-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
 #>       </li>
 #>       <li>
-#>         <a href="#tab-1052-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
+#>         <a href="#tab-5331-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
 #>       </li>
 #>     </ul>
-#>     <div class="tab-content" data-tabsetid="1052">
-#>       <div class="tab-pane active" data-value="overview" id="tab-1052-1">
+#>     <div class="tab-content" data-tabsetid="5331">
+#>       <div class="tab-pane active" data-value="overview" id="tab-5331-1">
 #>         <p>Overview content</p>
 #>       </div>
-#>       <div class="tab-pane" data-value="reports" id="tab-1052-2">
+#>       <div class="tab-pane" data-value="reports" id="tab-5331-2">
 #>         <p>Reports content</p>
 #>       </div>
 #>     </div>
