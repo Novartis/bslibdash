@@ -31,7 +31,7 @@ sidebarSearchForm(
 
   An icon tag, created by
   [`shiny::icon()`](https://rdrr.io/pkg/shiny/man/icon.html) or
-  [`icon()`](https://novartis.github.io/bslibdash/reference/icon.md).
+  [`icon()`](https://opensource.nibr.com/bslibdash/reference/icon.md).
 
 ## Examples
 

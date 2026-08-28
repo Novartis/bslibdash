@@ -3,6 +3,6 @@
 ### Articles
 
 - [Getting started with
-  bslibdash](https://novartis.github.io/bslibdash/articles/getting-started.md):
-- [Components](https://novartis.github.io/bslibdash/articles/components.md):
-- [Theming](https://novartis.github.io/bslibdash/articles/theming.md):
+  bslibdash](https://opensource.nibr.com/bslibdash/articles/getting-started.md):
+- [Components](https://opensource.nibr.com/bslibdash/articles/components.md):
+- [Theming](https://opensource.nibr.com/bslibdash/articles/theming.md):

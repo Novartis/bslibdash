@@ -52,12 +52,12 @@ accordion(
 #>   <div class="accordion bslib-accordion-input" data-require-bs-caller="accordion()" data-require-bs-version="5" id="filters" style="width:100%;">
 #>     <div class="accordion-item" data-value="Date range">
 #>       <div class="accordion-header">
-#>         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-2192" aria-controls="bslib-accordion-panel-2192" aria-expanded="true">
+#>         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-1357" aria-controls="bslib-accordion-panel-1357" aria-expanded="true">
 #>           <div class="accordion-icon"></div>
 #>           <div class="accordion-title">Date range</div>
 #>         </button>
 #>       </div>
-#>       <div id="bslib-accordion-panel-2192" class="accordion-collapse collapse show">
+#>       <div id="bslib-accordion-panel-1357" class="accordion-collapse collapse show">
 #>         <div class="accordion-body">
 #>           <p>Last 30 days</p>
 #>         </div>
@@ -65,12 +65,12 @@ accordion(
 #>     </div>
 #>     <div class="accordion-item" data-value="Region">
 #>       <div class="accordion-header">
-#>         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-1314" aria-expanded="false" aria-controls="bslib-accordion-panel-1314">
+#>         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-7431" aria-expanded="false" aria-controls="bslib-accordion-panel-7431">
 #>           <div class="accordion-icon"></div>
 #>           <div class="accordion-title">Region</div>
 #>         </button>
 #>       </div>
-#>       <div id="bslib-accordion-panel-1314" class="accordion-collapse collapse">
+#>       <div id="bslib-accordion-panel-7431" class="accordion-collapse collapse">
 #>         <div class="accordion-body">
 #>           <p>All regions</p>
 #>         </div>
@@ -86,12 +86,12 @@ accordionItem(
 )
 #> <div class="accordion-item bslibdash-accordion-item bslibdash-accordion-item-info" data-value="Advanced settings">
 #>   <div class="accordion-header">
-#>     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-1136" aria-expanded="false" aria-controls="bslib-accordion-panel-1136">
+#>     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-4302" aria-expanded="false" aria-controls="bslib-accordion-panel-4302">
 #>       <div class="accordion-icon"></div>
 #>       <div class="accordion-title">Advanced settings</div>
 #>     </button>
 #>   </div>
-#>   <div id="bslib-accordion-panel-1136" class="accordion-collapse collapse">
+#>   <div id="bslib-accordion-panel-4302" class="accordion-collapse collapse">
 #>     <div class="accordion-body">
 #>       <p>Optional controls</p>
 #>     </div>

@@ -39,7 +39,7 @@ dashboardHeader(
 - disable:
 
   Whether to disable and omit the header. When `TRUE`,
-  [`dashboardPage()`](https://novartis.github.io/bslibdash/reference/dashboardPage.md)
+  [`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md)
   renders without a header bar and the body occupies the freed vertical
   space.
 

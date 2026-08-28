@@ -1,7 +1,7 @@
 # Update the selected sidebar tab item
 
 This updates the hidden body tabset used by
-[`tabItems()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+[`tabItems()`](https://opensource.nibr.com/bslibdash/reference/dashboardBody.md)
 and keeps the sidebar active item synchronized with the selected tab.
 
 ## Usage

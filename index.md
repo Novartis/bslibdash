@@ -99,9 +99,9 @@ shiny::runApp(
   same names, same mental model, but rendered with Bootstrap 5 and
   themed through bslib. Dynamic theming, dark mode and `bs_themer()`
   work out of the box.
-- **vs [bs4Dash](https://rinterface.github.io/bs4Dash/)** — bslibdash
-  stays close to vanilla bslib, so dashboards inherit your bslib theme
-  rather than carrying a bespoke AdminLTE one.
+- **vs [bs4Dash](https://bs4dash.rinterface.com/)** — bslibdash stays
+  close to vanilla bslib, so dashboards inherit your bslib theme rather
+  than carrying a bespoke AdminLTE one.
 
 Because bslibdash is just bslib underneath, it also slots into apps
 built with [teal](https://insightsengineering.github.io/teal/), raw
@@ -113,27 +113,27 @@ theme, dark mode and `bs_themer()` machinery as your dashboard shell.
 ## Learn more
 
 - [Get
-  started](https://novartis.github.io/bslibdash/articles/getting-started.html)
+  started](https://opensource.nibr.com/bslibdash/articles/getting-started.html)
   — a minimal skeleton and a migration guide from shinydashboard.
-- [Components](https://novartis.github.io/bslibdash/articles/components.html)
+- [Components](https://opensource.nibr.com/bslibdash/articles/components.html)
   — a copy-pasteable tour of every component.
-- [Theming](https://novartis.github.io/bslibdash/articles/theming.html)
+- [Theming](https://opensource.nibr.com/bslibdash/articles/theming.html)
   — customise
-  [`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md),
+  [`brand_bs_theme()`](https://opensource.nibr.com/bslibdash/reference/brand_bs_theme.md),
   swap Bootswatch presets, add your own SCSS, and use
   [`bslib::bs_themer()`](https://rstudio.github.io/bslib/reference/run_with_themer.html).
 - [Function
-  reference](https://novartis.github.io/bslibdash/reference/index.html)
+  reference](https://opensource.nibr.com/bslibdash/reference/index.html)
   — every exported function, organised by topic.
 - More example apps live in
-  [`inst/shiny/examples/`](https://novartis.github.io/bslibdash/inst/shiny/examples).
+  [`inst/shiny/examples/`](https://opensource.nibr.com/bslibdash/inst/shiny/examples).
 
 ## Getting help
 
 If you find a bug, please open an
 [issue](https://github.com/Novartis/bslibdash/issues) with a minimal
 reproducible example. To propose a change, see
-[CONTRIBUTING.md](https://novartis.github.io/bslibdash/CONTRIBUTING.md).
+[CONTRIBUTING.md](https://opensource.nibr.com/bslibdash/CONTRIBUTING.md).
 
 ## Code of Conduct
 

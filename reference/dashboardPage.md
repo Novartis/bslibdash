@@ -3,7 +3,7 @@
 A bslib sidebar layout that arranges the four standard dashboard slots.
 The `title` argument, when set, replaces the title text inside `header`
 if
-[`dashboardHeader()`](https://novartis.github.io/bslibdash/reference/dashboardHeader.md)
+[`dashboardHeader()`](https://opensource.nibr.com/bslibdash/reference/dashboardHeader.md)
 was called without one.
 
 ## Usage
@@ -24,17 +24,17 @@ dashboardPage(
 - header:
 
   Slot for
-  [`dashboardHeader()`](https://novartis.github.io/bslibdash/reference/dashboardHeader.md).
+  [`dashboardHeader()`](https://opensource.nibr.com/bslibdash/reference/dashboardHeader.md).
 
 - sidebar:
 
   Slot for
-  [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md).
+  [`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md).
 
 - body:
 
   Slot for
-  [`dashboardBody()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md).
+  [`dashboardBody()`](https://opensource.nibr.com/bslibdash/reference/dashboardBody.md).
 
 - title:
 
@@ -43,12 +43,12 @@ dashboardPage(
 - footer:
 
   Optional slot for
-  [`dashboardFooter()`](https://novartis.github.io/bslibdash/reference/dashboardFooter.md).
+  [`dashboardFooter()`](https://opensource.nibr.com/bslibdash/reference/dashboardFooter.md).
 
 - theme:
 
   A `bslib` theme. Defaults to
-  [`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md).
+  [`brand_bs_theme()`](https://opensource.nibr.com/bslibdash/reference/brand_bs_theme.md).
 
 ## Value
 

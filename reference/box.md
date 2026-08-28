@@ -61,9 +61,9 @@ updateCard(
   Accepted values are Bootstrap semantic names: `"primary"`,
   `"secondary"`, `"success"`, `"info"`, `"warning"`, `"danger"`,
   `"light"`, `"dark"`. Unlike
-  [`valueBox()`](https://novartis.github.io/bslibdash/reference/valueBox.md)
+  [`valueBox()`](https://opensource.nibr.com/bslibdash/reference/valueBox.md)
   and
-  [`infoBox()`](https://novartis.github.io/bslibdash/reference/infoBox.md),
+  [`infoBox()`](https://opensource.nibr.com/bslibdash/reference/infoBox.md),
   legacy `shinydashboard` color names (e.g. `"aqua"`, `"blue"`) are
   **not** supported here.
 
@@ -79,12 +79,12 @@ updateCard(
   columns and the card is automatically wrapped in
   [`shiny::column()`](https://rdrr.io/pkg/shiny/man/column.html),
   consistent with
-  [`valueBox()`](https://novartis.github.io/bslibdash/reference/valueBox.md)
+  [`valueBox()`](https://opensource.nibr.com/bslibdash/reference/valueBox.md)
   and
-  [`infoBox()`](https://novartis.github.io/bslibdash/reference/infoBox.md).
+  [`infoBox()`](https://opensource.nibr.com/bslibdash/reference/infoBox.md).
   Any other value (e.g. `"300px"`) is applied as an inline CSS `width`.
   Use `NULL` when placing the card inside an existing column or a
-  [`boxLayout()`](https://novartis.github.io/bslibdash/reference/boxLayout.md).
+  [`boxLayout()`](https://opensource.nibr.com/bslibdash/reference/boxLayout.md).
 
 - height:
 
@@ -133,7 +133,7 @@ updateCard(
 ## See also
 
 Other cards:
-[`boxLayout()`](https://novartis.github.io/bslibdash/reference/boxLayout.md)
+[`boxLayout()`](https://opensource.nibr.com/bslibdash/reference/boxLayout.md)
 
 ## Examples
 

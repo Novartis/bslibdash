@@ -29,7 +29,7 @@ sidebarUserPanel(name, image = NULL, subtitle = NULL)
 ## Value
 
 An htmltools `<div>` tag intended to be passed into
-[`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md).
+[`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md).
 
 ## Details
 

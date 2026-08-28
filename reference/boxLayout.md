@@ -13,7 +13,7 @@ boxLayout(..., .list = NULL, type = c("group", "deck", "columns"))
 - ...:
 
   Slot for
-  [`box()`](https://novartis.github.io/bslibdash/reference/box.md).
+  [`box()`](https://opensource.nibr.com/bslibdash/reference/box.md).
 
 - .list:
 
@@ -39,7 +39,7 @@ boxLayout(..., .list = NULL, type = c("group", "deck", "columns"))
 ## See also
 
 Other cards:
-[`box()`](https://novartis.github.io/bslibdash/reference/box.md)
+[`box()`](https://opensource.nibr.com/bslibdash/reference/box.md)
 
 ## Examples
 

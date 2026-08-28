@@ -1,7 +1,7 @@
 # Theming
 
 bslibdash ships a single brand theme,
-\[[`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md)\],
+\[[`brand_bs_theme()`](https://opensource.nibr.com/bslibdash/reference/brand_bs_theme.md)\],
 that every page constructor applies by default. This vignette shows how
 to use it as-is, tweak individual Bootstrap variables, add your own
 SCSS, swap to a different Bootswatch preset, and tune the theme
@@ -13,7 +13,7 @@ articles](https://rstudio.github.io/bslib/articles/theming/).
 
 ## The default theme
 
-[`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md)
+[`brand_bs_theme()`](https://opensource.nibr.com/bslibdash/reference/brand_bs_theme.md)
 returns a
 [`bslib::bs_theme()`](https://rstudio.github.io/bslib/reference/bs_theme.html)
 built on Bootstrap 5 (`bootswatch = "bootstrap"`) with the bslibdash
@@ -98,7 +98,7 @@ so any
 including a plain `bslib::bs_theme(version = 5)` - still renders the
 package’s custom classes (`.bslibdash-value-box`, `.bslibdash-info-box`,
 `.app-sidebar`, …). Use
-[`brand_bs_theme()`](https://novartis.github.io/bslibdash/reference/brand_bs_theme.md)
+[`brand_bs_theme()`](https://opensource.nibr.com/bslibdash/reference/brand_bs_theme.md)
 when you want the bslibdash brand defaults; use your own
 [`bs_theme()`](https://rstudio.github.io/bslib/reference/bs_theme.html)
 when you do not.

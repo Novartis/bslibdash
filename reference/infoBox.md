@@ -35,7 +35,7 @@ infoBox(
 
   An icon tag, created by
   [`shiny::icon()`](https://rdrr.io/pkg/shiny/man/icon.html) or
-  [`icon()`](https://novartis.github.io/bslibdash/reference/icon.md).
+  [`icon()`](https://opensource.nibr.com/bslibdash/reference/icon.md).
 
 - color:
 
@@ -45,7 +45,7 @@ infoBox(
   to fixed hex values; Bootstrap names reference CSS theme variables so
   they follow the active theme. A contrasting foreground color is
   computed automatically. Note:
-  [`box()`](https://novartis.github.io/bslibdash/reference/box.md) uses
+  [`box()`](https://opensource.nibr.com/bslibdash/reference/box.md) uses
   a simpler `status` parameter that only accepts Bootstrap semantic
   names and applies them as utility classes.
 

@@ -13,9 +13,9 @@ renderMenu(expr, env = parent.frame(), quoted = FALSE)
 - expr:
 
   An expression that returns a
-  [`menuItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`menuItem()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md)
   or
-  [`sidebarMenu()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`sidebarMenu()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md)
   tag.
 
 - env:

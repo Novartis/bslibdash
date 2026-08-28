@@ -33,7 +33,7 @@ tabItem(tabName = NULL, ...)
 - `tabItems()` is the parent container.
 
 - `tabItem(tabName)` is one tab; `tabName` must match the corresponding
-  [`menuItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md)
+  [`menuItem()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md)
   `tabName`.
 
 ## Examples
@@ -48,19 +48,19 @@ dashboardBody(
 #> <div class="app-main-inner">
 #>   <div class="content-canvas flex-grow-1">
 #>     <div class="tabbable">
-#>       <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="3399">
+#>       <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="6898">
 #>         <li class="active">
-#>           <a href="#tab-3399-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
+#>           <a href="#tab-6898-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
 #>         </li>
 #>         <li>
-#>           <a href="#tab-3399-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
+#>           <a href="#tab-6898-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
 #>         </li>
 #>       </ul>
-#>       <div class="tab-content" data-tabsetid="3399">
-#>         <div class="tab-pane active" data-value="overview" id="tab-3399-1">
+#>       <div class="tab-content" data-tabsetid="6898">
+#>         <div class="tab-pane active" data-value="overview" id="tab-6898-1">
 #>           <h2>Overview</h2>
 #>         </div>
-#>         <div class="tab-pane" data-value="reports" id="tab-3399-2">
+#>         <div class="tab-pane" data-value="reports" id="tab-6898-2">
 #>           <h2>Reports</h2>
 #>         </div>
 #>       </div>
@@ -73,19 +73,19 @@ tabItems(
 )
 #> <div class="content-canvas flex-grow-1">
 #>   <div class="tabbable">
-#>     <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="9564">
+#>     <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="4121">
 #>       <li class="active">
-#>         <a href="#tab-9564-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
+#>         <a href="#tab-4121-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
 #>       </li>
 #>       <li>
-#>         <a href="#tab-9564-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
+#>         <a href="#tab-4121-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
 #>       </li>
 #>     </ul>
-#>     <div class="tab-content" data-tabsetid="9564">
-#>       <div class="tab-pane active" data-value="overview" id="tab-9564-1">
+#>     <div class="tab-content" data-tabsetid="4121">
+#>       <div class="tab-pane active" data-value="overview" id="tab-4121-1">
 #>         <p>Overview content</p>
 #>       </div>
-#>       <div class="tab-pane" data-value="reports" id="tab-9564-2">
+#>       <div class="tab-pane" data-value="reports" id="tab-4121-2">
 #>         <p>Reports content</p>
 #>       </div>
 #>     </div>

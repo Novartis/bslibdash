@@ -1,9 +1,9 @@
 # Components
 
 A guided tour of the UI components in bslibdash. New here? Start with
-[`vignette("getting-started")`](https://novartis.github.io/bslibdash/articles/getting-started.md)
+[`vignette("getting-started")`](https://opensource.nibr.com/bslibdash/articles/getting-started.md)
 for an end-to-end app; for restyling see
-[`vignette("theming")`](https://novartis.github.io/bslibdash/articles/theming.md).
+[`vignette("theming")`](https://opensource.nibr.com/bslibdash/articles/theming.md).
 
 All examples assume:
 
@@ -15,11 +15,11 @@ library(bslibdash)
 
 ## Cards
 
-[`box()`](https://novartis.github.io/bslibdash/reference/box.md) is the
+[`box()`](https://opensource.nibr.com/bslibdash/reference/box.md) is the
 primary card.
-[`boxLayout()`](https://novartis.github.io/bslibdash/reference/boxLayout.md)
+[`boxLayout()`](https://opensource.nibr.com/bslibdash/reference/boxLayout.md)
 arranges several cards in a responsive grid, and
-[`updateBox()`](https://novartis.github.io/bslibdash/reference/box.md)
+[`updateBox()`](https://opensource.nibr.com/bslibdash/reference/box.md)
 controls a card from the server.
 
 ``` r
@@ -87,7 +87,7 @@ dashboardSidebar(
 ```
 
 Navigate from the server with
-[`updateTabItems()`](https://novartis.github.io/bslibdash/reference/updateTabItems.md):
+[`updateTabItems()`](https://opensource.nibr.com/bslibdash/reference/updateTabItems.md):
 
 ``` r
 
@@ -114,8 +114,8 @@ dashboardHeader(
 ```
 
 Use
-[`dropdownMenuOutput()`](https://novartis.github.io/bslibdash/reference/dropdownMenuOutput.md) +
-[`renderDropdownMenu()`](https://novartis.github.io/bslibdash/reference/renderDropdownMenu.md)
+[`dropdownMenuOutput()`](https://opensource.nibr.com/bslibdash/reference/dropdownMenuOutput.md) +
+[`renderDropdownMenu()`](https://opensource.nibr.com/bslibdash/reference/renderDropdownMenu.md)
 to drive the panel reactively. See the next section for the full set of
 output/render pairs.
 
@@ -128,10 +128,10 @@ matching `render*()`:
 
 | UI side | Server side | Re-renders |
 |----|----|----|
-| [`valueBoxOutput()`](https://novartis.github.io/bslibdash/reference/valueBoxOutput.md) | [`renderValueBox()`](https://novartis.github.io/bslibdash/reference/renderValueBox.md) | A single [`valueBox()`](https://novartis.github.io/bslibdash/reference/valueBox.md) |
-| [`infoBoxOutput()`](https://novartis.github.io/bslibdash/reference/infoBoxOutput.md) | [`renderInfoBox()`](https://novartis.github.io/bslibdash/reference/renderInfoBox.md) | A single [`infoBox()`](https://novartis.github.io/bslibdash/reference/infoBox.md) |
-| [`dropdownMenuOutput()`](https://novartis.github.io/bslibdash/reference/dropdownMenuOutput.md) | [`renderDropdownMenu()`](https://novartis.github.io/bslibdash/reference/renderDropdownMenu.md) | A header [`dropdownMenu()`](https://novartis.github.io/bslibdash/reference/dropdownMenu.md) |
-| [`sidebarMenuOutput()`](https://novartis.github.io/bslibdash/reference/sidebarMenuOutput.md) | [`renderMenu()`](https://novartis.github.io/bslibdash/reference/renderMenu.md) | A [`sidebarMenu()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md) |
+| [`valueBoxOutput()`](https://opensource.nibr.com/bslibdash/reference/valueBoxOutput.md) | [`renderValueBox()`](https://opensource.nibr.com/bslibdash/reference/renderValueBox.md) | A single [`valueBox()`](https://opensource.nibr.com/bslibdash/reference/valueBox.md) |
+| [`infoBoxOutput()`](https://opensource.nibr.com/bslibdash/reference/infoBoxOutput.md) | [`renderInfoBox()`](https://opensource.nibr.com/bslibdash/reference/renderInfoBox.md) | A single [`infoBox()`](https://opensource.nibr.com/bslibdash/reference/infoBox.md) |
+| [`dropdownMenuOutput()`](https://opensource.nibr.com/bslibdash/reference/dropdownMenuOutput.md) | [`renderDropdownMenu()`](https://opensource.nibr.com/bslibdash/reference/renderDropdownMenu.md) | A header [`dropdownMenu()`](https://opensource.nibr.com/bslibdash/reference/dropdownMenu.md) |
+| [`sidebarMenuOutput()`](https://opensource.nibr.com/bslibdash/reference/sidebarMenuOutput.md) | [`renderMenu()`](https://opensource.nibr.com/bslibdash/reference/renderMenu.md) | A [`sidebarMenu()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md) |
 
 ## Accordion, badges, buttons, icons
 
@@ -154,7 +154,7 @@ icon("bar-chart", size = "1.25rem", class = "text-primary")
 
 ## Toasts
 
-[`toast()`](https://novartis.github.io/bslibdash/reference/toast.md) is
+[`toast()`](https://opensource.nibr.com/bslibdash/reference/toast.md) is
 a thin wrapper over
 [`shiny::showNotification()`](https://rdrr.io/pkg/shiny/man/showNotification.html)
 that uses a

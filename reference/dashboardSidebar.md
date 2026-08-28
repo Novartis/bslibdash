@@ -88,7 +88,7 @@ sidebarHeader(title)
 - tabName:
 
   Matching
-  [`tabItem()`](https://novartis.github.io/bslibdash/reference/dashboardBody.md)
+  [`tabItem()`](https://opensource.nibr.com/bslibdash/reference/dashboardBody.md)
   name.
 
 - selected:

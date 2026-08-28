@@ -16,9 +16,9 @@ This vignette walks through the smallest dashboard you can build and the
 changes you’ll need to port an existing
 [shinydashboard](https://rstudio.github.io/shinydashboard/) app. From
 here, head to
-[`vignette("components")`](https://novartis.github.io/bslibdash/articles/components.md)
+[`vignette("components")`](https://opensource.nibr.com/bslibdash/articles/components.md)
 for the component tour and
-[`vignette("theming")`](https://novartis.github.io/bslibdash/articles/theming.md)
+[`vignette("theming")`](https://opensource.nibr.com/bslibdash/articles/theming.md)
 to restyle.
 
 ## Minimal dashboard skeleton
@@ -69,7 +69,7 @@ shinyApp(ui, server)
 ## Programmatic tab navigation
 
 Use
-[`updateTabItems()`](https://novartis.github.io/bslibdash/reference/updateTabItems.md)
+[`updateTabItems()`](https://opensource.nibr.com/bslibdash/reference/updateTabItems.md)
 from server logic when you need to move users to a different tab based
 on an event:
 
@@ -107,7 +107,7 @@ counterparts and can be called the same way:
 ### Behavioural differences to know about
 
 - **`appName` is gone.** Use `title` instead in
-  [`dashboardPage()`](https://novartis.github.io/bslibdash/reference/dashboardPage.md)
+  [`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md)
   (matches `shiny`/`shinydashboard`).
 - **`box(collapsible)` defaults to `FALSE`** (matches shinydashboard).
   Pass `collapsible = TRUE` explicitly to get a collapse toggle.
@@ -123,9 +123,9 @@ the recommended bslibdash approach.
 
 | shinydashboard param | Where | bslibdash replacement |
 |----|----|----|
-| `solidHeader` | [`box()`](https://novartis.github.io/bslibdash/reference/box.md) | Use `status` + theming for visual emphasis. |
-| `skin` | [`dashboardPage()`](https://novartis.github.io/bslibdash/reference/dashboardPage.md) | Set `theme = brand_bs_theme(...)`. |
-| `options` | [`dashboardPage()`](https://novartis.github.io/bslibdash/reference/dashboardPage.md) | Not supported. |
+| `solidHeader` | [`box()`](https://opensource.nibr.com/bslibdash/reference/box.md) | Use `status` + theming for visual emphasis. |
+| `skin` | [`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md) | Set `theme = brand_bs_theme(...)`. |
+| `options` | [`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md) | Not supported. |
 
 ### Accepted, but implemented differently
 
@@ -135,9 +135,9 @@ from shinydashboard:
 
 | shinydashboard param | Where | bslibdash behaviour |
 |----|----|----|
-| `disable` | [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md) | When `TRUE`, the sidebar is omitted entirely. |
-| `width` | [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md) | Sets the `--app-sidebar-width` CSS variable. Prefer the bslib theme for global widths. |
-| `collapsed` | [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md) | Starts the sidebar collapsed via a CSS class. |
+| `disable` | [`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md) | When `TRUE`, the sidebar is omitted entirely. |
+| `width` | [`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md) | Sets the `--app-sidebar-width` CSS variable. Prefer the bslib theme for global widths. |
+| `collapsed` | [`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md) | Starts the sidebar collapsed via a CSS class. |
 
 ### Silently ignored — use these instead
 
@@ -147,9 +147,9 @@ instead:
 
 | shinydashboard param | Where | bslibdash approach |
 |----|----|----|
-| `minified`, `expandOnHover` | [`dashboardSidebar()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md) | Not supported. Style via `bs_theme()` if you need a similar effect. |
-| `titleWidth` | [`dashboardHeader()`](https://novartis.github.io/bslibdash/reference/dashboardHeader.md) | Styled by the theme. |
-| `href`, `newtab` | [`menuItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md) | Use `tags$a(href = ..., target = "_blank", text)` inside the sidebar instead of [`menuItem()`](https://novartis.github.io/bslibdash/reference/dashboardSidebar.md). |
+| `minified`, `expandOnHover` | [`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md) | Not supported. Style via `bs_theme()` if you need a similar effect. |
+| `titleWidth` | [`dashboardHeader()`](https://opensource.nibr.com/bslibdash/reference/dashboardHeader.md) | Styled by the theme. |
+| `href`, `newtab` | [`menuItem()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md) | Use `tags$a(href = ..., target = "_blank", text)` inside the sidebar instead of [`menuItem()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md). |
 
 ### Colour name mapping
 

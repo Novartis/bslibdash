@@ -25,7 +25,7 @@ produces the matching bslibdash styles. `brand_bs_theme()` exists to set
 the Bootstrap-level variables used as defaults by bslibdash page
 constructors.
 
-[`dashboardPage()`](https://novartis.github.io/bslibdash/reference/dashboardPage.md)
+[`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md)
 applies this theme by default. To customise it, override variables or
 rules via bslib and pass the result through the page `theme` argument:
 
