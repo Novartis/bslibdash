@@ -1,4 +1,4 @@
-# bslibdash
+# bslibdash <img src="man/figures/logo.png" align="right" height="139" alt="bslibdash hex logo" />
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)

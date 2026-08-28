@@ -11,6 +11,7 @@
 ^cran-comments\.md$
 ^docs$
 ^_pkgdown\.yml$
+^pkgdown$
 ^coverage$
 ^inst/shiny/examples/.*/rsconnect$
 ^inst/shiny/examples/.*/\.?log$

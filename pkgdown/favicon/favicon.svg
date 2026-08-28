@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b2078"></stop>
+      <stop offset="58%" stop-color="#ee2a7b"></stop>
+      <stop offset="100%" stop-color="#ff4d72"></stop>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff3b7f"></stop>
+      <stop offset="48%" stop-color="#b34ee9"></stop>
+      <stop offset="100%" stop-color="#13c8f4"></stop>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff477f"></stop>
+      <stop offset="48%" stop-color="#ce45c9"></stop>
+      <stop offset="100%" stop-color="#16c8f3"></stop>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd15c"></stop>
+      <stop offset="100%" stop-color="#ff6b63"></stop>
+    </linearGradient>
+    <clipPath id="hexClip">
+      <path d="M600 28 L1080 305 Q1090 311 1090 324 L1090 876 Q1090 889 1080 895 L600 1172 Q590 1178 580 1172 L100 895 Q90 889 90 876 L90 324 Q90 311 100 305 L580 28 Q590 22 600 28 Z"></path>
+    </clipPath>
+  </defs><g clip-path="url(#hexClip)">
+    <!-- base -->
+    <rect x="0" y="0" width="1200" height="1200" fill="#041530"></rect>
+
+    <!-- synthwave sky -->
+    <path d="M90 324 L590 35 L1090 324 L1090 470 L90 470 Z" fill="url(#sky)"></path>
+
+    <!-- sun -->
+    <circle cx="605" cy="355" r="145" fill="url(#sun)"></circle>
+    <rect x="450" y="355" width="310" height="10" fill="#d43b74"></rect>
+    <rect x="455" y="382" width="300" height="10" fill="#d43b74"></rect>
+    <rect x="462" y="409" width="286" height="10" fill="#d43b74"></rect>
+    <rect x="468" y="436" width="274" height="10" fill="#d43b74"></rect>
+
+    <!-- horizon -->
+    <rect x="90" y="455" width="1000" height="9" fill="#7e287c" opacity="0.92"></rect>
+    <rect x="90" y="475" width="1000" height="9" fill="#ff4e72"></rect>
+    <rect x="90" y="495" width="1000" height="9" fill="#f05281"></rect>
+
+    <!-- sidebar -->
+    <path d="M105 330 Q105 305 130 292 L245 230 Q280 213 292 245 L292 880 L105 880 Z" fill="#03122b" opacity="0.98"></path>
+    <path d="M105 880 L105 330 Q105 305 130 292" fill="none" stroke="#6e2f91" stroke-width="4"></path>
+    <line x1="292" y1="245" x2="292" y2="840" stroke="#6e2f91" stroke-width="4"></line>
+
+    <!-- house icon -->
+    <path d="M160 386 L204 346 L248 386 L238 397 L229 389 L229 432 L211 432 L211 403 L196 403 L196 432 L178 432 L178 389 L170 397 Z" fill="url(#neon)"></path>
+
+    <!-- sidebar menu -->
+    <rect x="146" y="545" width="112" height="16" rx="8" fill="#ff3b7f"></rect>
+    <rect x="146" y="630" width="112" height="16" rx="8" fill="#7a3cc3"></rect>
+    <rect x="146" y="715" width="112" height="16" rx="8" fill="#7454d8"></rect>
+
+    <!-- chart card -->
+    <rect x="335" y="520" width="735" height="330" rx="28" fill="#061633" stroke="#7f39a7" stroke-width="5"></rect>
+
+    <!-- minimalist line plot, no dots / no grid -->
+    <polyline points="385,805 470,755 525,772 610,700 680,745 790,645 870,685 1035,565" fill="none" stroke="url(#neon)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"></polyline>
+
+    <!-- wordmark -->
+    <text x="615" y="1000" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="142" font-weight="700" letter-spacing="-5" fill="url(#wordmark)">bslibdash</text>
+
+    <!-- retro taper lines -->
+    <path d="M340 1045 H860 L842 1058 H358 Z" fill="#6a3095"></path>
+    <path d="M390 1080 H810 L792 1093 H408 Z" fill="#66329d"></path>
+    <path d="M445 1115 H755 L737 1128 H463 Z" fill="#6032a1"></path>
+    <path d="M505 1150 H695 L677 1163 H523 Z" fill="#59309b"></path>
+  </g><path d="M600 28 L1080 305 Q1090 311 1090 324 L1090 876 Q1090 889 1080 895 L600 1172 Q590 1178 580 1172 L100 895 Q90 889 90 876 L90 324 Q90 311 100 305 L580 28 Q590 22 600 28 Z" fill="none" stroke="#03122b" stroke-width="28" stroke-linejoin="round"></path><path d="M600 55 L1057 319 Q1065 324 1065 334 L1065 866 Q1065 876 1057 881 L600 1145 Q590 1151 580 1145 L123 881 Q115 876 115 866 L115 334 Q115 324 123 319 L580 55 Q590 49 600 55 Z" fill="none" stroke="url(#neon)" stroke-width="4" opacity="0.9"></path></svg>
