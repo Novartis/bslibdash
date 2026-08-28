@@ -13,7 +13,7 @@ Description: Build modern Bootstrap 5 dashboards in Shiny with bslib. Provides a
     API is inspired by shinydashboard where the underlying concepts are shared, helping existing apps 
     migrate with minimal changes while supporting a cleaner, more flexible dashboard design style.
 License: MIT + file LICENSE
-URL: https://github.com/Novartis/bslibdash, https://novartis.github.io/bslibdash/
+URL: https://github.com/Novartis/bslibdash, https://opensource.nibr.com/bslibdash/
 BugReports: https://github.com/Novartis/bslibdash/issues
 Depends:
     R (>= 4.1.0)

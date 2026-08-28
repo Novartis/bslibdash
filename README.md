@@ -102,7 +102,7 @@ shiny::runApp(
   same names, same mental model, but rendered with Bootstrap 5 and
   themed through bslib. Dynamic theming, dark mode and `bs_themer()`
   work out of the box.
-* **vs [bs4Dash](https://rinterface.github.io/bs4Dash/)** — bslibdash
+* **vs [bs4Dash](https://bs4dash.rinterface.com/)** — bslibdash
   stays close to vanilla bslib, so dashboards inherit your bslib theme
   rather than carrying a bespoke AdminLTE one.
 
@@ -115,14 +115,14 @@ theme, dark mode and `bs_themer()` machinery as your dashboard shell.
 
 ## Learn more
 
-* [Get started](https://novartis.github.io/bslibdash/articles/getting-started.html) —
+* [Get started](https://opensource.nibr.com/bslibdash/articles/getting-started.html) —
   a minimal skeleton and a migration guide from shinydashboard.
-* [Components](https://novartis.github.io/bslibdash/articles/components.html) —
+* [Components](https://opensource.nibr.com/bslibdash/articles/components.html) —
   a copy-pasteable tour of every component.
-* [Theming](https://novartis.github.io/bslibdash/articles/theming.html) —
+* [Theming](https://opensource.nibr.com/bslibdash/articles/theming.html) —
   customise `brand_bs_theme()`, swap Bootswatch presets, add your own
   SCSS, and use `bslib::bs_themer()`.
-* [Function reference](https://novartis.github.io/bslibdash/reference/index.html) —
+* [Function reference](https://opensource.nibr.com/bslibdash/reference/index.html) —
   every exported function, organised by topic.
 * More example apps live in [`inst/shiny/examples/`](inst/shiny/examples).
 

@@ -48,7 +48,7 @@ bespoke SCSS.
 Useful links:
 \itemize{
   \item \url{https://github.com/Novartis/bslibdash}
-  \item \url{https://novartis.github.io/bslibdash/}
+  \item \url{https://opensource.nibr.com/bslibdash/}
   \item Report bugs at \url{https://github.com/Novartis/bslibdash/issues}
 }
 
