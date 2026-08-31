@@ -133,7 +133,7 @@ theme, dark mode and `bs_themer()` machinery as your dashboard shell.
 If you find a bug, please open an
 [issue](https://github.com/Novartis/bslibdash/issues) with a minimal
 reproducible example. To propose a change, see
-[CONTRIBUTING.md](https://opensource.nibr.com/bslibdash/CONTRIBUTING.md).
+[CONTRIBUTING.md](https://github.com/Novartis/bslibdash/blob/main/CONTRIBUTING.md).
 
 ## Code of Conduct
 
