@@ -1,5 +1,13 @@
 url: https://opensource.nibr.com/bslibdash/
 
+home:
+  title: "bslibdash: Modern sidebar navigation for Shiny"
+  description: >
+    bslibdash provides dashboard-style sidebar navigation for Shiny
+    applications built with bslib and Bootstrap 5 - sidebar menus,
+    nested navigation, badges, and tab-oriented dashboard layouts.
+    Developed by Novartis.
+
 template:
   bootstrap: 5
   bslib:
@@ -22,13 +30,31 @@ development:
 
 navbar:
   structure:
-    left: [intro, reference, articles, news]
+    left: [intro, articles, reference, news]
     right: [search, github]
+  components:
+    articles:
+      text: Articles
+      menu:
+      - text: "Sidebar navigation in Shiny"
+        href: articles/sidebar-navigation.html
+      - text: "Migrating from shinydashboard"
+        href: articles/sidebar-navigation.html#migrating-from-shinydashboard
+      - text: "Migrating from bs4Dash"
+        href: articles/sidebar-navigation.html#migrating-from-bs4dash
+      - text: "-------"
+      - text: "Get started"
+        href: articles/getting-started.html
+      - text: "Components"
+        href: articles/components.html
+      - text: "Theming"
+        href: articles/theming.html
 
 articles:
   - title: Articles
     navbar: ~
     contents:
+      - sidebar-navigation
       - getting-started
       - components
       - theming

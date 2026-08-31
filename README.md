@@ -6,18 +6,26 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-bslibdash gives you the vocabulary of a dashboard — a page shell, a
-sidebar menu, cards, KPI tiles, header widgets — built on top of
-[bslib](https://rstudio.github.io/bslib/) and Bootstrap 5. Because it's
-a thin layer over bslib, dashboards built with bslibdash inherit your
-theme, dark mode and `bslib::bs_themer()` for free, and play nicely
-with other bslib-based Shiny packages like
-[teal](https://insightsengineering.github.io/teal/).
+bslibdash provides modern dashboard-style sidebar navigation for Shiny
+applications built with [bslib](https://rstudio.github.io/bslib/) and
+Bootstrap 5. bslib already gives Shiny a sidebar *layout*; bslibdash adds
+the dashboard-oriented navigation primitives on top of it — a sidebar
+menu, menu items, nested/sub-items, badges, and the matching tab content
+a click reveals — plus the page shell, cards, KPI tiles and header
+widgets around it. Because it's a thin layer over bslib, dashboards
+built with bslibdash inherit your theme, dark mode and
+`bslib::bs_themer()` for free, and play nicely with other bslib-based
+Shiny packages like [teal](https://insightsengineering.github.io/teal/).
 
-If you know [shinydashboard](https://rstudio.github.io/shinydashboard/),
-you already know most of the bslibdash API: function names and
-arguments mirror it wherever the underlying concept is the same, so
-porting an existing app is mostly search-and-replace.
+If you know [shinydashboard](https://rstudio.github.io/shinydashboard/)
+or [bs4Dash](https://bs4dash.rinterface.com/), you already know most of
+the bslibdash API: sidebar menu function names and arguments mirror
+theirs wherever the underlying concept is the same, so porting an
+existing dashboard's navigation is mostly search-and-replace — see
+`vignette("sidebar-navigation")` for the details of migrating from
+either package.
+
+`bslibdash` is an open-source R package developed by Novartis.
 
 ## Features
 
@@ -94,17 +102,27 @@ shiny::runApp(
 ## Why bslibdash?
 
 * **vs raw [bslib](https://rstudio.github.io/bslib/)** — bslib gives
-  you the building blocks (themes, cards, sidebars). bslibdash
-  assembles them into a dashboard: a page shell, a sidebar menu with
-  sub-items and badges, header dropdowns, KPI tiles — so you don't
-  rebuild them in every app.
+  you the building blocks (themes, cards, sidebar layouts). bslibdash
+  adds the dashboard sidebar-navigation model on top: a sidebar menu
+  with nested sub-items and badges, header dropdowns, KPI tiles — so
+  you don't rebuild that navigation plumbing in every app.
 * **vs [shinydashboard](https://rstudio.github.io/shinydashboard/)** —
-  same names, same mental model, but rendered with Bootstrap 5 and
-  themed through bslib. Dynamic theming, dark mode and `bs_themer()`
-  work out of the box.
-* **vs [bs4Dash](https://bs4dash.rinterface.com/)** — bslibdash
-  stays close to vanilla bslib, so dashboards inherit your bslib theme
-  rather than carrying a bespoke AdminLTE one.
+  same sidebar menu names (`sidebarMenu()`, `menuItem()`, ...), same
+  mental model, but rendered on `bslib`/Bootstrap 5 instead of AdminLTE
+  2/Bootstrap 3. Dynamic theming, dark mode and `bs_themer()` work out
+  of the box.
+* **vs [bs4Dash](https://bs4dash.rinterface.com/)** — bs4Dash also
+  mirrors the shinydashboard sidebar API on AdminLTE 3/Bootstrap 4.
+  bslibdash keeps that familiar navigation model but renders it as a
+  native `bslib` sidebar on Bootstrap 5, so dashboards inherit your
+  `bslib` theme rather than a separate AdminLTE one.
+
+| Package | UI foundation | Sidebar navigation | bslib / Bootstrap 5 integration |
+|---|---|---|---|
+| shinydashboard | AdminLTE 2 / Bootstrap 3 | Yes | No native Bootstrap 5 architecture |
+| bs4Dash | AdminLTE 3 / Bootstrap 4 | Yes | Different dashboard architecture |
+| bslib | Modern Bootstrap | Sidebar layouts | Native |
+| **bslibdash** | `bslib` / Bootstrap 5 | Dashboard-style sidebar navigation | Native |
 
 Because bslibdash is just bslib underneath, it also slots into apps
 built with [teal](https://insightsengineering.github.io/teal/), raw
@@ -115,8 +133,11 @@ theme, dark mode and `bs_themer()` machinery as your dashboard shell.
 
 ## Learn more
 
+* [Sidebar navigation](https://opensource.nibr.com/bslibdash/articles/sidebar-navigation.html) —
+  building dashboard sidebar menus, nested navigation, and migrating
+  from shinydashboard or bs4Dash.
 * [Get started](https://opensource.nibr.com/bslibdash/articles/getting-started.html) —
-  a minimal skeleton and a migration guide from shinydashboard.
+  a minimal skeleton and the full shinydashboard migration reference.
 * [Components](https://opensource.nibr.com/bslibdash/articles/components.html) —
   a copy-pasteable tour of every component.
 * [Theming](https://opensource.nibr.com/bslibdash/articles/theming.html) —

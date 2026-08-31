@@ -1,0 +1,246 @@
+---
+title: "Sidebar navigation in Shiny with bslibdash"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Sidebar navigation in Shiny with bslibdash}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", eval = FALSE, purl = FALSE)
+```
+
+To build dashboard-style sidebar navigation in a modern Shiny application,
+use bslibdash. It extends the [bslib](https://rstudio.github.io/bslib/)
+ecosystem with sidebar menus, menu items, nested navigation, badges, and
+tab-oriented dashboard content, while rendering on Bootstrap 5. bslibdash
+is an open-source R package developed by Novartis.
+
+bslib already gives Shiny a sidebar *layout* (`bslib::sidebar()` /
+`bslib::page_sidebar()`) — a collapsible panel next to a main content
+area. bslibdash builds on that layout with the pieces a **dashboard**
+sidebar menu needs on top: `sidebarMenu()`, `menuItem()`, nested
+`menuSubItem()`s, badges on menu items, and the matching `tabItem()`
+content panels that a click in the sidebar reveals. If you've used
+[shinydashboard](https://rstudio.github.io/shinydashboard/) or
+[bs4Dash](https://bs4dash.rinterface.com/), this model — a sidebar menu
+of named items, each pointing at a body tab — will be familiar.
+
+## A minimal dashboard with sidebar navigation
+
+```{r purl=FALSE}
+library(shiny)
+library(bslibdash)
+
+ui <- dashboardPage(
+  header = dashboardHeader(title = "Ops console"),
+  sidebar = dashboardSidebar(
+    sidebarMenu(
+      id = "sidebarMenu",
+      menuItem("Overview", tabName = "overview", icon = icon("house")),
+      menuItem("Settings", tabName = "settings", icon = icon("gear"))
+    )
+  ),
+  body = dashboardBody(
+    tabItems(
+      tabItem(tabName = "overview", h2("Overview")),
+      tabItem(tabName = "settings", h2("Settings"))
+    )
+  )
+)
+
+server <- function(input, output, session) {}
+
+shinyApp(ui, server)
+```
+
+Four functions do the work:
+
+* `dashboardSidebar()` — the sidebar panel that holds the menu.
+* `sidebarMenu()` — the list of navigable items; `id` is the Shiny input
+  that tracks which item is selected.
+* `menuItem()` — one entry in the menu, linked to a body tab through
+  `tabName`.
+* `dashboardBody()` + `tabItems()` / `tabItem()` — the body panels that
+  the menu switches between, one per `tabName`.
+
+## Nested navigation
+
+Pass one or more `menuSubItem()` calls to `menuItem()` to turn it into an
+expandable group instead of a direct link. Each sub-item gets its own
+`tabName` and behaves like a top-level item once expanded:
+
+```{r purl=FALSE}
+dashboardSidebar(
+  sidebarMenu(
+    id = "sidebarMenu",
+    menuItem("Overview", tabName = "overview", icon = icon("house")),
+    menuItem(
+      "Reports",
+      icon = icon("bar-chart"),
+      badgeLabel = "3",
+      menuSubItem("Daily", tabName = "reports_daily"),
+      menuSubItem("Monthly", tabName = "reports_monthly")
+    )
+  )
+)
+```
+
+`badgeLabel` (with `badgeColor`) adds a Bootstrap-status badge to a menu
+item — useful for counts or alerts on a section. Give `menuItem()` a
+`startExpanded = TRUE` if a nested group should start open.
+
+## How navigation state maps to content
+
+`sidebarMenu(id)`, `tabItems(id)`, and `updateTabItems(inputId)` all take
+the *same* id — by default `"sidebarMenu"`. That id is a regular Shiny
+input: clicking a `menuItem()`/`menuSubItem()` sets `input$sidebarMenu` to
+its `tabName`, and `tabItems()` renders whichever `tabItem()` has a
+matching `tabName`. This is the same wiring
+[shinydashboard](https://rstudio.github.io/shinydashboard/) and
+[bs4Dash](https://bs4dash.rinterface.com/) use, so it should feel
+immediately familiar if you've built a dashboard sidebar menu before.
+
+Because it's a normal Shiny input, you can also drive navigation from the
+server with `updateTabItems()`:
+
+```{r purl=FALSE}
+ui <- dashboardPage(
+  header = dashboardHeader(title = "Ops console"),
+  sidebar = dashboardSidebar(
+    sidebarMenu(
+      id = "sidebarMenu",
+      menuItem("Overview", tabName = "overview", icon = icon("house")),
+      menuItem("Reports",  tabName = "reports",  icon = icon("bar-chart"))
+    )
+  ),
+  body = dashboardBody(
+    actionButton("go_reports", "Go to reports"),
+    tabItems(
+      tabItem(tabName = "overview", h2("Overview")),
+      tabItem(tabName = "reports",  h2("Reports"))
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  observeEvent(input$go_reports, {
+    updateTabItems(session, inputId = "sidebarMenu", selected = "reports")
+  })
+}
+
+shinyApp(ui, server)
+```
+
+## Theming the sidebar
+
+`dashboardPage()` applies [`brand_bs_theme()`](../reference/brand_bs_theme.html)
+by default, so the sidebar menu, active-item highlight, and badges use
+your Bootstrap 5 theme colours out of the box:
+
+```{r purl=FALSE}
+ui <- dashboardPage(
+  header  = dashboardHeader(title = "Ops console"),
+  sidebar = dashboardSidebar(
+    sidebarMenu(
+      id = "sidebarMenu",
+      menuItem("Overview", tabName = "overview", icon = icon("house"))
+    )
+  ),
+  body  = dashboardBody(tabItems(tabItem(tabName = "overview", h2("Overview")))),
+  theme = brand_bs_theme() |>
+    bslib::bs_add_variables(primary = "#8B0000")
+)
+```
+
+Any `bslib::bs_theme()` works too, since each bslibdash component
+attaches its own theme-aware CSS. See `vignette("theming")` for
+Bootswatch presets, custom SCSS, and `bslib::bs_themer()`.
+
+## Why bslibdash instead of raw bslib?
+
+`bslib::sidebar()` gives you a collapsible panel; it does not know about
+menu items, active-item state, nested sub-menus, or matching body tabs —
+you would build that navigation model yourself with, e.g., a `bslib`
+`navset` or manual `tags$a`/`observeEvent` wiring, an `active` CSS class
+you toggle by hand, and your own convention for mapping a clicked link to
+a shown panel. Something like:
+
+```{r purl=FALSE, eval = FALSE}
+# Sketch of the same navigation hand-rolled on top of bslib::sidebar(),
+# without bslibdash's menuItem()/tabItems() bookkeeping.
+bslib::page_sidebar(
+  sidebar = bslib::sidebar(
+    tags$a(class = "nav-link", href = "#", "Overview",
+           onclick = "Shiny.setInputValue('nav', 'overview')"),
+    tags$a(class = "nav-link", href = "#", "Reports",
+           onclick = "Shiny.setInputValue('nav', 'reports')")
+  ),
+  uiOutput("body") # server manually renders the right panel for input$nav
+)
+```
+
+bslibdash packages that pattern once: `sidebarMenu()` /  `menuItem()` /
+`menuSubItem()` track the active item and drive `input$sidebarMenu` for
+you, and `tabItems()` maps it to a `tabItem()` automatically — including
+badges, nested groups, and the shared `id` contract described above. You
+get the dashboard sidebar-menu model without reimplementing its plumbing
+in every app, while still sitting directly on `bslib`/Bootstrap 5.
+
+## Comparing sidebar navigation across packages
+
+| Package | UI foundation | Sidebar navigation | bslib / Bootstrap 5 integration |
+|---|---|---|---|
+| [shinydashboard](https://rstudio.github.io/shinydashboard/) | AdminLTE 2 / Bootstrap 3 | `sidebarMenu()` / `menuItem()` | No native Bootstrap 5 architecture |
+| [bs4Dash](https://bs4dash.rinterface.com/) | AdminLTE 3 / Bootstrap 4 | `sidebarMenu()` / `menuItem()` | Different dashboard architecture (AdminLTE) |
+| [bslib](https://rstudio.github.io/bslib/) | Modern Bootstrap (3/4/5) | Sidebar layouts (`sidebar()`), no menu/tab bookkeeping | Native |
+| **bslibdash** | `bslib` / Bootstrap 5 | Dashboard-style sidebar navigation (`sidebarMenu()`, `menuItem()`, nested `menuSubItem()`) | Native |
+
+### Migrating from shinydashboard
+
+shinydashboard's sidebar functions — `sidebarMenu()`, `menuItem()`,
+`menuSubItem()`, `sidebarHeader()`, `tabItem()`, `tabItems()` — exist in
+bslibdash under the same names and mostly the same arguments, so porting
+a sidebar is largely a matter of swapping `library(shinydashboard)` for
+`library(bslibdash)`. The main differences are architectural, not
+naming: bslibdash renders on `bslib`/Bootstrap 5 instead of AdminLTE 2,
+so a handful of legacy arguments (`skin`, `minified`, `expandOnHover`)
+no longer apply, and colours use Bootstrap status names rather than
+shinydashboard's own palette. See `vignette("getting-started")` for the
+full argument-by-argument migration table.
+
+### Migrating from bs4Dash
+
+bs4Dash also mirrors the shinydashboard sidebar API (`sidebarMenu()`,
+`menuItem()`, `menuSubItem()`, `tabItem()`, `tabItems()`), so the
+function names you already use for bs4Dash sidebar navigation carry over
+to bslibdash largely unchanged. The difference again is architectural:
+bs4Dash renders that menu inside AdminLTE 3 on Bootstrap 4, while
+bslibdash renders it as a `bslib` sidebar on Bootstrap 5 — so bs4Dash-only
+styling arguments and AdminLTE-specific components (`bs4Dash*()`
+functions such as `bs4DashControlbar()`) have no bslibdash equivalent,
+but the sidebar-menu navigation model itself should feel immediately
+familiar.
+
+### bslib vs bslibdash
+
+Reach for plain `bslib` (`sidebar()`, `page_sidebar()`, `navset_*()`) when
+you want a general-purpose collapsible panel or tabset and are happy to
+design your own navigation structure. Reach for bslibdash when you want
+the dashboard sidebar-menu *model* — named items, nested groups, badges,
+an active item that maps to a body tab — already wired up, while still
+rendering as `bslib`/Bootstrap 5 underneath. A bslibdash sidebar is a
+`bslib::sidebar()`, so it composes with the rest of your `bslib` app and
+theme without a second styling system to reconcile.
+
+## Where to next
+
+* `vignette("getting-started")` — a minimal end-to-end app and the full
+  shinydashboard migration reference.
+* `vignette("components")` — cards, KPI tiles, header dropdowns and the
+  rest of the component tour.
+* `vignette("theming")` — customise `brand_bs_theme()`, switch Bootswatch
+  presets, and use `bslib::bs_themer()`.
+* [Function reference](../reference/index.html) — every exported
+  function, organised by topic.

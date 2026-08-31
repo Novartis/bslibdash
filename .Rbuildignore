@@ -9,6 +9,7 @@
 ^CONTRIBUTING\.md$
 ^CODE_OF_CONDUCT\.md$
 ^cran-comments\.md$
+^cran-next-release-notes\.md$
 ^docs$
 ^_pkgdown\.yml$
 ^pkgdown$

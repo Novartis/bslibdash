@@ -1,5 +1,9 @@
 #' Create a dashboard main sidebar
 #'
+#' The dashboard's sidebar navigation panel. Pair it with [sidebarMenu()] to
+#' render a dashboard-style sidebar menu of [menuItem()]s (and nested
+#' [menuSubItem()]s) alongside the current [bslib::sidebar()] layout.
+#'
 #' @param ... Slot for `sidebarMenu()`.
 #' @param disable Whether to disable and omit the sidebar.
 #' @param width Expanded sidebar width. Numeric values are interpreted as
@@ -46,6 +50,12 @@ dashboardSidebar <- function(...,
 
 #' Dashboard main sidebar menu
 #'
+#' The sidebar navigation menu itself: an ordered list of [menuItem()]s (and
+#' optional nested [menuSubItem()]s) rendered inside [dashboardSidebar()].
+#' `id` ties the menu's selected item to the matching [tabItem()] in
+#' [dashboardBody()], so clicking a menu item switches the visible dashboard
+#' tab; see `vignette("sidebar-navigation")` for the full navigation model.
+#'
 #' @param ... Slot for `menuItem()` or `sidebarHeader()`.
 #' @param id Shared Shiny id for the sidebar menu and body tabset. Use the same
 #'   value in `sidebarMenu(id)`, `tabItems(id)`, and
@@ -72,6 +82,11 @@ sidebarMenu <- function(...,
 }
 
 #' Dashboard sidebar menu item
+#'
+#' One entry in a [sidebarMenu()]. A plain `menuItem()` is a navigation link
+#' to the [tabItem()] with a matching `tabName`; passing one or more
+#' [menuSubItem()]s turns it into an expandable nested-navigation group
+#' instead.
 #'
 #' @param text Item name.
 #' @param ... `menuSubItem()` children.
@@ -182,6 +197,10 @@ menuItem <- function(text,
 }
 
 #' Dashboard sidebar menu sub-item
+#'
+#' A nested navigation link inside an expandable [menuItem()], for
+#' second-level dashboard navigation. Like a top-level `menuItem()`, it
+#' links to the [tabItem()] with a matching `tabName`.
 #'
 #' @param text Item name.
 #' @param tabName Matching `tabItem()` name.

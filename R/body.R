@@ -1,5 +1,10 @@
 #' Dashboard body
 #'
+#' The main content area of [dashboardPage()], rendered next to
+#' [dashboardSidebar()]. Typically holds [tabItems()], so that each
+#' [sidebarMenu()] selection displays its matching [tabItem()]; see
+#' `vignette("sidebar-navigation")` for the full navigation model.
+#'
 #' @param ... Body content, usually `tabItems()`.
 #' @examples
 #' dashboardBody(

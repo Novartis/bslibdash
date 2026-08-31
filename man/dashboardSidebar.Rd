@@ -73,15 +73,24 @@ Set explicitly for multiple items with the same text and children.}
 \item{title}{Header title.}
 }
 \description{
-Create a dashboard main sidebar
+The dashboard's sidebar navigation panel. Pair it with \code{\link[=sidebarMenu]{sidebarMenu()}} to
+render a dashboard-style sidebar menu of \code{\link[=menuItem]{menuItem()}}s (and nested
+\code{\link[=menuSubItem]{menuSubItem()}}s) alongside the current \code{\link[bslib:sidebar]{bslib::sidebar()}} layout.
 
-Dashboard main sidebar menu
+The sidebar navigation menu itself: an ordered list of \code{\link[=menuItem]{menuItem()}}s (and
+optional nested \code{\link[=menuSubItem]{menuSubItem()}}s) rendered inside \code{\link[=dashboardSidebar]{dashboardSidebar()}}.
+\code{id} ties the menu's selected item to the matching \code{\link[=tabItem]{tabItem()}} in
+\code{\link[=dashboardBody]{dashboardBody()}}, so clicking a menu item switches the visible dashboard
+tab; see \code{vignette("sidebar-navigation")} for the full navigation model.
 
-Dashboard sidebar menu item
+One entry in a \code{\link[=sidebarMenu]{sidebarMenu()}}. A plain \code{menuItem()} is a navigation link
+to the \code{\link[=tabItem]{tabItem()}} with a matching \code{tabName}; passing one or more
+\code{\link[=menuSubItem]{menuSubItem()}}s turns it into an expandable nested-navigation group
+instead.
 
-Dashboard sidebar menu sub-item
-
-Dashboard sidebar menu header
+A nested navigation link inside an expandable \code{\link[=menuItem]{menuItem()}}, for
+second-level dashboard navigation. Like a top-level \code{menuItem()}, it
+links to the \code{\link[=tabItem]{tabItem()}} with a matching \code{tabName}.
 }
 \examples{
 dashboardSidebar(

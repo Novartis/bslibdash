@@ -22,6 +22,11 @@ value in \code{sidebarMenu(id)}, \code{tabItems(id)}, and
 \item{tabName}{The name of a tab.}
 }
 \description{
+The main content area of \code{\link[=dashboardPage]{dashboardPage()}}, rendered next to
+\code{\link[=dashboardSidebar]{dashboardSidebar()}}. Typically holds \code{\link[=tabItems]{tabItems()}}, so that each
+\code{\link[=sidebarMenu]{sidebarMenu()}} selection displays its matching \code{\link[=tabItem]{tabItem()}}; see
+\code{vignette("sidebar-navigation")} for the full navigation model.
+
 Containers for tab content placed inside \code{\link[=dashboardBody]{dashboardBody()}}:
 }
 \details{
