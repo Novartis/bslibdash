@@ -1,11 +1,23 @@
 ## Submission
 
-This is the first submission of bslibdash to CRAN.
+This is a resubmission of bslibdash 0.7.5.
 
 bslibdash provides a Bootstrap 5 dashboard framework for Shiny apps, built on
 top of bslib. It packages a page shell, sidebar navigation, cards, KPI tiles,
 header widgets and feedback components behind an API that mirrors
 shinydashboard wherever the underlying concept is the same.
+
+### Changes since the previous submission
+
+The pretest run for this version reported one NOTE, "Possibly misspelled
+words in DESCRIPTION" (bslib, shinydashboard, theming) and "Found the
+following (possibly) invalid file URI: CONTRIBUTING.md". Fixed by:
+
+* single-quoting the package names ('bslib', 'shinydashboard') in
+  `Description` and rewording "theming" to "themes";
+* pointing the README's CONTRIBUTING.md link to its absolute GitHub URL
+  (CONTRIBUTING.md is intentionally excluded from the built package via
+  `.Rbuildignore`).
 
 ## Test environments
 
