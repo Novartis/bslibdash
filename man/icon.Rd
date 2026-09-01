@@ -26,6 +26,8 @@ An icon \code{htmltools} tag.
 Create an bslibdash icon
 }
 \examples{
-icon("user")
-icon("bar-chart", class = "text-primary", size = "1.25rem")
+if (interactive()) {
+  icon("user")
+  icon("bar-chart", class = "text-primary", size = "1.25rem")
+}
 }

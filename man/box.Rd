@@ -103,7 +103,7 @@ boxLayout(
   type = "deck"
 )
 
-\dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(
     shiny::actionButton("toggle", "Toggle card"),

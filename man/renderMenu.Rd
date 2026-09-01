@@ -17,7 +17,7 @@ renderMenu(expr, env = parent.frame(), quoted = FALSE)
 Render a sidebar menu element
 }
 \examples{
-\dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(menuItemOutput("dynamic_menu_item")),
   server = function(input, output, session) {

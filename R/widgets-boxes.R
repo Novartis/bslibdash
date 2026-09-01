@@ -101,7 +101,7 @@ valueBoxOutput <- function(outputId, width = 4) {
 #' @param quoted Is `expr` a quoted expression.
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' shiny::shinyApp(
 #'   ui = bslib::page_fluid(valueBoxOutput("tickets")),
 #'   server = function(input, output, session) {
@@ -242,7 +242,7 @@ infoBoxOutput <- function(outputId, width = 4) {
 #' @param quoted Is `expr` a quoted expression.
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' shiny::shinyApp(
 #'   ui = bslib::page_fluid(infoBoxOutput("system_status")),
 #'   server = function(input, output, session) {

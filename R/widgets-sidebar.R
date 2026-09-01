@@ -92,7 +92,7 @@ sidebarMenuOutput <- function(outputId) {
 #' @param quoted Is `expr` a quoted expression.
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' shiny::shinyApp(
 #'   ui = bslib::page_fluid(menuItemOutput("dynamic_menu_item")),
 #'   server = function(input, output, session) {
@@ -124,7 +124,7 @@ renderMenu <- function(expr, env = parent.frame(), quoted = FALSE) {
 #' @param selected Name of the tab to select.
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' shiny::shinyApp(
 #'   ui = dashboardPage(
 #'     header = dashboardHeader(title = "Demo"),

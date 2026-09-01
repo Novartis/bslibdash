@@ -17,7 +17,7 @@ renderValueBox(expr, env = parent.frame(), quoted = FALSE)
 Render a value box
 }
 \examples{
-\dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(valueBoxOutput("tickets")),
   server = function(input, output, session) {
