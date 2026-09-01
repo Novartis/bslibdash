@@ -25,7 +25,7 @@ renderValueBox(expr, env = parent.frame(), quoted = FALSE)
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(valueBoxOutput("tickets")),
   server = function(input, output, session) {
@@ -34,5 +34,5 @@ shiny::shinyApp(
     })
   }
 )
-} # }
+}
 ```

@@ -67,19 +67,19 @@ tabsetPanel(
   shiny::tabPanel("Details", shiny::p("Detail content"))
 )
 #> <div class="tabbable">
-#>   <ul class="nav nav-tabs shiny-tab-input" id="tabs" data-tabsetid="5977">
+#>   <ul class="nav nav-tabs shiny-tab-input" id="tabs" data-tabsetid="3152">
 #>     <li class="active">
-#>       <a href="#tab-5977-1" data-toggle="tab" data-bs-toggle="tab" data-value="Overview">Overview</a>
+#>       <a href="#tab-3152-1" data-toggle="tab" data-bs-toggle="tab" data-value="Overview">Overview</a>
 #>     </li>
 #>     <li>
-#>       <a href="#tab-5977-2" data-toggle="tab" data-bs-toggle="tab" data-value="Details">Details</a>
+#>       <a href="#tab-3152-2" data-toggle="tab" data-bs-toggle="tab" data-value="Details">Details</a>
 #>     </li>
 #>   </ul>
-#>   <div class="tab-content" data-tabsetid="5977">
-#>     <div class="tab-pane active" data-value="Overview" id="tab-5977-1">
+#>   <div class="tab-content" data-tabsetid="3152">
+#>     <div class="tab-pane active" data-value="Overview" id="tab-3152-1">
 #>       <p>Overview content</p>
 #>     </div>
-#>     <div class="tab-pane" data-value="Details" id="tab-5977-2">
+#>     <div class="tab-pane" data-value="Details" id="tab-3152-2">
 #>       <p>Detail content</p>
 #>     </div>
 #>   </div>

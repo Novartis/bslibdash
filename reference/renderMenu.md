@@ -29,7 +29,7 @@ renderMenu(expr, env = parent.frame(), quoted = FALSE)
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(menuItemOutput("dynamic_menu_item")),
   server = function(input, output, session) {
@@ -38,5 +38,5 @@ shiny::shinyApp(
     })
   }
 )
-} # }
+}
 ```

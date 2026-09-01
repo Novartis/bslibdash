@@ -32,7 +32,7 @@ updateTabItems(
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = dashboardPage(
     header = dashboardHeader(title = "Demo"),
@@ -57,5 +57,5 @@ shiny::shinyApp(
     })
   }
 )
-} # }
+}
 ```
