@@ -19,6 +19,11 @@ following (possibly) invalid file URI: CONTRIBUTING.md". Fixed by:
   (CONTRIBUTING.md is intentionally excluded from the built package via
   `.Rbuildignore`).
 
+An `icon()` example auto-printed a browsable HTML object, launching a
+browser/viewer in non-interactive mode (likely cause of the Debian
+`calibre-*` NOTE). Fixed with `if (interactive())`; the seven existing
+`\dontrun{}` Shiny examples were converted the same way for consistency.
+
 ## Test environments
 
 * Local: Windows 11 x64, R 4.5.2

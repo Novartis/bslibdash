@@ -23,7 +23,7 @@ This updates the hidden body tabset used by \code{\link[=tabItems]{tabItems()}} 
 sidebar active item synchronized with the selected tab.
 }
 \examples{
-\dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = dashboardPage(
     header = dashboardHeader(title = "Demo"),

@@ -17,7 +17,7 @@ renderDropdownMenu(expr, env = parent.frame(), quoted = FALSE)
 Render a dropdown menu
 }
 \examples{
-\dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(dropdownMenuOutput("alerts_menu")),
   server = function(input, output, session) {

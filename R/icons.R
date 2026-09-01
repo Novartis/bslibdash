@@ -9,8 +9,10 @@
 #'
 #' @return An icon `htmltools` tag.
 #' @examples
-#' icon("user")
-#' icon("bar-chart", class = "text-primary", size = "1.25rem")
+#' if (interactive()) {
+#'   icon("user")
+#'   icon("bar-chart", class = "text-primary", size = "1.25rem")
+#' }
 #' @export
 icon <- function(name,
                  class = NULL,

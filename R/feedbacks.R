@@ -21,7 +21,7 @@
 #' @param session Shiny session object.
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' shiny::shinyApp(
 #'   ui = bslib::page_fluid(shiny::actionButton("show_toast", "Show toast")),
 #'   server = function(input, output, session) {

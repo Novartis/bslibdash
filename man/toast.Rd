@@ -39,7 +39,7 @@ controls the status color via Shiny's own notification statuses
 (\code{"default"}, \code{"message"}, \code{"warning"}, \code{"error"}).
 }
 \examples{
-\dontrun{
+if (interactive()) {
 shiny::shinyApp(
   ui = bslib::page_fluid(shiny::actionButton("show_toast", "Show toast")),
   server = function(input, output, session) {

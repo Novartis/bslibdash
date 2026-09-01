@@ -298,7 +298,7 @@ dropdownMenuOutput <- function(outputId) {
 #' @param quoted Is `expr` a quoted expression.
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' shiny::shinyApp(
 #'   ui = bslib::page_fluid(dropdownMenuOutput("alerts_menu")),
 #'   server = function(input, output, session) {
