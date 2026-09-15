@@ -62,23 +62,7 @@ detail follow the conventions used by 'bslib'.
 
 0 errors | 0 warnings | 1 note
 
-On win-builder the only NOTE is the one every first-time package receives:
-
-    Maintainer: 'Alexandros Kouretsis <alexandros@appsilon.com>'
-
-    New submission
-
-An earlier win-builder run of this version also reported "Possibly misspelled
-words in DESCRIPTION: dropdown". That was a genuine dictionary miss rather than
-jargon, so the Description now reads "drop-down", which is the hyphenated form
-both `en_GB` and `en_US` accept. No other word in Title or Description is
-flagged.
-
-Locally the check additionally reports missing pdflatex and pandoc, and cannot
-verify the current time behind this network. All three are properties of the
-machine, not the package; win-builder completes "checking PDF version of
-manual", "checking top-level files" and "checking for future file timestamps"
-cleanly.
+* This is a new submission.
 
 ## Downstream dependencies
 
