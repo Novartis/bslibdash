@@ -10,6 +10,10 @@
 #' @param .list Optional list of menu item tags.
 #' @param href Optional URL for the "More" footer link.
 #'
+#' @return `dropdownMenu()` returns a `shiny.tag` `<div>` holding the dropdown
+#'   toggle, badge count and panel, ready to be placed in
+#'   [dashboardHeader()].
+#'
 #' @examples
 #' dropdownMenu(
 #'   type = "notifications",
@@ -108,6 +112,10 @@ dropdownMenu <- function(...,
 #' @param color Bootstrap status color used for item accents.
 #' @param inputId Optional id to make the item behave like an action button.
 #'
+#' @return `messageItem()` returns a `shiny.tag.list` containing a dropdown
+#'   entry and a trailing divider. When `inputId` is supplied the entry also
+#'   acts as an action button readable as `input[[inputId]]`.
+#'
 #' @examples
 #' messageItem(
 #'   from = "Ops bot",
@@ -181,6 +189,10 @@ messageItem <- function(from,
 #' @param text Item text.
 #' @param status Bootstrap status color used for the icon.
 #'
+#' @return `notificationItem()` returns a `shiny.tag.list` containing a dropdown
+#'   entry and a trailing divider. When `inputId` is supplied the entry also
+#'   acts as an action button readable as `input[[inputId]]`.
+#'
 #' @examples
 #' notificationItem(
 #'   text = "3 new alerts",
@@ -225,6 +237,10 @@ notificationItem <- function(text,
 #' @param text Item text.
 #' @param value Percent completion value.
 #' @param color Bootstrap status color used for item accents.
+#'
+#' @return `taskItem()` returns a `shiny.tag.list` containing a dropdown entry
+#'   with a progress bar and a trailing divider. When `inputId` is supplied the
+#'   entry also acts as an action button readable as `input[[inputId]]`.
 #'
 #' @examples
 #' taskItem(
@@ -278,6 +294,9 @@ taskItem <- function(text, value = 0, color = "info", href = NULL, inputId = NUL
 #'
 #' @param outputId Output variable name.
 #'
+#' @return A `shiny.tag` `<div>` output container that [renderDropdownMenu()]
+#'   fills with a `dropdownMenu()` on the server.
+#'
 #' @examples
 #' dropdownMenuOutput("alerts_menu")
 #'
@@ -296,6 +315,9 @@ dropdownMenuOutput <- function(outputId) {
 #' @param expr An expression that returns a dropdown menu tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return An object of class `shiny.render.function`, to be assigned to an
+#'   `output` slot paired with [dropdownMenuOutput()].
 #'
 #' @examples
 #' if (interactive()) {

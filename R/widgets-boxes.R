@@ -14,6 +14,10 @@
 #'   Use `NULL` when placing the box inside an existing column.
 #' @param href Optional URL to link to.
 #'
+#' @return A `shiny.tag` holding a bslib value box with the bslibdash value-box
+#'   styles attached. When `width` is an integer the box is wrapped in a
+#'   Bootstrap grid column; when `width` is `NULL` the box itself is returned.
+#'
 #' @examples
 #' valueBox(
 #'   value = "128",
@@ -79,6 +83,9 @@ valueBox <- function(value,
 #' @param width The width of the box in Bootstrap grid columns (`1`-`12`).
 #'   Use `NULL` when placing the output inside an existing column.
 #'
+#' @return A `shiny.tag` output container that [renderValueBox()] fills on the
+#'   server, optionally wrapped in a Bootstrap grid column.
+#'
 #' @examples
 #' valueBoxOutput("tickets")
 #'
@@ -99,6 +106,9 @@ valueBoxOutput <- function(outputId, width = 4) {
 #' @param expr An expression that returns a value box tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return An object of class `shiny.render.function`, to be assigned to an
+#'   `output` slot paired with [valueBoxOutput()].
 #'
 #' @examples
 #' if (interactive()) {
@@ -139,6 +149,10 @@ renderValueBox <- function(expr, env = parent.frame(), quoted = FALSE) {
 #'   Use `NULL` when placing the box inside an existing column.
 #' @param href Optional URL to link to.
 #' @param fill Whether to fill the entire box background with `color`.
+#'
+#' @return A `shiny.tag` `<div>` holding the info box card with the bslibdash
+#'   info-box styles attached. When `width` is an integer the box is wrapped in
+#'   a Bootstrap grid column; when `width` is `NULL` the box itself is returned.
 #'
 #' @examples
 #' infoBox(
@@ -220,6 +234,9 @@ infoBox <- function(title,
 #' @param width The width of the box in Bootstrap grid columns (`1`-`12`).
 #'   Use `NULL` when placing the output inside an existing column.
 #'
+#' @return A `shiny.tag` output container that [renderInfoBox()] fills on the
+#'   server, optionally wrapped in a Bootstrap grid column.
+#'
 #' @examples
 #' infoBoxOutput("system_status")
 #'
@@ -240,6 +257,9 @@ infoBoxOutput <- function(outputId, width = 4) {
 #' @param expr An expression that returns an info box tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return An object of class `shiny.render.function`, to be assigned to an
+#'   `output` slot paired with [infoBoxOutput()].
 #'
 #' @examples
 #' if (interactive()) {
@@ -275,6 +295,12 @@ renderInfoBox <- function(expr, env = parent.frame(), quoted = FALSE) {
 #'   [bslib::navset_card_tab()].
 #' @param side Whether to place tabs on the `"left"` or `"right"` side of the
 #'   header.
+#'
+#' @return A `shiny.tag` holding a [bslib::navset_card_tab()] card with the
+#'   bslibdash tab-box styles attached. When `width` is an integer the card is
+#'   wrapped in a Bootstrap grid column; when `width` is `NULL` the card itself
+#'   is returned. When `id` is supplied, the selected tab is readable on the
+#'   server as `input[[id]]`.
 #'
 #' @examples
 #' # Basic tab box with a title in the card header

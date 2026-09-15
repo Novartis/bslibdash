@@ -12,6 +12,10 @@ infoBoxOutput(outputId, width = 4)
 \item{width}{The width of the box in Bootstrap grid columns (\code{1}-\code{12}).
 Use \code{NULL} when placing the output inside an existing column.}
 }
+\value{
+A \code{shiny.tag} output container that \code{\link[=renderInfoBox]{renderInfoBox()}} fills on the
+server, optionally wrapped in a Bootstrap grid column.
+}
 \description{
 Info box output
 }

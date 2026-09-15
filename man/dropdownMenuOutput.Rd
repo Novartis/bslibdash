@@ -9,6 +9,10 @@ dropdownMenuOutput(outputId)
 \arguments{
 \item{outputId}{Output variable name.}
 }
+\value{
+A \code{shiny.tag} \verb{<div>} output container that \code{\link[=renderDropdownMenu]{renderDropdownMenu()}}
+fills with a \code{dropdownMenu()} on the server.
+}
 \description{
 Dropdown menu output
 }

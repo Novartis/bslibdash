@@ -38,7 +38,10 @@ dashboard_header_set_title <- function(tag, title) {
 #' @param footer Optional slot for [dashboardFooter()].
 #' @param theme A `bslib` theme. Defaults to [brand_bs_theme()].
 #'
-#' @return A Shiny UI definition.
+#' @return A `bslib_page` object (a `shiny.tag.list`) holding the complete
+#'   dashboard UI: the header, the sidebar and main content layout, the optional
+#'   footer, and the attached theme and HTML dependencies. Pass it as the `ui`
+#'   argument of [shiny::shinyApp()].
 #' @examples
 #' ui <- dashboardPage(
 #'   header = dashboardHeader(title = "bslibdash dashboard"),
@@ -84,6 +87,9 @@ dashboardPage <- function(header,
 #'
 #' @inheritParams shiny::tabsetPanel
 #' @param .list Optional list of tab panels.
+#' @return A `shiny.tag` `<div>` holding the tabset, as produced by
+#'   [shiny::tabsetPanel()]. When `id` is supplied, the currently selected tab
+#'   is readable on the server as `input[[id]]`.
 #' @examples
 #' tabsetPanel(
 #'   id = "tabs",
@@ -112,6 +118,9 @@ tabsetPanel <- function(...,
 #' @param left Left-side footer content.
 #' @param right Right-side footer content.
 #' @param fixed Whether to mark footer as fixed.
+#'
+#' @return A `shiny.tag` `<footer>` element, or `NULL` when both `left` and
+#'   `right` are `NULL`, in which case [dashboardPage()] renders no footer.
 #'
 #' @examples
 #' dashboardFooter(
@@ -151,6 +160,10 @@ dashboardFooter <- function(left = NULL, right = NULL, fixed = FALSE) {
 #'   the freed vertical space.
 #' @param .list Optional list of right-side header UI elements, merged with
 #'   `...`.
+#'
+#' @return A `shiny.tag` `<nav>` element containing the dashboard header bar, or
+#'   `NULL` when `disable = TRUE`, in which case [dashboardPage()] renders
+#'   without a header and the body occupies the freed vertical space.
 #'
 #' @examples
 #' dashboardHeader(

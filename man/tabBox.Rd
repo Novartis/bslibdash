@@ -27,10 +27,17 @@ tabBox(
 Use \code{NULL} when placing the box inside an existing column.}
 
 \item{height}{Optional CSS height value passed to
-\code{\link[bslib:navset_card_tab]{bslib::navset_card_tab()}}.}
+\code{\link[bslib:navset]{bslib::navset_card_tab()}}.}
 
 \item{side}{Whether to place tabs on the \code{"left"} or \code{"right"} side of the
 header.}
+}
+\value{
+A \code{shiny.tag} holding a \code{\link[bslib:navset]{bslib::navset_card_tab()}} card with the
+bslibdash tab-box styles attached. When \code{width} is an integer the card is
+wrapped in a Bootstrap grid column; when \code{width} is \code{NULL} the card itself
+is returned. When \code{id} is supplied, the selected tab is readable on the
+server as \code{input[[id]]}.
 }
 \description{
 Tab box

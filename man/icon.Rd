@@ -20,7 +20,9 @@ icon(name, class = NULL, style = NULL, size = NULL, color = NULL, css = NULL)
 \item{css}{Named list of CSS properties applied to the icon tag.}
 }
 \value{
-An icon \code{htmltools} tag.
+An object of class \code{html} (a \code{character} string of HTML) containing
+the icon tag, optionally wrapped in a styled span. Insert it directly into
+a UI definition or pass it to the \code{icon} argument of a bslibdash component.
 }
 \description{
 Create an bslibdash icon

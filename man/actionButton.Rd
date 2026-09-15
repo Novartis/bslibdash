@@ -35,6 +35,10 @@ actionButton(
 
 \item{flat}{Whether to apply a flat style.}
 }
+\value{
+A \code{shiny.tag} \verb{<button>} element. On the server the button exposes an
+integer input value under \code{inputId} that increments on every click.
+}
 \description{
 Action button/link
 }

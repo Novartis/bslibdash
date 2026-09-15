@@ -24,6 +24,14 @@ accordionItem(..., title, status = NULL)
 and header are tinted with the matching subtle status hue, aligned with
 \code{box(status = ...)}.}
 }
+\value{
+\code{accordion()} returns a \code{shiny.tag} (a \code{bslib_fragment}) holding the
+accordion panels, with the bslibdash accordion styles attached as an HTML
+dependency.
+
+\code{accordionItem()} returns a \code{shiny.tag} accordion panel, to be passed
+to \code{accordion()}.
+}
 \description{
 Accordion container
 

@@ -10,6 +10,9 @@
 #' @param size Button size.
 #' @param flat Whether to apply a flat style.
 #'
+#' @return A `shiny.tag` `<button>` element. On the server the button exposes an
+#'   integer input value under `inputId` that increments on every click.
+#'
 #' @examples
 #' actionButton(
 #'   inputId = "refresh",

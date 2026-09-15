@@ -13,6 +13,10 @@ column(width, ..., offset = 0)
 
 \item{offset}{The number of columns to offset this column.}
 }
+\value{
+A \code{shiny.tag} \verb{<div>} carrying the Bootstrap grid column classes and
+wrapping the elements passed to \code{...}.
+}
 \description{
 Column system
 }

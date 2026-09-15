@@ -13,6 +13,10 @@ renderMenu(expr, env = parent.frame(), quoted = FALSE)
 
 \item{quoted}{Is \code{expr} a quoted expression.}
 }
+\value{
+An object of class \code{shiny.render.function}, to be assigned to an
+\code{output} slot paired with \code{\link[=menuItemOutput]{menuItemOutput()}} or \code{\link[=sidebarMenuOutput]{sidebarMenuOutput()}}.
+}
 \description{
 Render a sidebar menu element
 }

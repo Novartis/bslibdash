@@ -7,7 +7,9 @@
 #' @param color Icon color applied to a wrapping span.
 #' @param css Named list of CSS properties applied to the icon tag.
 #'
-#' @return An icon `htmltools` tag.
+#' @return An object of class `html` (a `character` string of HTML) containing
+#'   the icon tag, optionally wrapped in a styled span. Insert it directly into
+#'   a UI definition or pass it to the `icon` argument of a bslibdash component.
 #' @examples
 #' if (interactive()) {
 #'   icon("user")

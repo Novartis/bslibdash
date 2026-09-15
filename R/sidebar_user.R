@@ -12,8 +12,8 @@
 #'   icon is used.
 #' @param subtitle Optional secondary text shown beneath the name.
 #'
-#' @return An htmltools `<div>` tag intended to be passed into
-#'   `dashboardSidebar()`.
+#' @return A `shiny.tag` `<div>` element showing the user's avatar, name and
+#'   optional subtitle, intended to be passed into [dashboardSidebar()].
 #' @examples
 #' dashboardSidebar(
 #'   sidebarUserPanel(

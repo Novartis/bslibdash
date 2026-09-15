@@ -1,6 +1,8 @@
 #' Dashboard body
 #'
 #' @param ... Body content, usually `tabItems()`.
+#' @return `dashboardBody()` returns a `shiny.tag` `<div>` wrapping the main
+#'   content area of the dashboard.
 #' @examples
 #' dashboardBody(
 #'   tabItems(
@@ -26,6 +28,8 @@ dashboardBody <- function(...) {
 #' @param id Shared Shiny id for the sidebar menu and body tabset. Use the same
 #'   value in `sidebarMenu(id)`, `tabItems(id)`, and
 #'   `updateTabItems(inputId)`. Defaults to `"sidebarMenu"`.
+#' @return `tabItems()` returns a `shiny.tag` `<div>` containing a hidden
+#'   [shiny::tabsetPanel()] whose panels are switched by the sidebar menu.
 #' @examples
 #' tabItems(
 #'   tabItem(tabName = "overview", shiny::p("Overview content")),
@@ -38,6 +42,9 @@ tabItems <- function(..., id = "sidebarMenu") {
 }
 
 #' @param tabName The name of a tab.
+#' @return `tabItem()` returns a `shiny.tag.list` holding the tab content, with
+#'   the tab name recorded in its `tabName` attribute so that `tabItems()` can
+#'   place it in the matching panel.
 #' @examples
 #' tabItem(
 #'   tabName = "overview",

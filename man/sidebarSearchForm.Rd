@@ -20,6 +20,11 @@ sidebarSearchForm(
 
 \item{icon}{An icon tag, created by \code{\link[shiny:icon]{shiny::icon()}} or \code{\link[=icon]{icon()}}.}
 }
+\value{
+A \code{shiny.tag} \verb{<form>} element containing a text input and a search
+button. On the server the typed text is available as \code{input[[textId]]} and
+the button click count as \code{input[[buttonId]]}.
+}
 \description{
 A search form consists of a text input field and a search button.
 }

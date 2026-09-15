@@ -5,6 +5,10 @@
 #' @param color Bootstrap status color.
 #' @param rounded Whether the badge is rounded.
 #'
+#' @return A `shiny.tag` `<span>` element carrying the Bootstrap badge
+#'   classes, ready to be inserted into a UI definition (for example inside a
+#'   `menuItem()` label).
+#'
 #' @examples
 #' badge("NEW", color = "success", position = "right", rounded = TRUE)
 #'
@@ -33,6 +37,10 @@ badge <- function(..., position = c("left", "right"), color, rounded = FALSE) {
 #' @param id Unique accordion id.
 #' @param width The width of the accordion.
 #' @param .list Optional list of accordion items.
+#'
+#' @return `accordion()` returns a `shiny.tag` (a `bslib_fragment`) holding the
+#'   accordion panels, with the bslibdash accordion styles attached as an HTML
+#'   dependency.
 #'
 #' @examples
 #' accordion(
@@ -72,6 +80,9 @@ accordion <- function(..., id, width = 12, .list = NULL) {
 #' @param status Optional Bootstrap status color. When set, the item border
 #'   and header are tinted with the matching subtle status hue, aligned with
 #'   `box(status = ...)`.
+#'
+#' @return `accordionItem()` returns a `shiny.tag` accordion panel, to be passed
+#'   to `accordion()`.
 #'
 #' @examples
 #' accordionItem(

@@ -23,7 +23,10 @@
 #' )
 #' }
 #'
-#' @return A `bslib` theme object.
+#' @return A `bs_theme` object (also inheriting `bs_version_5` and
+#'   `sass_bundle`) carrying the bslibdash brand colour, typography and shape
+#'   variables. Pass it to the `theme` argument of [dashboardPage()], or extend
+#'   it with the `bslib::bs_add_*()` helpers.
 #' @examples
 #' theme <- brand_bs_theme()
 #' class(theme)

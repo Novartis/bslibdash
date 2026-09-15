@@ -9,6 +9,10 @@ sidebarMenuOutput(outputId)
 \arguments{
 \item{outputId}{Output variable name.}
 }
+\value{
+A \code{shiny.tag} \verb{<div>} output container that \code{\link[=renderMenu]{renderMenu()}} fills with
+a \code{sidebarMenu()} on the server.
+}
 \description{
 Sidebar menu output
 }

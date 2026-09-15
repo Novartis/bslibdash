@@ -7,7 +7,10 @@
 brand_bs_theme()
 }
 \value{
-A \code{bslib} theme object.
+A \code{bs_theme} object (also inheriting \code{bs_version_5} and
+\code{sass_bundle}) carrying the bslibdash brand colour, typography and shape
+variables. Pass it to the \code{theme} argument of \code{\link[=dashboardPage]{dashboardPage()}}, or extend
+it with the \verb{bslib::bs_add_*()} helpers.
 }
 \description{
 Builds a Bootstrap 5 theme via \code{\link[bslib:bs_theme]{bslib::bs_theme()}} with the bslibdash brand
@@ -15,7 +18,7 @@ colour, typography and shape variables.
 }
 \details{
 Component CSS is no longer bundled into the theme: each bslibdash component
-attaches its own theme-aware \code{\link[bslib:bs_dependency_defer]{bslib::bs_dependency_defer()}} dependency, so
+attaches its own theme-aware \code{\link[bslib:bs_dependency]{bslib::bs_dependency_defer()}} dependency, so
 rendering a component with any \code{bslib::bs_theme()} produces the matching
 bslibdash styles. \code{brand_bs_theme()} exists to set the Bootstrap-level
 variables used as defaults by bslibdash page constructors.

@@ -20,6 +20,11 @@
 #'   `"message"`, `"warning"`, `"error"`).
 #' @param session Shiny session object.
 #'
+#' @return A character string holding the id of the notification created by
+#'   [shiny::showNotification()], which can be passed to
+#'   [shiny::removeNotification()]. Called mainly for the side effect of
+#'   displaying the toast.
+#'
 #' @examples
 #' if (interactive()) {
 #' shiny::shinyApp(
