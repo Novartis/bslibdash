@@ -62,9 +62,23 @@ detail follow the conventions used by 'bslib'.
 
 0 errors | 0 warnings | 1 note
 
-The only NOTE is "checking for future file timestamps ... unable to verify
-current time", which is an artefact of the local machine having no outbound
-internet access rather than a property of the package.
+`checking CRAN incoming feasibility ... OK`.
+
+The one NOTE is
+
+    Examples with CPU (user + system) or elapsed time > 5s
+                     user system elapsed
+    dashboardSidebar 0.96   1.51    6.89
+
+This is the cost of compiling the 'Bootstrap' Sass bundle for the first time in
+the session rather than the cost of the example itself. CPU time is 2.5s, well
+inside the threshold, and only the elapsed time exceeds it. Re-running the same
+example with a warm cache takes 0.02s CPU and 0.12s elapsed. Whichever example
+runs first absorbs this cost.
+
+This machine has no pdflatex and no pandoc, so "checking PDF version of manual"
+and "checking top-level files" cannot be completed locally; those two results
+come from the GitHub Actions runs listed above.
 
 ## Downstream dependencies
 
