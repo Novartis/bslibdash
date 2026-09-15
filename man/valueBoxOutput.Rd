@@ -13,8 +13,7 @@ valueBoxOutput(outputId, width = 4)
 Use \code{NULL} when placing the output inside an existing column.}
 }
 \value{
-A \code{shiny.tag} output container that \code{\link[=renderValueBox]{renderValueBox()}} fills on the
-server, optionally wrapped in a Bootstrap grid column.
+A \code{\link[shiny:htmlOutput]{shiny::uiOutput()}} container to be filled by \code{\link[=renderValueBox]{renderValueBox()}}.
 }
 \description{
 Value box output

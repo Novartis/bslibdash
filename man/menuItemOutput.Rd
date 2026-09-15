@@ -10,8 +10,7 @@ menuItemOutput(outputId)
 \item{outputId}{Output variable name.}
 }
 \value{
-A \code{shiny.tag} \verb{<div>} output container that \code{\link[=renderMenu]{renderMenu()}} fills with
-a \code{menuItem()} on the server.
+A \code{\link[shiny:htmlOutput]{shiny::uiOutput()}} container to be filled by \code{\link[=renderMenu]{renderMenu()}}.
 }
 \description{
 Sidebar menu item output

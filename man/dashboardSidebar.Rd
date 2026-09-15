@@ -73,22 +73,20 @@ Set explicitly for multiple items with the same text and children.}
 \item{title}{Header title.}
 }
 \value{
-\code{dashboardSidebar()} returns a \code{shiny.tag} \verb{<aside>} element
-containing the sidebar, or \code{NULL} when \code{disable = TRUE}, in which case
-\code{\link[=dashboardPage]{dashboardPage()}} renders without a sidebar.
+\code{dashboardSidebar()} returns an \verb{<aside>} tag that may be passed to
+\code{\link[=dashboardPage]{dashboardPage()}}, or \code{NULL} if \code{disable = TRUE}.
 
-\code{sidebarMenu()} returns a \code{shiny.tag} \verb{<div>} that groups the supplied
-items into one or more \verb{<nav>} sections and carries the shared menu id.
+\code{sidebarMenu()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{dashboardSidebar()}.
 
-\code{menuItem()} returns a \code{shiny.tag}: a \verb{<button>} nav link when the
-item has no children, or a \verb{<div>} wrapping a collapsible sub-menu when
-\code{menuSubItem()} children are supplied.
+\code{menuItem()} returns a menu item that may be passed to
+\code{sidebarMenu()}.
 
-\code{menuSubItem()} returns a \code{shiny.tag} \verb{<button>} nav link, styled as a
-child entry and intended to be nested inside a \code{menuItem()}.
+\code{menuSubItem()} returns a menu item that may be passed to
+\code{menuItem()}.
 
-\code{sidebarHeader()} returns a \code{shiny.tag} \verb{<div>} used to label a group
-of menu items in the sidebar.
+\code{sidebarHeader()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{sidebarMenu()}.
 }
 \description{
 Create a dashboard main sidebar

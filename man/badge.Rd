@@ -19,9 +19,8 @@ dashboardBadge(..., position = c("left", "right"), color, rounded = FALSE)
 \item{rounded}{Whether the badge is rounded.}
 }
 \value{
-A \code{shiny.tag} \verb{<span>} element carrying the Bootstrap badge
-classes, ready to be inserted into a UI definition (for example inside a
-\code{menuItem()} label).
+An \code{\link[htmltools:builder]{htmltools::span()}} tag that may be included in a Shiny UI (e.g.
+inside a \code{menuItem()} label).
 }
 \description{
 Create dashboard badge item

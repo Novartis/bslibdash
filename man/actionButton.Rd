@@ -36,8 +36,9 @@ actionButton(
 \item{flat}{Whether to apply a flat style.}
 }
 \value{
-A \code{shiny.tag} \verb{<button>} element. On the server the button exposes an
-integer input value under \code{inputId} that increments on every click.
+Returns a UI element for an action button. The server value received
+for the input corresponding to \code{inputId} will be an integer that increments
+with each click.
 }
 \description{
 Action button/link

@@ -40,9 +40,8 @@ Use \code{NULL} when placing the box inside an existing column.}
 \item{fill}{Whether to fill the entire box background with \code{color}.}
 }
 \value{
-A \code{shiny.tag} \verb{<div>} holding the info box card with the bslibdash
-info-box styles attached. When \code{width} is an integer the box is wrapped in
-a Bootstrap grid column; when \code{width} is \code{NULL} the box itself is returned.
+An \code{\link[htmltools:builder]{htmltools::div()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}} unless
+\code{width} is \code{NULL}.
 }
 \description{
 Info box

@@ -25,12 +25,11 @@ and header are tinted with the matching subtle status hue, aligned with
 \code{box(status = ...)}.}
 }
 \value{
-\code{accordion()} returns a \code{shiny.tag} (a \code{bslib_fragment}) holding the
-accordion panels, with the bslibdash accordion styles attached as an HTML
-dependency.
+\code{accordion()} returns a \code{\link[bslib:accordion]{bslib::accordion()}} tag that may be included
+in a Shiny UI.
 
-\code{accordionItem()} returns a \code{shiny.tag} accordion panel, to be passed
-to \code{accordion()}.
+\code{accordionItem()} returns a \code{\link[bslib:accordion]{bslib::accordion_panel()}} tag that may be
+passed to \code{accordion()}.
 }
 \description{
 Accordion container

@@ -19,8 +19,7 @@ and \code{updateTabItems(inputId)}. All three must use the same value.}
 \item{selected}{Name of the tab to select.}
 }
 \value{
-No return value, called for side effects. Selects the requested tab
-in the body tabset and synchronizes the active sidebar menu item.
+nothing. This function is called for its side-effects.
 }
 \description{
 This updates the hidden body tabset used by \code{\link[=tabItems]{tabItems()}} and keeps the

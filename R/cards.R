@@ -26,10 +26,8 @@
 #' @param id Optional card id. Use to target the card with [updateBox()].
 #'   Provide distinct ids when rendering otherwise-identical cards on the same page.
 #'
-#' @return `box()` returns a `shiny.tag`: a bslib card with the bslibdash card
-#'   styles attached as an HTML dependency. When `width` is an integer between
-#'   `1` and `12` the card is wrapped in a Bootstrap grid column; for any other
-#'   `width` the card itself is returned.
+#' @return `box()` returns a [bslib::card()] tag, wrapped in a [shiny::column()]
+#'   when `width` is an integer between `1` and `12`.
 #'
 #' @examples
 #' box(
@@ -210,10 +208,7 @@ box <- function(...,
 #'     `bslib::layout_column_wrap()` fallback is used, but prefer calling
 #'     `bslib::layout_column_wrap()` directly for new code.
 #'
-#' @return A `shiny.tag` `<div>` containing the supplied cards, laid out
-#'   according to `type`: a Bootstrap `.card-group` row, a responsive
-#'   `.row.row-cols-*` grid, or a `bslib::layout_column_wrap()` fragment for the
-#'   deprecated `"columns"` type.
+#' @return An [htmltools::div()] tag containing the supplied cards.
 #'
 #' @examples
 #' boxLayout(
@@ -276,8 +271,8 @@ boxLayout <- function(..., .list = NULL, type = c("group", "deck", "columns")) {
 #' @param action Action to trigger.
 #' @param options List of new options for `action = "update"`.
 #' @param session Shiny session.
-#' @return `updateBox()`, and its alias `updateCard()`, return `NULL` invisibly.
-#'   They are called for their side effect of modifying the card in the browser.
+#' @return `updateBox()` and `updateCard()` return nothing. These functions are
+#'   called for their side-effects.
 #' @rdname box
 #' @export
 updateBox <- function(id,

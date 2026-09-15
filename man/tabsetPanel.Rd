@@ -35,9 +35,7 @@ active tab via other input controls. (See example below)}
 \item{.list}{Optional list of tab panels.}
 }
 \value{
-A \code{shiny.tag} \verb{<div>} holding the tabset, as produced by
-\code{\link[shiny:tabsetPanel]{shiny::tabsetPanel()}}. When \code{id} is supplied, the currently selected tab
-is readable on the server as \code{input[[id]]}.
+A \code{\link[shiny:tabsetPanel]{shiny::tabsetPanel()}} tag that may be included in a Shiny UI.
 }
 \description{
 bslibdash tabsetPanel

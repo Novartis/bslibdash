@@ -27,10 +27,8 @@ dashboardPage(
 \item{theme}{A \code{bslib} theme. Defaults to \code{\link[=brand_bs_theme]{brand_bs_theme()}}.}
 }
 \value{
-A \code{bslib_page} object (a \code{shiny.tag.list}) holding the complete
-dashboard UI: the header, the sidebar and main content layout, the optional
-footer, and the attached theme and HTML dependencies. Pass it as the \code{ui}
-argument of \code{\link[shiny:shinyApp]{shiny::shinyApp()}}.
+A \code{\link[bslib:page]{bslib::page()}} tag that may be passed to the \code{ui} argument of
+\code{\link[shiny:shinyApp]{shiny::shinyApp()}}.
 }
 \description{
 A bslib sidebar layout that arranges the four standard dashboard slots.

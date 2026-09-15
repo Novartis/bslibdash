@@ -33,9 +33,8 @@ the freed vertical space.}
 \code{...}.}
 }
 \value{
-A \code{shiny.tag} \verb{<nav>} element containing the dashboard header bar, or
-\code{NULL} when \code{disable = TRUE}, in which case \code{\link[=dashboardPage]{dashboardPage()}} renders
-without a header and the body occupies the freed vertical space.
+A \verb{<nav>} tag that may be passed to \code{\link[=dashboardPage]{dashboardPage()}}, or \code{NULL} if
+\code{disable = TRUE}.
 }
 \description{
 Dashboard navbar

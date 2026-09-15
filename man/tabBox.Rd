@@ -33,11 +33,8 @@ Use \code{NULL} when placing the box inside an existing column.}
 header.}
 }
 \value{
-A \code{shiny.tag} holding a \code{\link[bslib:navset]{bslib::navset_card_tab()}} card with the
-bslibdash tab-box styles attached. When \code{width} is an integer the card is
-wrapped in a Bootstrap grid column; when \code{width} is \code{NULL} the card itself
-is returned. When \code{id} is supplied, the selected tab is readable on the
-server as \code{input[[id]]}.
+A \code{\link[bslib:navset]{bslib::navset_card_tab()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}}
+unless \code{width} is \code{NULL}.
 }
 \description{
 Tab box

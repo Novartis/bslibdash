@@ -22,15 +22,14 @@ value in \code{sidebarMenu(id)}, \code{tabItems(id)}, and
 \item{tabName}{The name of a tab.}
 }
 \value{
-\code{dashboardBody()} returns a \code{shiny.tag} \verb{<div>} wrapping the main
-content area of the dashboard.
+\code{dashboardBody()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{\link[=dashboardPage]{dashboardPage()}}.
 
-\code{tabItems()} returns a \code{shiny.tag} \verb{<div>} containing a hidden
-\code{\link[shiny:tabsetPanel]{shiny::tabsetPanel()}} whose panels are switched by the sidebar menu.
+\code{tabItems()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag containing a hidden
+\code{\link[shiny:tabsetPanel]{shiny::tabsetPanel()}}.
 
-\code{tabItem()} returns a \code{shiny.tag.list} holding the tab content, with
-the tab name recorded in its \code{tabName} attribute so that \code{tabItems()} can
-place it in the matching panel.
+\code{tabItem()} returns an \code{\link[htmltools:tagList]{htmltools::tagList()}} that may be passed to
+\code{tabItems()}.
 }
 \description{
 Containers for tab content placed inside \code{\link[=dashboardBody]{dashboardBody()}}:

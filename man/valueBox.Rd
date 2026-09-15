@@ -27,9 +27,8 @@ Use \code{NULL} when placing the box inside an existing column.}
 \item{href}{Optional URL to link to.}
 }
 \value{
-A \code{shiny.tag} holding a bslib value box with the bslibdash value-box
-styles attached. When \code{width} is an integer the box is wrapped in a
-Bootstrap grid column; when \code{width} is \code{NULL} the box itself is returned.
+A \code{\link[bslib:value_box]{bslib::value_box()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}} unless
+\code{width} is \code{NULL}.
 }
 \description{
 Value box

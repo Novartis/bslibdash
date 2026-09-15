@@ -7,9 +7,9 @@
 #' @param label Text label to display inside the search box.
 #' @param icon An icon tag, created by [shiny::icon()] or [icon()].
 #'
-#' @return A `shiny.tag` `<form>` element containing a text input and a search
-#'   button. On the server the typed text is available as `input[[textId]]` and
-#'   the button click count as `input[[buttonId]]`.
+#' @return A `<form>` tag that may be passed to [dashboardSidebar()]. The server
+#'   values received for the inputs corresponding to `textId` and `buttonId`
+#'   will be the search string and the button click count.
 #'
 #' @examples
 #' sidebarSearchForm(
@@ -59,8 +59,7 @@ sidebarSearchForm <- function(textId,
 #'
 #' @param outputId Output variable name.
 #'
-#' @return A `shiny.tag` `<div>` output container that [renderMenu()] fills with
-#'   a `menuItem()` on the server.
+#' @return A [shiny::uiOutput()] container to be filled by [renderMenu()].
 #'
 #' @examples
 #' menuItemOutput("dynamic_menu_item")
@@ -79,8 +78,7 @@ menuItemOutput <- function(outputId) {
 #'
 #' @param outputId Output variable name.
 #'
-#' @return A `shiny.tag` `<div>` output container that [renderMenu()] fills with
-#'   a `sidebarMenu()` on the server.
+#' @return A [shiny::uiOutput()] container to be filled by [renderMenu()].
 #'
 #' @examples
 #' sidebarMenuOutput("dynamic_sidebar_menu")
@@ -101,8 +99,8 @@ sidebarMenuOutput <- function(outputId) {
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
 #'
-#' @return An object of class `shiny.render.function`, to be assigned to an
-#'   `output` slot paired with [menuItemOutput()] or [sidebarMenuOutput()].
+#' @return A [shiny::renderUI()] function that may be assigned to an `output`
+#'   slot paired with [menuItemOutput()] or [sidebarMenuOutput()].
 #'
 #' @examples
 #' if (interactive()) {
@@ -136,8 +134,7 @@ renderMenu <- function(expr, env = parent.frame(), quoted = FALSE) {
 #'   and `updateTabItems(inputId)`. All three must use the same value.
 #' @param selected Name of the tab to select.
 #'
-#' @return No return value, called for side effects. Selects the requested tab
-#'   in the body tabset and synchronizes the active sidebar menu item.
+#' @return nothing. This function is called for its side-effects.
 #'
 #' @examples
 #' if (interactive()) {

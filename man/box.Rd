@@ -83,13 +83,11 @@ the card inside an existing column or a \code{boxLayout()}.}
 \item{session}{Shiny session.}
 }
 \value{
-\code{box()} returns a \code{shiny.tag}: a bslib card with the bslibdash card
-styles attached as an HTML dependency. When \code{width} is an integer between
-\code{1} and \code{12} the card is wrapped in a Bootstrap grid column; for any other
-\code{width} the card itself is returned.
+\code{box()} returns a \code{\link[bslib:card]{bslib::card()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}}
+when \code{width} is an integer between \code{1} and \code{12}.
 
-\code{updateBox()}, and its alias \code{updateCard()}, return \code{NULL} invisibly.
-They are called for their side effect of modifying the card in the browser.
+\code{updateBox()} and \code{updateCard()} return nothing. These functions are
+called for their side-effects.
 }
 \description{
 Create a card

@@ -14,8 +14,8 @@ dashboardFooter(left = NULL, right = NULL, fixed = FALSE)
 \item{fixed}{Whether to mark footer as fixed.}
 }
 \value{
-A \code{shiny.tag} \verb{<footer>} element, or \code{NULL} when both \code{left} and
-\code{right} are \code{NULL}, in which case \code{\link[=dashboardPage]{dashboardPage()}} renders no footer.
+A \verb{<footer>} tag that may be passed to \code{\link[=dashboardPage]{dashboardPage()}}, or \code{NULL} if
+\code{left} and \code{right} are both \code{NULL}.
 }
 \description{
 Dashboard footer

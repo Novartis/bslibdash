@@ -7,10 +7,7 @@
 brand_bs_theme()
 }
 \value{
-A \code{bs_theme} object (also inheriting \code{bs_version_5} and
-\code{sass_bundle}) carrying the bslibdash brand colour, typography and shape
-variables. Pass it to the \code{theme} argument of \code{\link[=dashboardPage]{dashboardPage()}}, or extend
-it with the \verb{bslib::bs_add_*()} helpers.
+Returns a \code{\link[bslib:bs_theme]{bslib::bs_theme()}} object.
 }
 \description{
 Builds a Bootstrap 5 theme via \code{\link[bslib:bs_theme]{bslib::bs_theme()}} with the bslibdash brand

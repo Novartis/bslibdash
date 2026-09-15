@@ -6,9 +6,8 @@
 #'   pixels; CSS strings such as `"18rem"` are passed through.
 #' @param collapsed Whether the sidebar starts collapsed on desktop.
 #'
-#' @return `dashboardSidebar()` returns a `shiny.tag` `<aside>` element
-#'   containing the sidebar, or `NULL` when `disable = TRUE`, in which case
-#'   [dashboardPage()] renders without a sidebar.
+#' @return `dashboardSidebar()` returns an `<aside>` tag that may be passed to
+#'   [dashboardPage()], or `NULL` if `disable = TRUE`.
 #'
 #' @examples
 #' dashboardSidebar(
@@ -56,8 +55,8 @@ dashboardSidebar <- function(...,
 #'   `updateTabItems(inputId)`. Defaults to `"sidebarMenu"`.
 #' @param .list Optional list of items.
 #'
-#' @return `sidebarMenu()` returns a `shiny.tag` `<div>` that groups the supplied
-#'   items into one or more `<nav>` sections and carries the shared menu id.
+#' @return `sidebarMenu()` returns an [htmltools::div()] tag that may be passed
+#'   to `dashboardSidebar()`.
 #'
 #' @examples
 #' sidebarMenu(
@@ -93,9 +92,8 @@ sidebarMenu <- function(...,
 #' @param startExpanded Whether children start expanded.
 #' @param condition Optional display condition stored as a data attribute.
 #'
-#' @return `menuItem()` returns a `shiny.tag`: a `<button>` nav link when the
-#'   item has no children, or a `<div>` wrapping a collapsible sub-menu when
-#'   `menuSubItem()` children are supplied.
+#' @return `menuItem()` returns a menu item that may be passed to
+#'   `sidebarMenu()`.
 #'
 #' @examples
 #' menuItem(
@@ -199,8 +197,8 @@ menuItem <- function(text,
 #' @param icon Icon tag or icon name.
 #' @param selected Whether the item starts selected.
 #'
-#' @return `menuSubItem()` returns a `shiny.tag` `<button>` nav link, styled as a
-#'   child entry and intended to be nested inside a `menuItem()`.
+#' @return `menuSubItem()` returns a menu item that may be passed to
+#'   `menuItem()`.
 #'
 #' @examples
 #' menuSubItem(
@@ -227,8 +225,8 @@ menuSubItem <- function(text,
 #' Dashboard sidebar menu header
 #'
 #' @param title Header title.
-#' @return `sidebarHeader()` returns a `shiny.tag` `<div>` used to label a group
-#'   of menu items in the sidebar.
+#' @return `sidebarHeader()` returns an [htmltools::div()] tag that may be passed
+#'   to `sidebarMenu()`.
 #' @examples
 #' sidebarHeader("Administration")
 #' @rdname dashboardSidebar

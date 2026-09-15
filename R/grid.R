@@ -4,8 +4,7 @@
 #' @param ... Elements to include within the column.
 #' @param offset The number of columns to offset this column.
 #'
-#' @return A `shiny.tag` `<div>` carrying the Bootstrap grid column classes and
-#'   wrapping the elements passed to `...`.
+#' @return A [shiny::column()] tag that may be included in a Shiny UI.
 #'
 #' @examples
 #' shiny::fluidRow(

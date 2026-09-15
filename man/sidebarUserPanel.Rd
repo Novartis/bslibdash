@@ -16,8 +16,7 @@ icon is used.}
 \item{subtitle}{Optional secondary text shown beneath the name.}
 }
 \value{
-A \code{shiny.tag} \verb{<div>} element showing the user's avatar, name and
-optional subtitle, intended to be passed into \code{\link[=dashboardSidebar]{dashboardSidebar()}}.
+An \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed to \code{\link[=dashboardSidebar]{dashboardSidebar()}}.
 }
 \description{
 Displays a user identity block (avatar, name, optional subtitle) at the

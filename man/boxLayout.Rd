@@ -24,10 +24,7 @@ heights per row (\verb{.row.row-cols-*} + \code{.h-100}). Replaces the removed
 }}
 }
 \value{
-A \code{shiny.tag} \verb{<div>} containing the supplied cards, laid out
-according to \code{type}: a Bootstrap \code{.card-group} row, a responsive
-\verb{.row.row-cols-*} grid, or a \code{bslib::layout_column_wrap()} fragment for the
-deprecated \code{"columns"} type.
+An \code{\link[htmltools:builder]{htmltools::div()}} tag containing the supplied cards.
 }
 \description{
 Container for cards

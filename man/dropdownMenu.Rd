@@ -74,21 +74,17 @@ taskItem(text, value = 0, color = "info", href = NULL, inputId = NULL)
 \item{value}{Percent completion value.}
 }
 \value{
-\code{dropdownMenu()} returns a \code{shiny.tag} \verb{<div>} holding the dropdown
-toggle, badge count and panel, ready to be placed in
-\code{\link[=dashboardHeader]{dashboardHeader()}}.
+\code{dropdownMenu()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{\link[=dashboardHeader]{dashboardHeader()}}.
 
-\code{messageItem()} returns a \code{shiny.tag.list} containing a dropdown
-entry and a trailing divider. When \code{inputId} is supplied the entry also
-acts as an action button readable as \code{input[[inputId]]}.
+\code{messageItem()} returns a dropdown item that may be passed to
+\code{dropdownMenu()}.
 
-\code{notificationItem()} returns a \code{shiny.tag.list} containing a dropdown
-entry and a trailing divider. When \code{inputId} is supplied the entry also
-acts as an action button readable as \code{input[[inputId]]}.
+\code{notificationItem()} returns a dropdown item that may be passed to
+\code{dropdownMenu()}.
 
-\code{taskItem()} returns a \code{shiny.tag.list} containing a dropdown entry
-with a progress bar and a trailing divider. When \code{inputId} is supplied the
-entry also acts as an action button readable as \code{input[[inputId]]}.
+\code{taskItem()} returns a dropdown item that may be passed to
+\code{dropdownMenu()}.
 }
 \description{
 Dropdown menu
