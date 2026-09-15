@@ -56,7 +56,9 @@ detail follow the conventions used by 'bslib'.
   * Ubuntu-latest, R devel
   * Ubuntu-latest, R release
   * Ubuntu-latest, R oldrel-1
-* win-builder: R 4.6.1 (release), Windows Server 2022 x64 — run 2026-09-15
+* win-builder, Windows Server 2022 x64, 2026-09-15:
+  * R 4.6.1 (release)
+  * R Under development (unstable) (2026-09-14 r90539)
 
 ## R CMD check results
 
