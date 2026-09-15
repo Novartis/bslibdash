@@ -1,6 +1,6 @@
 Package: bslibdash
 Type: Package
-Title: Bootstrap 5 Dashboard Framework for Shiny Apps
+Title: 'Bootstrap' 5 Dashboard Framework for 'shiny' Apps
 Version: 0.7.5
 Authors@R: c(
     person("Alexandros", "Kouretsis", email = "alexandros@appsilon.com", role = c("aut", "cre")),
@@ -8,10 +8,12 @@ Authors@R: c(
     person("Dominik", "Rafacz", email = "dominik.rafacz_ext@novartis.com", role = "aut"),
     person("Novartis Open Source Initiative", role = "cph")
     )
-Description: Build modern Bootstrap 5 dashboards in Shiny with 'bslib'. Provides a dashboard page shell
-    and reusable components that integrate with 'bslib' themes and follow Bootstrap design patterns. The
-    API is inspired by 'shinydashboard', where the underlying concepts are shared, helping existing apps 
-    migrate with minimal changes while supporting a cleaner, more flexible dashboard design style.
+Description: Provides a dashboard layer for 'shiny' applications built on 'bslib' and
+    'Bootstrap' 5. Includes a dashboard page shell, sidebar navigation, cards, value boxes,
+    header drop-down menus and feedback components that inherit the active 'bslib' theme and
+    follow 'Bootstrap' design patterns. Function names mirror those of the 'shinydashboard'
+    package wherever the underlying concepts are shared, allowing existing applications to
+    migrate with minimal changes.
 License: MIT + file LICENSE
 URL: https://github.com/Novartis/bslibdash, https://opensource.nibr.com/bslibdash/
 BugReports: https://github.com/Novartis/bslibdash/issues

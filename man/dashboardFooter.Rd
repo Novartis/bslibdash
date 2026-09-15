@@ -13,6 +13,10 @@ dashboardFooter(left = NULL, right = NULL, fixed = FALSE)
 
 \item{fixed}{Whether to mark footer as fixed.}
 }
+\value{
+A \verb{<footer>} tag that may be passed to \code{\link[=dashboardPage]{dashboardPage()}}, or \code{NULL} if
+\code{left} and \code{right} are both \code{NULL}.
+}
 \description{
 Dashboard footer
 }

@@ -9,6 +9,10 @@ dropdownMenuOutput(outputId)
 \arguments{
 \item{outputId}{Output variable name.}
 }
+\value{
+A \code{\link[shiny:htmlOutput]{shiny::uiOutput()}} container to be filled by
+\code{\link[=renderDropdownMenu]{renderDropdownMenu()}}.
+}
 \description{
 Dropdown menu output
 }

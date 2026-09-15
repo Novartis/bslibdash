@@ -26,6 +26,9 @@
 #' @param id Optional card id. Use to target the card with [updateBox()].
 #'   Provide distinct ids when rendering otherwise-identical cards on the same page.
 #'
+#' @return `box()` returns a [bslib::card()] tag, wrapped in a [shiny::column()]
+#'   when `width` is an integer between `1` and `12`.
+#'
 #' @examples
 #' box(
 #'   "Card body",
@@ -205,6 +208,8 @@ box <- function(...,
 #'     `bslib::layout_column_wrap()` fallback is used, but prefer calling
 #'     `bslib::layout_column_wrap()` directly for new code.
 #'
+#' @return An [htmltools::div()] tag containing the supplied cards.
+#'
 #' @examples
 #' boxLayout(
 #'   box("Revenue", title = "KPI"),
@@ -266,6 +271,8 @@ boxLayout <- function(..., .list = NULL, type = c("group", "deck", "columns")) {
 #' @param action Action to trigger.
 #' @param options List of new options for `action = "update"`.
 #' @param session Shiny session.
+#' @return `updateBox()` and `updateCard()` return nothing. These functions are
+#'   called for their side-effects.
 #' @rdname box
 #' @export
 updateBox <- function(id,

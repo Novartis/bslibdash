@@ -14,6 +14,9 @@
 #'   Use `NULL` when placing the box inside an existing column.
 #' @param href Optional URL to link to.
 #'
+#' @return A [bslib::value_box()] tag, wrapped in a [shiny::column()] unless
+#'   `width` is `NULL`.
+#'
 #' @examples
 #' valueBox(
 #'   value = "128",
@@ -79,6 +82,8 @@ valueBox <- function(value,
 #' @param width The width of the box in Bootstrap grid columns (`1`-`12`).
 #'   Use `NULL` when placing the output inside an existing column.
 #'
+#' @return A [shiny::uiOutput()] container to be filled by [renderValueBox()].
+#'
 #' @examples
 #' valueBoxOutput("tickets")
 #'
@@ -99,6 +104,9 @@ valueBoxOutput <- function(outputId, width = 4) {
 #' @param expr An expression that returns a value box tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return A [shiny::renderUI()] function that may be assigned to an `output`
+#'   slot paired with [valueBoxOutput()].
 #'
 #' @examples
 #' if (interactive()) {
@@ -139,6 +147,9 @@ renderValueBox <- function(expr, env = parent.frame(), quoted = FALSE) {
 #'   Use `NULL` when placing the box inside an existing column.
 #' @param href Optional URL to link to.
 #' @param fill Whether to fill the entire box background with `color`.
+#'
+#' @return An [htmltools::div()] tag, wrapped in a [shiny::column()] unless
+#'   `width` is `NULL`.
 #'
 #' @examples
 #' infoBox(
@@ -220,6 +231,8 @@ infoBox <- function(title,
 #' @param width The width of the box in Bootstrap grid columns (`1`-`12`).
 #'   Use `NULL` when placing the output inside an existing column.
 #'
+#' @return A [shiny::uiOutput()] container to be filled by [renderInfoBox()].
+#'
 #' @examples
 #' infoBoxOutput("system_status")
 #'
@@ -240,6 +253,9 @@ infoBoxOutput <- function(outputId, width = 4) {
 #' @param expr An expression that returns an info box tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return A [shiny::renderUI()] function that may be assigned to an `output`
+#'   slot paired with [infoBoxOutput()].
 #'
 #' @examples
 #' if (interactive()) {
@@ -275,6 +291,9 @@ renderInfoBox <- function(expr, env = parent.frame(), quoted = FALSE) {
 #'   [bslib::navset_card_tab()].
 #' @param side Whether to place tabs on the `"left"` or `"right"` side of the
 #'   header.
+#'
+#' @return A [bslib::navset_card_tab()] tag, wrapped in a [shiny::column()]
+#'   unless `width` is `NULL`.
 #'
 #' @examples
 #' # Basic tab box with a title in the card header

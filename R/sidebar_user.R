@@ -12,8 +12,7 @@
 #'   icon is used.
 #' @param subtitle Optional secondary text shown beneath the name.
 #'
-#' @return An htmltools `<div>` tag intended to be passed into
-#'   `dashboardSidebar()`.
+#' @return An [htmltools::div()] tag that may be passed to [dashboardSidebar()].
 #' @examples
 #' dashboardSidebar(
 #'   sidebarUserPanel(

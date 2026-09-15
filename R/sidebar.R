@@ -6,6 +6,9 @@
 #'   pixels; CSS strings such as `"18rem"` are passed through.
 #' @param collapsed Whether the sidebar starts collapsed on desktop.
 #'
+#' @return `dashboardSidebar()` returns an `<aside>` tag that may be passed to
+#'   [dashboardPage()], or `NULL` if `disable = TRUE`.
+#'
 #' @examples
 #' dashboardSidebar(
 #'   sidebarMenu(
@@ -52,6 +55,9 @@ dashboardSidebar <- function(...,
 #'   `updateTabItems(inputId)`. Defaults to `"sidebarMenu"`.
 #' @param .list Optional list of items.
 #'
+#' @return `sidebarMenu()` returns an [htmltools::div()] tag that may be passed
+#'   to `dashboardSidebar()`.
+#'
 #' @examples
 #' sidebarMenu(
 #'   id = "sidebarMenu",
@@ -85,6 +91,9 @@ sidebarMenu <- function(...,
 #'   Set explicitly for multiple items with the same text and children.
 #' @param startExpanded Whether children start expanded.
 #' @param condition Optional display condition stored as a data attribute.
+#'
+#' @return `menuItem()` returns a menu item that may be passed to
+#'   `sidebarMenu()`.
 #'
 #' @examples
 #' menuItem(
@@ -188,6 +197,9 @@ menuItem <- function(text,
 #' @param icon Icon tag or icon name.
 #' @param selected Whether the item starts selected.
 #'
+#' @return `menuSubItem()` returns a menu item that may be passed to
+#'   `menuItem()`.
+#'
 #' @examples
 #' menuSubItem(
 #'   "Daily report",
@@ -213,6 +225,8 @@ menuSubItem <- function(text,
 #' Dashboard sidebar menu header
 #'
 #' @param title Header title.
+#' @return `sidebarHeader()` returns an [htmltools::div()] tag that may be passed
+#'   to `sidebarMenu()`.
 #' @examples
 #' sidebarHeader("Administration")
 #' @rdname dashboardSidebar

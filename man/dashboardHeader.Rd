@@ -32,6 +32,10 @@ the freed vertical space.}
 \item{.list}{Optional list of right-side header UI elements, merged with
 \code{...}.}
 }
+\value{
+A \verb{<nav>} tag that may be passed to \code{\link[=dashboardPage]{dashboardPage()}}, or \code{NULL} if
+\code{disable = TRUE}.
+}
 \description{
 Dashboard navbar
 }

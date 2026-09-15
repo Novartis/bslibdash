@@ -20,6 +20,9 @@
 #'   `"message"`, `"warning"`, `"error"`).
 #' @param session Shiny session object.
 #'
+#' @return The notification ID (string) returned by [shiny::showNotification()],
+#'   which can be used with [shiny::removeNotification()].
+#'
 #' @examples
 #' if (interactive()) {
 #' shiny::shinyApp(

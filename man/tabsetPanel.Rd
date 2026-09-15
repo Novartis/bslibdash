@@ -34,6 +34,9 @@ active tab via other input controls. (See example below)}
 
 \item{.list}{Optional list of tab panels.}
 }
+\value{
+A \code{\link[shiny:tabsetPanel]{shiny::tabsetPanel()}} tag that may be included in a Shiny UI.
+}
 \description{
 bslibdash tabsetPanel
 }

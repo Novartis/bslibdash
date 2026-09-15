@@ -16,8 +16,7 @@ icon is used.}
 \item{subtitle}{Optional secondary text shown beneath the name.}
 }
 \value{
-An htmltools \verb{<div>} tag intended to be passed into
-\code{dashboardSidebar()}.
+An \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed to \code{\link[=dashboardSidebar]{dashboardSidebar()}}.
 }
 \description{
 Displays a user identity block (avatar, name, optional subtitle) at the

@@ -13,6 +13,10 @@ renderInfoBox(expr, env = parent.frame(), quoted = FALSE)
 
 \item{quoted}{Is \code{expr} a quoted expression.}
 }
+\value{
+A \code{\link[shiny:renderUI]{shiny::renderUI()}} function that may be assigned to an \code{output}
+slot paired with \code{\link[=infoBoxOutput]{infoBoxOutput()}}.
+}
 \description{
 Render an info box
 }

@@ -73,6 +73,19 @@ taskItem(text, value = 0, color = "info", href = NULL, inputId = NULL)
 
 \item{value}{Percent completion value.}
 }
+\value{
+\code{dropdownMenu()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{\link[=dashboardHeader]{dashboardHeader()}}.
+
+\code{messageItem()} returns a dropdown item that may be passed to
+\code{dropdownMenu()}.
+
+\code{notificationItem()} returns a dropdown item that may be passed to
+\code{dropdownMenu()}.
+
+\code{taskItem()} returns a dropdown item that may be passed to
+\code{dropdownMenu()}.
+}
 \description{
 Dropdown menu
 

@@ -7,6 +7,10 @@
 #' @param label Text label to display inside the search box.
 #' @param icon An icon tag, created by [shiny::icon()] or [icon()].
 #'
+#' @return A `<form>` tag that may be passed to [dashboardSidebar()]. The server
+#'   values received for the inputs corresponding to `textId` and `buttonId`
+#'   will be the search string and the button click count.
+#'
 #' @examples
 #' sidebarSearchForm(
 #'   textId = "sidebar_search",
@@ -55,6 +59,8 @@ sidebarSearchForm <- function(textId,
 #'
 #' @param outputId Output variable name.
 #'
+#' @return A [shiny::uiOutput()] container to be filled by [renderMenu()].
+#'
 #' @examples
 #' menuItemOutput("dynamic_menu_item")
 #'
@@ -71,6 +77,8 @@ menuItemOutput <- function(outputId) {
 #' Sidebar menu output
 #'
 #' @param outputId Output variable name.
+#'
+#' @return A [shiny::uiOutput()] container to be filled by [renderMenu()].
 #'
 #' @examples
 #' sidebarMenuOutput("dynamic_sidebar_menu")
@@ -90,6 +98,9 @@ sidebarMenuOutput <- function(outputId) {
 #' @param expr An expression that returns a `menuItem()` or `sidebarMenu()` tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return A [shiny::renderUI()] function that may be assigned to an `output`
+#'   slot paired with [menuItemOutput()] or [sidebarMenuOutput()].
 #'
 #' @examples
 #' if (interactive()) {
@@ -122,6 +133,8 @@ renderMenu <- function(expr, env = parent.frame(), quoted = FALSE) {
 #' @param inputId The shared `id` used for `sidebarMenu(id)`, `tabItems(id)`,
 #'   and `updateTabItems(inputId)`. All three must use the same value.
 #' @param selected Name of the tab to select.
+#'
+#' @return nothing. This function is called for its side-effects.
 #'
 #' @examples
 #' if (interactive()) {

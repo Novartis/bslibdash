@@ -26,6 +26,10 @@ Use \code{NULL} when placing the box inside an existing column.}
 
 \item{href}{Optional URL to link to.}
 }
+\value{
+A \code{\link[bslib:value_box]{bslib::value_box()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}} unless
+\code{width} is \code{NULL}.
+}
 \description{
 Value box
 }

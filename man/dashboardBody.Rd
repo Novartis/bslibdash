@@ -21,6 +21,16 @@ value in \code{sidebarMenu(id)}, \code{tabItems(id)}, and
 
 \item{tabName}{The name of a tab.}
 }
+\value{
+\code{dashboardBody()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{\link[=dashboardPage]{dashboardPage()}}.
+
+\code{tabItems()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag containing a hidden
+\code{\link[shiny:tabsetPanel]{shiny::tabsetPanel()}}.
+
+\code{tabItem()} returns an \code{\link[htmltools:tagList]{htmltools::tagList()}} that may be passed to
+\code{tabItems()}.
+}
 \description{
 Containers for tab content placed inside \code{\link[=dashboardBody]{dashboardBody()}}:
 }

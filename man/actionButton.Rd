@@ -35,6 +35,11 @@ actionButton(
 
 \item{flat}{Whether to apply a flat style.}
 }
+\value{
+Returns a UI element for an action button. The server value received
+for the input corresponding to \code{inputId} will be an integer that increments
+with each click.
+}
 \description{
 Action button/link
 }

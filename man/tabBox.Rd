@@ -27,10 +27,14 @@ tabBox(
 Use \code{NULL} when placing the box inside an existing column.}
 
 \item{height}{Optional CSS height value passed to
-\code{\link[bslib:navset_card_tab]{bslib::navset_card_tab()}}.}
+\code{\link[bslib:navset]{bslib::navset_card_tab()}}.}
 
 \item{side}{Whether to place tabs on the \code{"left"} or \code{"right"} side of the
 header.}
+}
+\value{
+A \code{\link[bslib:navset]{bslib::navset_card_tab()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}}
+unless \code{width} is \code{NULL}.
 }
 \description{
 Tab box

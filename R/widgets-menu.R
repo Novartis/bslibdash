@@ -10,6 +10,9 @@
 #' @param .list Optional list of menu item tags.
 #' @param href Optional URL for the "More" footer link.
 #'
+#' @return `dropdownMenu()` returns an [htmltools::div()] tag that may be passed
+#'   to [dashboardHeader()].
+#'
 #' @examples
 #' dropdownMenu(
 #'   type = "notifications",
@@ -108,6 +111,9 @@ dropdownMenu <- function(...,
 #' @param color Bootstrap status color used for item accents.
 #' @param inputId Optional id to make the item behave like an action button.
 #'
+#' @return `messageItem()` returns a dropdown item that may be passed to
+#'   `dropdownMenu()`.
+#'
 #' @examples
 #' messageItem(
 #'   from = "Ops bot",
@@ -181,6 +187,9 @@ messageItem <- function(from,
 #' @param text Item text.
 #' @param status Bootstrap status color used for the icon.
 #'
+#' @return `notificationItem()` returns a dropdown item that may be passed to
+#'   `dropdownMenu()`.
+#'
 #' @examples
 #' notificationItem(
 #'   text = "3 new alerts",
@@ -225,6 +234,9 @@ notificationItem <- function(text,
 #' @param text Item text.
 #' @param value Percent completion value.
 #' @param color Bootstrap status color used for item accents.
+#'
+#' @return `taskItem()` returns a dropdown item that may be passed to
+#'   `dropdownMenu()`.
 #'
 #' @examples
 #' taskItem(
@@ -278,6 +290,9 @@ taskItem <- function(text, value = 0, color = "info", href = NULL, inputId = NUL
 #'
 #' @param outputId Output variable name.
 #'
+#' @return A [shiny::uiOutput()] container to be filled by
+#'   [renderDropdownMenu()].
+#'
 #' @examples
 #' dropdownMenuOutput("alerts_menu")
 #'
@@ -296,6 +311,9 @@ dropdownMenuOutput <- function(outputId) {
 #' @param expr An expression that returns a dropdown menu tag.
 #' @param env The parent environment for the reactive expression.
 #' @param quoted Is `expr` a quoted expression.
+#'
+#' @return A [shiny::renderUI()] function that may be assigned to an `output`
+#'   slot paired with [dropdownMenuOutput()].
 #'
 #' @examples
 #' if (interactive()) {
