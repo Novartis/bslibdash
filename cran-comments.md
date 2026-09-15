@@ -60,11 +60,11 @@ detail follow the conventions used by 'bslib'.
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 note
 
-The local run reports a single NOTE, "checking for future file timestamps ...
-unable to verify current time", which is an artefact of this machine having no
-outbound internet access rather than a property of the package.
+The only NOTE is "checking for future file timestamps ... unable to verify
+current time", which is an artefact of the local machine having no outbound
+internet access rather than a property of the package.
 
 ## Downstream dependencies
 
