@@ -10,7 +10,7 @@ Authors@R: c(
     )
 Description: Provides a dashboard layer for 'shiny' applications built on 'bslib' and
     'Bootstrap' 5. Includes a dashboard page shell, sidebar navigation, cards, value boxes,
-    header dropdown menus and feedback components that inherit the active 'bslib' theme and
+    header drop-down menus and feedback components that inherit the active 'bslib' theme and
     follow 'Bootstrap' design patterns. Function names mirror those of the 'shinydashboard'
     package wherever the underlying concepts are shared, allowing existing applications to
     migrate with minimal changes.

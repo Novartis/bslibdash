@@ -56,29 +56,29 @@ detail follow the conventions used by 'bslib'.
   * Ubuntu-latest, R devel
   * Ubuntu-latest, R release
   * Ubuntu-latest, R oldrel-1
-* win-builder: release, devel, oldrelease (to be run before final submission)
+* win-builder: R 4.6.1 (release), Windows Server 2022 x64 — run 2026-09-15
 
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
 
-`checking CRAN incoming feasibility ... OK`.
+On win-builder the only NOTE is the one every first-time package receives:
 
-The one NOTE is
+    Maintainer: 'Alexandros Kouretsis <alexandros@appsilon.com>'
 
-    Examples with CPU (user + system) or elapsed time > 5s
-                     user system elapsed
-    dashboardSidebar 0.96   1.51    6.89
+    New submission
 
-This is the cost of compiling the 'Bootstrap' Sass bundle for the first time in
-the session rather than the cost of the example itself. CPU time is 2.5s, well
-inside the threshold, and only the elapsed time exceeds it. Re-running the same
-example with a warm cache takes 0.02s CPU and 0.12s elapsed. Whichever example
-runs first absorbs this cost.
+An earlier win-builder run of this version also reported "Possibly misspelled
+words in DESCRIPTION: dropdown". That was a genuine dictionary miss rather than
+jargon, so the Description now reads "drop-down", which is the hyphenated form
+both `en_GB` and `en_US` accept. No other word in Title or Description is
+flagged.
 
-This machine has no pdflatex and no pandoc, so "checking PDF version of manual"
-and "checking top-level files" cannot be completed locally; those two results
-come from the GitHub Actions runs listed above.
+Locally the check additionally reports missing pdflatex and pandoc, and cannot
+verify the current time behind this network. All three are properties of the
+machine, not the package; win-builder completes "checking PDF version of
+manual", "checking top-level files" and "checking for future file timestamps"
+cleanly.
 
 ## Downstream dependencies
 
