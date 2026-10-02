@@ -22,6 +22,12 @@ renderInfoBox(expr, env = parent.frame(), quoted = FALSE)
 
   Is `expr` a quoted expression.
 
+## Value
+
+A [`shiny::renderUI()`](https://rdrr.io/pkg/shiny/man/renderUI.html)
+function that may be assigned to an `output` slot paired with
+[`infoBoxOutput()`](https://opensource.nibr.com/bslibdash/reference/infoBoxOutput.md).
+
 ## Examples
 
 ``` r

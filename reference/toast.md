@@ -49,6 +49,13 @@ toast(
 
   Shiny session object.
 
+## Value
+
+The notification ID (string) returned by
+[`shiny::showNotification()`](https://rdrr.io/pkg/shiny/man/showNotification.html),
+which can be used with
+[`shiny::removeNotification()`](https://rdrr.io/pkg/shiny/man/showNotification.html).
+
 ## Examples
 
 ``` r

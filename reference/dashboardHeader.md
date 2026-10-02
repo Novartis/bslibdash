@@ -47,6 +47,12 @@ dashboardHeader(
 
   Optional list of right-side header UI elements, merged with `...`.
 
+## Value
+
+A `<nav>` tag that may be passed to
+[`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md),
+or `NULL` if `disable = TRUE`.
+
 ## Examples
 
 ``` r

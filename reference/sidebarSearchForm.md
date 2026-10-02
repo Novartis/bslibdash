@@ -33,6 +33,13 @@ sidebarSearchForm(
   [`shiny::icon()`](https://rdrr.io/pkg/shiny/man/icon.html) or
   [`icon()`](https://opensource.nibr.com/bslibdash/reference/icon.md).
 
+## Value
+
+A `<form>` tag that may be passed to
+[`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md).
+The server values received for the inputs corresponding to `textId` and
+`buttonId` will be the search string and the button click count.
+
 ## Examples
 
 ``` r

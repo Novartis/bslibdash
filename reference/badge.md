@@ -30,6 +30,14 @@ dashboardBadge(..., position = c("left", "right"), color, rounded = FALSE)
 
   Whether the badge is rounded.
 
+## Value
+
+An
+[`htmltools::span()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag that may be included in a Shiny UI (e.g. inside a
+[`menuItem()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md)
+label).
+
 ## Examples
 
 ``` r

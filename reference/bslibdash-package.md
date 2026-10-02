@@ -1,7 +1,7 @@
 # bslibdash: Bootstrap 5 dashboards for Shiny
 
 Build Bootstrap 5 dashboards in Shiny, on
-[bslib](https://rstudio.github.io/bslib/reference/bslib-package.html).
+[bslib::bslib](https://rstudio.github.io/bslib/reference/bslib-package.html).
 bslibdash provides a page shell
 ([`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md),
 [`dashboardHeader()`](https://opensource.nibr.com/bslibdash/reference/dashboardHeader.md),
@@ -73,8 +73,6 @@ Useful links:
 **Maintainer**: Alexandros Kouretsis <alexandros@appsilon.com>
 
 Authors:
-
-- Alexandros Kouretsis <alexandros@appsilon.com>
 
 - Ardalan Mirshani <ardalan.mirshani@novartis.com>
 

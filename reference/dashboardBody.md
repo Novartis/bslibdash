@@ -28,6 +28,22 @@ tabItem(tabName = NULL, ...)
 
   The name of a tab.
 
+## Value
+
+`dashboardBody()` returns an
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag that may be passed to
+[`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md).
+
+`tabItems()` returns an
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag containing a hidden
+[`shiny::tabsetPanel()`](https://rdrr.io/pkg/shiny/man/tabsetPanel.html).
+
+`tabItem()` returns an
+[`htmltools::tagList()`](https://rstudio.github.io/htmltools/reference/tagList.html)
+that may be passed to `tabItems()`.
+
 ## Details
 
 - `tabItems()` is the parent container.
@@ -48,19 +64,19 @@ dashboardBody(
 #> <div class="app-main-inner">
 #>   <div class="content-canvas flex-grow-1">
 #>     <div class="tabbable">
-#>       <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="3906">
+#>       <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="8565">
 #>         <li class="active">
-#>           <a href="#tab-3906-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
+#>           <a href="#tab-8565-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
 #>         </li>
 #>         <li>
-#>           <a href="#tab-3906-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
+#>           <a href="#tab-8565-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
 #>         </li>
 #>       </ul>
-#>       <div class="tab-content" data-tabsetid="3906">
-#>         <div class="tab-pane active" data-value="overview" id="tab-3906-1">
+#>       <div class="tab-content" data-tabsetid="8565">
+#>         <div class="tab-pane active" data-value="overview" id="tab-8565-1">
 #>           <h2>Overview</h2>
 #>         </div>
-#>         <div class="tab-pane" data-value="reports" id="tab-3906-2">
+#>         <div class="tab-pane" data-value="reports" id="tab-8565-2">
 #>           <h2>Reports</h2>
 #>         </div>
 #>       </div>
@@ -73,19 +89,19 @@ tabItems(
 )
 #> <div class="content-canvas flex-grow-1">
 #>   <div class="tabbable">
-#>     <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="5388">
+#>     <ul class="nav nav-hidden shiny-tab-input" id="sidebarMenu" data-tabsetid="7082">
 #>       <li class="active">
-#>         <a href="#tab-5388-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
+#>         <a href="#tab-7082-1" data-toggle="tab" data-bs-toggle="tab" data-value="overview">overview</a>
 #>       </li>
 #>       <li>
-#>         <a href="#tab-5388-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
+#>         <a href="#tab-7082-2" data-toggle="tab" data-bs-toggle="tab" data-value="reports">reports</a>
 #>       </li>
 #>     </ul>
-#>     <div class="tab-content" data-tabsetid="5388">
-#>       <div class="tab-pane active" data-value="overview" id="tab-5388-1">
+#>     <div class="tab-content" data-tabsetid="7082">
+#>       <div class="tab-pane active" data-value="overview" id="tab-7082-1">
 #>         <p>Overview content</p>
 #>       </div>
-#>       <div class="tab-pane" data-value="reports" id="tab-5388-2">
+#>       <div class="tab-pane" data-value="reports" id="tab-7082-2">
 #>         <p>Reports content</p>
 #>       </div>
 #>     </div>

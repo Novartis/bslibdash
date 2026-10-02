@@ -26,6 +26,14 @@ renderMenu(expr, env = parent.frame(), quoted = FALSE)
 
   Is `expr` a quoted expression.
 
+## Value
+
+A [`shiny::renderUI()`](https://rdrr.io/pkg/shiny/man/renderUI.html)
+function that may be assigned to an `output` slot paired with
+[`menuItemOutput()`](https://opensource.nibr.com/bslibdash/reference/menuItemOutput.md)
+or
+[`sidebarMenuOutput()`](https://opensource.nibr.com/bslibdash/reference/sidebarMenuOutput.md).
+
 ## Examples
 
 ``` r

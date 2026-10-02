@@ -49,6 +49,14 @@ tabBox(
 
   Whether to place tabs on the `"left"` or `"right"` side of the header.
 
+## Value
+
+A
+[`bslib::navset_card_tab()`](https://rstudio.github.io/bslib/reference/navset.html)
+tag, wrapped in a
+[`shiny::column()`](https://rdrr.io/pkg/shiny/man/column.html) unless
+`width` is `NULL`.
+
 ## Examples
 
 ``` r
@@ -63,22 +71,22 @@ tabBox(
 #>   <div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslibdash-tab-box" data-bslib-card-init data-require-bs-caller="card()" data-require-bs-version="5">
 #>     <div class="card-header bslib-gap-spacing bslib-navs-card-title">
 #>       <span>Quarterly summary</span>
-#>       <ul class="nav nav-tabs shiny-tab-input card-header-tabs" id="quarterly" data-tabsetid="4956">
+#>       <ul class="nav nav-tabs shiny-tab-input card-header-tabs" id="quarterly" data-tabsetid="7255">
 #>         <li class="active">
-#>           <a href="#tab-4956-1" data-toggle="tab" data-bs-toggle="tab" data-value="Q1">Q1</a>
+#>           <a href="#tab-7255-1" data-toggle="tab" data-bs-toggle="tab" data-value="Q1">Q1</a>
 #>         </li>
 #>         <li>
-#>           <a href="#tab-4956-2" data-toggle="tab" data-bs-toggle="tab" data-value="Q2">Q2</a>
+#>           <a href="#tab-7255-2" data-toggle="tab" data-bs-toggle="tab" data-value="Q2">Q2</a>
 #>         </li>
 #>       </ul>
 #>     </div>
-#>     <div class="tab-content html-fill-item html-fill-container" data-tabsetid="4956">
-#>       <div class="tab-pane active html-fill-item html-fill-container bslib-gap-spacing" data-value="Q1" id="tab-4956-1" style="gap:0;padding:0;">
+#>     <div class="tab-content html-fill-item html-fill-container" data-tabsetid="7255">
+#>       <div class="tab-pane active html-fill-item html-fill-container bslib-gap-spacing" data-value="Q1" id="tab-7255-1" style="gap:0;padding:0;">
 #>         <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
 #>           <p>Q1 content</p>
 #>         </div>
 #>       </div>
-#>       <div class="tab-pane html-fill-item html-fill-container bslib-gap-spacing" data-value="Q2" id="tab-4956-2" style="gap:0;padding:0;">
+#>       <div class="tab-pane html-fill-item html-fill-container bslib-gap-spacing" data-value="Q2" id="tab-7255-2" style="gap:0;padding:0;">
 #>         <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
 #>           <p>Q2 content</p>
 #>         </div>
@@ -98,22 +106,22 @@ tabBox(
 #> <div class="col-sm-6">
 #>   <div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslibdash-tab-box" data-bslib-card-init data-require-bs-caller="card()" data-require-bs-version="5" style="height:200px;">
 #>     <div class="card-header bslib-gap-spacing">
-#>       <ul class="nav nav-tabs card-header-tabs" data-tabsetid="6409">
+#>       <ul class="nav nav-tabs card-header-tabs" data-tabsetid="9685">
 #>         <li>
-#>           <a href="#tab-6409-1" data-toggle="tab" data-bs-toggle="tab" data-value="Q1">Q1</a>
+#>           <a href="#tab-9685-1" data-toggle="tab" data-bs-toggle="tab" data-value="Q1">Q1</a>
 #>         </li>
 #>         <li class="active">
-#>           <a href="#tab-6409-2" data-toggle="tab" data-bs-toggle="tab" data-value="Q2">Q2</a>
+#>           <a href="#tab-9685-2" data-toggle="tab" data-bs-toggle="tab" data-value="Q2">Q2</a>
 #>         </li>
 #>       </ul>
 #>     </div>
-#>     <div class="tab-content html-fill-item html-fill-container" data-tabsetid="6409">
-#>       <div class="tab-pane html-fill-item html-fill-container bslib-gap-spacing" data-value="Q1" id="tab-6409-1" style="gap:0;padding:0;">
+#>     <div class="tab-content html-fill-item html-fill-container" data-tabsetid="9685">
+#>       <div class="tab-pane html-fill-item html-fill-container bslib-gap-spacing" data-value="Q1" id="tab-9685-1" style="gap:0;padding:0;">
 #>         <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
 #>           <p>Q1 content</p>
 #>         </div>
 #>       </div>
-#>       <div class="tab-pane active html-fill-item html-fill-container bslib-gap-spacing" data-value="Q2" id="tab-6409-2" style="gap:0;padding:0;">
+#>       <div class="tab-pane active html-fill-item html-fill-container bslib-gap-spacing" data-value="Q2" id="tab-9685-2" style="gap:0;padding:0;">
 #>         <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
 #>           <p>Q2 content</p>
 #>         </div>

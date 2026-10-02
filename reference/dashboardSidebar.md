@@ -113,6 +113,24 @@ sidebarHeader(title)
 
   Header title.
 
+## Value
+
+`dashboardSidebar()` returns an `<aside>` tag that may be passed to
+[`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md),
+or `NULL` if `disable = TRUE`.
+
+`sidebarMenu()` returns an
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag that may be passed to `dashboardSidebar()`.
+
+`menuItem()` returns a menu item that may be passed to `sidebarMenu()`.
+
+`menuSubItem()` returns a menu item that may be passed to `menuItem()`.
+
+`sidebarHeader()` returns an
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag that may be passed to `sidebarMenu()`.
+
 ## Examples
 
 ``` r

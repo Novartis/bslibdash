@@ -22,6 +22,11 @@ column(width, ..., offset = 0)
 
   The number of columns to offset this column.
 
+## Value
+
+A [`shiny::column()`](https://rdrr.io/pkg/shiny/man/column.html) tag
+that may be included in a Shiny UI.
+
 ## Examples
 
 ``` r

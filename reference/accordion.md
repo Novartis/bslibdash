@@ -40,6 +40,16 @@ accordionItem(..., title, status = NULL)
   are tinted with the matching subtle status hue, aligned with
   `box(status = ...)`.
 
+## Value
+
+`accordion()` returns a
+[`bslib::accordion()`](https://rstudio.github.io/bslib/reference/accordion.html)
+tag that may be included in a Shiny UI.
+
+`accordionItem()` returns a
+[`bslib::accordion_panel()`](https://rstudio.github.io/bslib/reference/accordion.html)
+tag that may be passed to `accordion()`.
+
 ## Examples
 
 ``` r
@@ -52,12 +62,12 @@ accordion(
 #>   <div class="accordion bslib-accordion-input" data-require-bs-caller="accordion()" data-require-bs-version="5" id="filters" style="width:100%;">
 #>     <div class="accordion-item" data-value="Date range">
 #>       <div class="accordion-header">
-#>         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-8147" aria-controls="bslib-accordion-panel-8147" aria-expanded="true">
+#>         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-2781" aria-controls="bslib-accordion-panel-2781" aria-expanded="true">
 #>           <div class="accordion-icon"></div>
 #>           <div class="accordion-title">Date range</div>
 #>         </button>
 #>       </div>
-#>       <div id="bslib-accordion-panel-8147" class="accordion-collapse collapse show">
+#>       <div id="bslib-accordion-panel-2781" class="accordion-collapse collapse show">
 #>         <div class="accordion-body">
 #>           <p>Last 30 days</p>
 #>         </div>
@@ -65,12 +75,12 @@ accordion(
 #>     </div>
 #>     <div class="accordion-item" data-value="Region">
 #>       <div class="accordion-header">
-#>         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-9272" aria-expanded="false" aria-controls="bslib-accordion-panel-9272">
+#>         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-8597" aria-expanded="false" aria-controls="bslib-accordion-panel-8597">
 #>           <div class="accordion-icon"></div>
 #>           <div class="accordion-title">Region</div>
 #>         </button>
 #>       </div>
-#>       <div id="bslib-accordion-panel-9272" class="accordion-collapse collapse">
+#>       <div id="bslib-accordion-panel-8597" class="accordion-collapse collapse">
 #>         <div class="accordion-body">
 #>           <p>All regions</p>
 #>         </div>
@@ -86,12 +96,12 @@ accordionItem(
 )
 #> <div class="accordion-item bslibdash-accordion-item bslibdash-accordion-item-info" data-value="Advanced settings">
 #>   <div class="accordion-header">
-#>     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-6165" aria-expanded="false" aria-controls="bslib-accordion-panel-6165">
+#>     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bslib-accordion-panel-3884" aria-expanded="false" aria-controls="bslib-accordion-panel-3884">
 #>       <div class="accordion-icon"></div>
 #>       <div class="accordion-title">Advanced settings</div>
 #>     </button>
 #>   </div>
-#>   <div id="bslib-accordion-panel-6165" class="accordion-collapse collapse">
+#>   <div id="bslib-accordion-panel-3884" class="accordion-collapse collapse">
 #>     <div class="accordion-body">
 #>       <p>Optional controls</p>
 #>     </div>

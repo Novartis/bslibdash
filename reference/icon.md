@@ -36,7 +36,7 @@ icon(name, class = NULL, style = NULL, size = NULL, color = NULL, css = NULL)
 
 ## Value
 
-An icon `htmltools` tag.
+An HTML tag object that can be included in a Shiny UI.
 
 ## Examples
 

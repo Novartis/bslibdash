@@ -28,7 +28,9 @@ sidebarUserPanel(name, image = NULL, subtitle = NULL)
 
 ## Value
 
-An htmltools `<div>` tag intended to be passed into
+An
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag that may be passed to
 [`dashboardSidebar()`](https://opensource.nibr.com/bslibdash/reference/dashboardSidebar.md).
 
 ## Details

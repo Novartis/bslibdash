@@ -22,6 +22,12 @@ dashboardFooter(left = NULL, right = NULL, fixed = FALSE)
 
   Whether to mark footer as fixed.
 
+## Value
+
+A `<footer>` tag that may be passed to
+[`dashboardPage()`](https://opensource.nibr.com/bslibdash/reference/dashboardPage.md),
+or `NULL` if `left` and `right` are both `NULL`.
+
 ## Examples
 
 ``` r

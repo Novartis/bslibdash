@@ -62,6 +62,14 @@ infoBox(
 
   Whether to fill the entire box background with `color`.
 
+## Value
+
+An
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag, wrapped in a
+[`shiny::column()`](https://rdrr.io/pkg/shiny/man/column.html) unless
+`width` is `NULL`.
+
 ## Examples
 
 ``` r

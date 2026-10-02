@@ -130,6 +130,17 @@ updateCard(
 
   Shiny session.
 
+## Value
+
+`box()` returns a
+[`bslib::card()`](https://rstudio.github.io/bslib/reference/card.html)
+tag, wrapped in a
+[`shiny::column()`](https://rdrr.io/pkg/shiny/man/column.html) when
+`width` is an integer between `1` and `12`.
+
+`updateBox()` and `updateCard()` return nothing. These functions are
+called for their side-effects.
+
 ## See also
 
 Other cards:

@@ -52,7 +52,9 @@ dashboardPage(
 
 ## Value
 
-A Shiny UI definition.
+A [`bslib::page()`](https://rstudio.github.io/bslib/reference/page.html)
+tag that may be passed to the `ui` argument of
+[`shiny::shinyApp()`](https://rdrr.io/pkg/shiny/man/shinyApp.html).
 
 ## Examples
 

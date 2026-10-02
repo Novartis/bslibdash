@@ -56,6 +56,12 @@ actionButton(
 
   Whether to apply a flat style.
 
+## Value
+
+Returns a UI element for an action button. The server value received for
+the input corresponding to `inputId` will be an integer that increments
+with each click.
+
 ## Examples
 
 ``` r

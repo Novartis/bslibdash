@@ -14,6 +14,12 @@ dropdownMenuOutput(outputId)
 
   Output variable name.
 
+## Value
+
+A [`shiny::uiOutput()`](https://rdrr.io/pkg/shiny/man/htmlOutput.html)
+container to be filled by
+[`renderDropdownMenu()`](https://opensource.nibr.com/bslibdash/reference/renderDropdownMenu.md).
+
 ## Examples
 
 ``` r

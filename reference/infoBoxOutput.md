@@ -19,6 +19,12 @@ infoBoxOutput(outputId, width = 4)
   The width of the box in Bootstrap grid columns (`1`-`12`). Use `NULL`
   when placing the output inside an existing column.
 
+## Value
+
+A [`shiny::uiOutput()`](https://rdrr.io/pkg/shiny/man/htmlOutput.html)
+container to be filled by
+[`renderInfoBox()`](https://opensource.nibr.com/bslibdash/reference/renderInfoBox.md).
+
 ## Examples
 
 ``` r

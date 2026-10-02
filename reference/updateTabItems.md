@@ -29,6 +29,10 @@ updateTabItems(
 
   Name of the tab to select.
 
+## Value
+
+nothing. This function is called for its side-effects.
+
 ## Examples
 
 ``` r

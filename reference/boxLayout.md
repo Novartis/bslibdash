@@ -36,6 +36,12 @@ boxLayout(..., .list = NULL, type = c("group", "deck", "columns"))
     [`bslib::layout_column_wrap()`](https://rstudio.github.io/bslib/reference/layout_column_wrap.html)
     directly for new code.
 
+## Value
+
+An
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag containing the supplied cards.
+
 ## See also
 
 Other cards:

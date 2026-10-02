@@ -45,6 +45,14 @@ valueBox(value, subtitle, icon = NULL, color = "aqua", width = 4, href = NULL)
 
   Optional URL to link to.
 
+## Value
+
+A
+[`bslib::value_box()`](https://rstudio.github.io/bslib/reference/value_box.html)
+tag, wrapped in a
+[`shiny::column()`](https://rdrr.io/pkg/shiny/man/column.html) unless
+`width` is `NULL`.
+
 ## Examples
 
 ``` r

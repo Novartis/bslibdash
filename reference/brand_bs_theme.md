@@ -12,7 +12,9 @@ brand_bs_theme()
 
 ## Value
 
-A `bslib` theme object.
+Returns a
+[`bslib::bs_theme()`](https://rstudio.github.io/bslib/reference/bs_theme.html)
+object.
 
 ## Details
 

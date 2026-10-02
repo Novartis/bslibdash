@@ -111,6 +111,22 @@ taskItem(text, value = 0, color = "info", href = NULL, inputId = NULL)
 
   Percent completion value.
 
+## Value
+
+`dropdownMenu()` returns an
+[`htmltools::div()`](https://rstudio.github.io/htmltools/reference/builder.html)
+tag that may be passed to
+[`dashboardHeader()`](https://opensource.nibr.com/bslibdash/reference/dashboardHeader.md).
+
+`messageItem()` returns a dropdown item that may be passed to
+`dropdownMenu()`.
+
+`notificationItem()` returns a dropdown item that may be passed to
+`dropdownMenu()`.
+
+`taskItem()` returns a dropdown item that may be passed to
+`dropdownMenu()`.
+
 ## Examples
 
 ``` r
