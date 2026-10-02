@@ -1,7 +1,7 @@
 Package: bslibdash
 Type: Package
 Title: 'Bootstrap' 5 Dashboard Framework for 'shiny' Apps
-Version: 0.7.5
+Version: 0.7.5.9000
 Authors@R: c(
     person("Alexandros", "Kouretsis", email = "alexandros@appsilon.com", role = c("aut", "cre")),
     person("Ardalan", "Mirshani", email = "ardalan.mirshani@novartis.com", role = "aut"),
