@@ -28,6 +28,10 @@ milliseconds), \code{autohide} (set \code{FALSE} to disable auto-hide), \code{ic
 
 \item{session}{Shiny session object.}
 }
+\value{
+The notification ID (string) returned by \code{\link[shiny:showNotification]{shiny::showNotification()}},
+which can be used with \code{\link[shiny:showNotification]{shiny::removeNotification()}}.
+}
 \description{
 Renders a notification through \code{\link[shiny:showNotification]{shiny::showNotification()}}. The default
 Shiny / bslib notification chrome (background, border, position, status

@@ -13,6 +13,9 @@ column(width, ..., offset = 0)
 
 \item{offset}{The number of columns to offset this column.}
 }
+\value{
+A \code{\link[shiny:column]{shiny::column()}} tag that may be included in a Shiny UI.
+}
 \description{
 Column system
 }

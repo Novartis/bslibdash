@@ -72,6 +72,22 @@ Set explicitly for multiple items with the same text and children.}
 
 \item{title}{Header title.}
 }
+\value{
+\code{dashboardSidebar()} returns an \verb{<aside>} tag that may be passed to
+\code{\link[=dashboardPage]{dashboardPage()}}, or \code{NULL} if \code{disable = TRUE}.
+
+\code{sidebarMenu()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{dashboardSidebar()}.
+
+\code{menuItem()} returns a menu item that may be passed to
+\code{sidebarMenu()}.
+
+\code{menuSubItem()} returns a menu item that may be passed to
+\code{menuItem()}.
+
+\code{sidebarHeader()} returns an \code{\link[htmltools:builder]{htmltools::div()}} tag that may be passed
+to \code{sidebarMenu()}.
+}
 \description{
 Create a dashboard main sidebar
 

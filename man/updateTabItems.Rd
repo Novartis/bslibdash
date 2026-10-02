@@ -18,6 +18,9 @@ and \code{updateTabItems(inputId)}. All three must use the same value.}
 
 \item{selected}{Name of the tab to select.}
 }
+\value{
+nothing. This function is called for its side-effects.
+}
 \description{
 This updates the hidden body tabset used by \code{\link[=tabItems]{tabItems()}} and keeps the
 sidebar active item synchronized with the selected tab.

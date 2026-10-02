@@ -39,6 +39,10 @@ Use \code{NULL} when placing the box inside an existing column.}
 
 \item{fill}{Whether to fill the entire box background with \code{color}.}
 }
+\value{
+An \code{\link[htmltools:builder]{htmltools::div()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}} unless
+\code{width} is \code{NULL}.
+}
 \description{
 Info box
 }

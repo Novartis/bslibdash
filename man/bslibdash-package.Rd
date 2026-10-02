@@ -6,7 +6,7 @@
 \alias{bslibdash-package}
 \title{bslibdash: Bootstrap 5 dashboards for Shiny}
 \description{
-Build Bootstrap 5 dashboards in Shiny, on \link[bslib:bslib]{bslib}. bslibdash provides
+Build Bootstrap 5 dashboards in Shiny, on \link[bslib:bslib-package]{bslib::bslib}. bslibdash provides
 a page shell (\code{\link[=dashboardPage]{dashboardPage()}}, \code{\link[=dashboardHeader]{dashboardHeader()}},
 \code{\link[=dashboardSidebar]{dashboardSidebar()}}, \code{\link[=dashboardBody]{dashboardBody()}}, \code{\link[=dashboardFooter]{dashboardFooter()}}),
 sidebar navigation (\code{\link[=sidebarMenu]{sidebarMenu()}}, \code{\link[=menuItem]{menuItem()}},
@@ -27,7 +27,7 @@ on Bootstrap 5 have been removed — see
 migration story.
 
 Every bslibdash component attaches its CSS via
-\code{\link[bslib:bs_dependency_defer]{bslib::bs_dependency_defer()}}, so any \code{\link[bslib:bs_theme]{bslib::bs_theme()}} (including
+\code{\link[bslib:bs_dependency]{bslib::bs_dependency_defer()}}, so any \code{\link[bslib:bs_theme]{bslib::bs_theme()}} (including
 the bundled \code{\link[=brand_bs_theme]{brand_bs_theme()}}) recompiles bslibdash styles against
 the active theme.
 }
@@ -58,7 +58,6 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Alexandros Kouretsis \email{alexandros@appsilon.com}
   \item Ardalan Mirshani \email{ardalan.mirshani@novartis.com}
   \item Dominik Rafacz \email{dominik.rafacz_ext@novartis.com}
 }

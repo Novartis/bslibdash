@@ -82,6 +82,13 @@ the card inside an existing column or a \code{boxLayout()}.}
 
 \item{session}{Shiny session.}
 }
+\value{
+\code{box()} returns a \code{\link[bslib:card]{bslib::card()}} tag, wrapped in a \code{\link[shiny:column]{shiny::column()}}
+when \code{width} is an integer between \code{1} and \code{12}.
+
+\code{updateBox()} and \code{updateCard()} return nothing. These functions are
+called for their side-effects.
+}
 \description{
 Create a card
 
@@ -119,7 +126,7 @@ shiny::shinyApp(
 
 }
 \seealso{
-Other cards:
-\code{\link[=boxLayout]{boxLayout()}}
+Other cards: 
+\code{\link{boxLayout}()}
 }
 \concept{cards}

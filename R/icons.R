@@ -7,7 +7,7 @@
 #' @param color Icon color applied to a wrapping span.
 #' @param css Named list of CSS properties applied to the icon tag.
 #'
-#' @return An icon `htmltools` tag.
+#' @return An HTML tag object that can be included in a Shiny UI.
 #' @examples
 #' if (interactive()) {
 #'   icon("user")

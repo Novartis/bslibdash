@@ -23,7 +23,7 @@
 #' )
 #' }
 #'
-#' @return A `bslib` theme object.
+#' @return Returns a [bslib::bs_theme()] object.
 #' @examples
 #' theme <- brand_bs_theme()
 #' class(theme)

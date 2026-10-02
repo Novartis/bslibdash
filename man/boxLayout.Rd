@@ -23,6 +23,9 @@ heights per row (\verb{.row.row-cols-*} + \code{.h-100}). Replaces the removed
 \code{bslib::layout_column_wrap()} directly for new code.
 }}
 }
+\value{
+An \code{\link[htmltools:builder]{htmltools::div()}} tag containing the supplied cards.
+}
 \description{
 Container for cards
 }
@@ -34,7 +37,7 @@ boxLayout(
 )
 }
 \seealso{
-Other cards:
-\code{\link[=box]{box()}}
+Other cards: 
+\code{\link{box}()}
 }
 \concept{cards}
