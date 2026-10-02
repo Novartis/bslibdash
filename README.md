@@ -1,6 +1,7 @@
 # bslibdash <img src="man/figures/logo.png" align="right" height="139" alt="bslibdash hex logo" />
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/bslibdash)](https://CRAN.R-project.org/package=bslibdash)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
 [![R-CMD-check](https://github.com/Novartis/bslibdash/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Novartis/bslibdash/actions/workflows/R-CMD-check.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Novartis/bslibdash/blob/main/LICENSE.md)
@@ -36,8 +37,13 @@ porting an existing app is mostly search-and-replace.
 
 ## Installation
 
-bslibdash isn't on CRAN yet. Install the development version from
-GitHub:
+Install the released version from CRAN:
+
+``` r
+install.packages("bslibdash")
+```
+
+Or the development version from GitHub:
 
 ``` r
 # install.packages("pak")
